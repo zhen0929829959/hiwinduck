@@ -60,6 +60,18 @@ colcon build
 source install/setup.bash
 ros2 run hiwin_example strategy_example 
 
+#force
+
+開arduino程式
+貼上force_kg
+執行 #執行時勿開serial monitor 序列赴會卡住
+
+sudo apt install -y python3-serial
+sudo chmod 777 /dev/ttyUSB0
+source install/setup.bash
+ros2 run arduino_bridge force_pub
+
+
 
 #git note
 1.git add .
