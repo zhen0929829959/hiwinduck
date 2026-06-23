@@ -1,0 +1,1 @@
+/home/zzz/work/build/hiwin_interfaces/rosidl_generator_cpp/hiwin_interfaces/srv/detail/robot_command__traits.hpp

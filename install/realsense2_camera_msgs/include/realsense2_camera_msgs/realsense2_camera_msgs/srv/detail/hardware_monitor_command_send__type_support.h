@@ -1,0 +1,1 @@
+/home/zzz/work/build/realsense2_camera_msgs/rosidl_generator_c/realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__type_support.h

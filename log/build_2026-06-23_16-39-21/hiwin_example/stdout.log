@@ -1,0 +1,25 @@
+running develop
+running egg_info
+writing hiwin_example.egg-info/PKG-INFO
+writing dependency_links to hiwin_example.egg-info/dependency_links.txt
+writing entry points to hiwin_example.egg-info/entry_points.txt
+writing requirements to hiwin_example.egg-info/requires.txt
+writing top-level names to hiwin_example.egg-info/top_level.txt
+reading manifest file 'hiwin_example.egg-info/SOURCES.txt'
+writing manifest file 'hiwin_example.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/zzz/work/install/hiwin_example/lib/python3.10/site-packages/hiwin-example.egg-link (link to .)
+Installing hand_in_eye_calibration script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+Installing strategy_example script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+Installing three_points_calibration_example script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+
+Installed /home/zzz/work/build/hiwin_example
+running symlink_data
+symbolically linking /home/zzz/work/build/hiwin_example/resource/hiwin_example -> /home/zzz/work/install/hiwin_example/share/ament_index/resource_index/packages
+symbolically linking /home/zzz/work/build/hiwin_example/package.xml -> /home/zzz/work/install/hiwin_example/share/hiwin_example
+symbolically linking /home/zzz/work/build/hiwin_example/launch/bag_three_points_calibration.launch.py -> /home/zzz/work/install/hiwin_example/share/hiwin_example/launch
+symbolically linking /home/zzz/work/build/hiwin_example/launch/cup_three_points_calibration.launch.py -> /home/zzz/work/install/hiwin_example/share/hiwin_example/launch
+symbolically linking /home/zzz/work/build/hiwin_example/config/cup_cam.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
+symbolically linking /home/zzz/work/build/hiwin_example/config/bag_cali_pose.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
+symbolically linking /home/zzz/work/build/hiwin_example/config/cup_cali_pose.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
+symbolically linking /home/zzz/work/build/hiwin_example/config/bag_cam.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
