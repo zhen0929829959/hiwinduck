@@ -49,7 +49,7 @@ git push origin main
 ```
 
 ---
-### 注記：
+###＃ 注記：
 日常更新/統一版本 hiwinduck指向的submodule版本
 ```bash
 git pull --rebase origin main
@@ -63,7 +63,7 @@ git pull --rebase origin main
 
 ---
 
-### 一般專案檔案提交（不重要 想詳細看在看）
+### 一般專案檔案提交（以下都沒很重要 想詳細看再看）
 
 在專案根目錄執行：
 
