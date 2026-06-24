@@ -28,6 +28,11 @@ cd ~/work/src/Hiwin_libmodbus
 git submodule sync
 git submodule update --init --recursive
 
+
+cd ~/hiwinduck/src/realsense-ros
+git checkout 4.57.7
+cd ~/hiwinduck
+
 ```
 ---
 
