@@ -7,9 +7,18 @@ src/Hiwin_libmodbus
 src/realsense-ros
 ubuntu22.04_ros2
 ```
-
 因此修改一般檔案與修改 submodule 的提交方式不同。
 
+---
+### 下載專案
+
+第一次下載時使用：
+
+```bash
+git clone --recurse-submodules https://github.com/zhen0929829959/hiwinduck.git
+git submodule update --init --recursive
+
+```
 ---
 
 ### 常用指令重點整理
@@ -20,13 +29,8 @@ git pull --rebase origin main
 git submodule update --init --recursive
 ```
 
-```bash
-cd src/Hiwin_libmodbus
-git switch main
-git pull --rebase origin main
-```
-
 修改完成後
+1.提交Hiwin_libmodbus內的修改
 ```bash
 cd ~/work/src/Hiwin_libmodbus
 git add .
@@ -34,7 +38,7 @@ git commit -m "修改內容"
 git pull --rebase origin main
 git push origin main
 ```
-
+2.提交hiwinduck 更新submodule版本
 ```bash
 cd ~/work
 git add src/Hiwin_libmodbus
@@ -63,7 +67,7 @@ git pull --rebase origin main
 
 ---
 
-### 一般專案檔案提交
+### 一般專案檔案提交（不重要 想詳細看在看）
 
 在專案根目錄執行：
 
@@ -121,14 +125,6 @@ git push origin main
 ```
 
 ---
-
-### 下載專案
-
-第一次下載時使用：
-
-```bash
-git clone --recurse-submodules https://github.com/zhen0929829959/hiwinduck.git
-```
 
 
 ### 更新 submodule
