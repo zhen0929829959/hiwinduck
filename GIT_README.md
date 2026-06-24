@@ -30,6 +30,7 @@ git submodule update --init --recursive
 ```
 
 修改完成後
+
 1.提交Hiwin_libmodbus內的修改
 ```bash
 cd ~/work/src/Hiwin_libmodbus
@@ -46,12 +47,7 @@ git commit -m "Update Hiwin_libmodbus submodule"
 git pull --rebase origin main
 git push origin main
 ```
-組員下載更新
-```bash
-cd ~/work
-git pull --rebase origin main
-git submodule update --init --recursive
-```
+
 ---
 ### 注記：
 日常更新/統一版本 hiwinduck指向的submodule版本
