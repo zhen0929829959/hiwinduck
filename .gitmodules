@@ -1,3 +1,9 @@
 [submodule "src/Hiwin_libmodbus"]
 	path = src/Hiwin_libmodbus
 	url = https://github.com/zhen0929829959/Hiwin_libmodbus.git
+[submodule "src/realsense-ros"]
+	path = src/realsense-ros
+	url = https://github.com/realsenseai/realsense-ros.git
+[submodule "ubuntu22.04_ros2"]
+	path = ubuntu22.04_ros2
+	url = https://github.com/errrr0501/ubuntu22.04_ros2.git
