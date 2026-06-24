@@ -48,9 +48,18 @@ cd ~/work
 git pull --rebase origin main
 git submodule update --init --recursive
 ```
-
-
-
+---
+### 注記：
+日常更新/統一版本 hiwinduck指向的submodule版本
+```bash
+git pull --rebase origin main
+git submodule update --init --recursive
+```
+抓 Hiwin_libmodbus 最新版：
+```bash
+cd src/Hiwin_libmodbus
+git pull --rebase origin main
+```
 
 ---
 
