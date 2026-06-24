@@ -14,29 +14,40 @@ ubuntu22.04_ros2
 
 ### 常用指令重點整理
 開始工作前
+```bash
 cd ~/work
 git pull --rebase origin main
 git submodule update --init --recursive
+```
 
+```bash
 cd src/Hiwin_libmodbus
 git switch main
 git pull --rebase origin main
+```
+
 修改完成後
+```bash
 cd ~/work/src/Hiwin_libmodbus
 git add .
 git commit -m "修改內容"
 git pull --rebase origin main
 git push origin main
+```
 
+```bash
 cd ~/work
 git add src/Hiwin_libmodbus
 git commit -m "Update Hiwin_libmodbus submodule"
 git pull --rebase origin main
 git push origin main
+```
 組員下載更新
+```bash
 cd ~/work
 git pull --rebase origin main
 git submodule update --init --recursive
+```
 
 
 
