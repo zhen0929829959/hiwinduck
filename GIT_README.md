@@ -18,6 +18,16 @@ ubuntu22.04_ros2
 git clone --recurse-submodules https://github.com/zhen0929829959/hiwinduck.git
 git submodule update --init --recursive
 
+#進docker
+sudo apt update 
+rosdep update
+rosdep install --from-paths src --ignore-src -y
+
+
+cd ~/work/src/Hiwin_libmodbus
+git submodule sync
+git submodule update --init --recursive
+
 ```
 ---
 
