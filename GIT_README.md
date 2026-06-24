@@ -12,6 +12,37 @@ ubuntu22.04_ros2
 
 ---
 
+### 常用指令重點整理
+開始工作前
+cd ~/work
+git pull --rebase origin main
+git submodule update --init --recursive
+
+cd src/Hiwin_libmodbus
+git switch main
+git pull --rebase origin main
+修改完成後
+cd ~/work/src/Hiwin_libmodbus
+git add .
+git commit -m "修改內容"
+git pull --rebase origin main
+git push origin main
+
+cd ~/work
+git add src/Hiwin_libmodbus
+git commit -m "Update Hiwin_libmodbus submodule"
+git pull --rebase origin main
+git push origin main
+組員下載更新
+cd ~/work
+git pull --rebase origin main
+git submodule update --init --recursive
+
+
+
+
+---
+
 ### 一般專案檔案提交
 
 在專案根目錄執行：
@@ -47,13 +78,6 @@ git pull --rebase origin main
 git push origin main
 ```
 
-如果原始倉庫不是自己的帳號，可能沒有推送權限，需要先 Fork 倉庫，再修改遠端網址：
-
-```bash
-git remote set-url origin https://github.com/你的帳號/Hiwin_libmodbus.git
-git push -u origin main
-```
-
 #### 3. 回到外層專案
 
 ```bash
@@ -78,21 +102,14 @@ git push origin main
 
 ---
 
-### 新電腦下載專案
+### 下載專案
 
 第一次下載時使用：
 
 ```bash
-git clone --recurse-submodules https://github.com/你的帳號/hiwinduck.git
+git clone --recurse-submodules https://github.com/zhen0929829959/hiwinduck.git
 ```
 
-如果已經 clone 過，但 submodule 尚未下載：
-
-```bash
-git submodule update --init --recursive
-```
-
----
 
 ### 更新 submodule
 
@@ -108,61 +125,3 @@ git commit -m "Update submodules"
 git push origin main
 ```
 
----
-
-### 常見問題
-
-#### 顯示 `modified content`
-
-```text
-modified: src/Hiwin_libmodbus (modified content)
-```
-
-代表 submodule 裡有尚未提交的修改。需先進入該 submodule 提交：
-
-```bash
-cd src/Hiwin_libmodbus
-git add .
-git commit -m "修改內容"
-git push
-```
-
-#### 推送被拒絕 `fetch first`
-
-```text
-Updates were rejected because the remote contains work that you do not have locally
-```
-
-先同步遠端：
-
-```bash
-git pull --rebase origin main
-git push origin main
-```
-
-#### GitHub 不接受超過 100 MB 的檔案
-
-大型安裝檔不應上傳，例如：
-
-```text
-*.AppImage
-```
-
-可加入 `.gitignore`：
-
-```gitignore
-build/
-install/
-log/
-*.AppImage
-__pycache__/
-*.pyc
-```
-
-如果大型檔案已經被加入提交紀錄，需要先移除：
-
-```bash
-git rm --cached 檔案名稱
-git commit --amend --no-edit
-git push origin main
-```
