@@ -17,54 +17,22 @@ source install/setup.bash
 ```bash
 ros2 launch realsense2_camera rs_align_depth_launch.py
 ```
-
----
-
-### 2. 啟動 YOLO
-
-開啟新的終端機：
-
+#### 2. 啟動 YOLO
 ```bash
-cd ~/work
-source install/setup.bash
 ros2 run yolo yolo_sub
 ```
-
----
-
-### 3. 啟動 HIWIN 手臂連線
-
-開啟新的終端機：
-
+#### 3. 啟動 HIWIN 手臂連線
 ```bash
-cd ~/work
-source install/setup.bash
 ros2 run hiwin_libmodbus hiwinlibmodbus_server
 ```
-
----
-
-### 4. 執行手臂控制程式
-
-開啟新的終端機：
-
+#### 4. 執行手臂控制程式
 ```bash
-cd ~/work
-source install/setup.bash
 ros2 run hiwin_example strategy_example
 ```
+#### 5. 啟動力量感測器
+1.開arduino
 
-執行前需先確認：
-
-```text
-hiwinlibmodbus_server 已正常啟動
-```
-
----
-
-### 5. 啟動力量感測器
-
-先將 Arduino 開 `force_kg` 程式。
+2.貼上force_kg 執行 
 
 安裝 Python Serial 套件：
 
@@ -82,8 +50,6 @@ sudo chmod 777 /dev/ttyUSB0
 啟動 ROS 2 節點：
 
 ```bash
-cd ~/work
-source install/setup.bash
 ros2 run arduino_bridge force_pub
 ```
 
