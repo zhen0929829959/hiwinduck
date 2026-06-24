@@ -1,0 +1,3 @@
+[submodule "src/Hiwin_libmodbus"]
+	path = src/Hiwin_libmodbus
+	url = https://github.com/zhen0929829959/Hiwin_libmodbus.git
