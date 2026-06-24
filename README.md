@@ -1,29 +1,20 @@
 ## 專案使用方式
 
 
-## 執行 ROS 2 節點
+### 執行 ROS 2 節點
 
 每次重新開啟終端機後，先進入工作區並載入環境：
 
 ```bash
 cd ~/work
-source install/setup.bash
-```
-
-如果程式有修改，先重新編譯：
-
-```bash
 colcon build --symlink-install
 source install/setup.bash
 ```
 
 ---
 
-### 1. 啟動 RealSense 相機
-
+#### 1. 啟動 RealSense 相機
 ```bash
-cd ~/work
-source install/setup.bash
 ros2 launch realsense2_camera rs_align_depth_launch.py
 ```
 
