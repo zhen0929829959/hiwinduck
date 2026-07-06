@@ -1,0 +1,1 @@
+/home/leo/work/build/realsense2_ros_mqtt_bridge/launch/rs_launch.py

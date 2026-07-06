@@ -50,7 +50,7 @@ class YoloNode(Node):
 
         self.publisher = self.create_publisher(
             String,
-            'yolo_detections',
+            '/yolo/detections',
             10
         )
 
@@ -158,8 +158,8 @@ class YoloNode(Node):
 
         fx = 909.77309
         fy = 909.173606
-        cx = 645.06746
-        cy = 366.54143
+        cx = 962.14125
+        cy = 538.59806
 
         X = (u - cx) * depth_m / fx
         Y = (v - cy) * depth_m / fy
