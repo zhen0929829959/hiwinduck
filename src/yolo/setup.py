@@ -27,6 +27,7 @@ setup(
             'yolo_pub = yolo.camera_node_pub:main',
             'yolo_sub = yolo.camera_node_sub:main',
             'apriltag=yolo.camera_node_apriltag:main',
+            'yolo_apriltag=yolo.camera_node_yolo_apriltag:main',
         ],
     },
 )
