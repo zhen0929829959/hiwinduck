@@ -1,1 +1,5 @@
-/home/zzz/work/src/realsense-ros/realsense2_camera_msgs/srv/SafetyPresetWrite.srv
+string safety_preset
+uint8 index
+---
+bool success
+string error_message

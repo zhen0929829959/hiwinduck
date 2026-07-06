@@ -1,4 +1,0 @@
-/home/zzz/work/install/hiwin_libmodbus/lib/libhiwin_libmodbus.so
-/home/zzz/work/install/hiwin_libmodbus/lib/libhiwin_libmodbus_ctype_wrapper.so
-/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/cmake/export_hiwin_libmodbusExport.cmake
-/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/cmake/export_hiwin_libmodbusExport-release.cmake

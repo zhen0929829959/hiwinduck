@@ -1,1 +1,0 @@
-/home/zzz/work/build/hiwin_service_client/ament_cmake_core/hiwin_service_clientConfig-version.cmake

@@ -1,10 +1,10 @@
 {
   "package_name": "hiwin_interfaces",
-  "output_dir": "/home/zzz/work/build/hiwin_interfaces/rosidl_generator_py/hiwin_interfaces",
+  "output_dir": "/home/leo/work/build/hiwin_interfaces/rosidl_generator_py/hiwin_interfaces",
   "template_dir": "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource",
   "idl_tuples": [
-    "/home/zzz/work/build/hiwin_interfaces/rosidl_adapter/hiwin_interfaces:srv/Hiwinmodbus.idl",
-    "/home/zzz/work/build/hiwin_interfaces/rosidl_adapter/hiwin_interfaces:srv/RobotCommand.idl"
+    "/home/leo/work/build/hiwin_interfaces/rosidl_adapter/hiwin_interfaces:srv/Hiwinmodbus.idl",
+    "/home/leo/work/build/hiwin_interfaces/rosidl_adapter/hiwin_interfaces:srv/RobotCommand.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
@@ -84,8 +84,8 @@
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
-    "/home/zzz/work/build/hiwin_interfaces/rosidl_adapter/hiwin_interfaces/srv/Hiwinmodbus.idl",
-    "/home/zzz/work/build/hiwin_interfaces/rosidl_adapter/hiwin_interfaces/srv/RobotCommand.idl",
+    "/home/leo/work/build/hiwin_interfaces/rosidl_adapter/hiwin_interfaces/srv/Hiwinmodbus.idl",
+    "/home/leo/work/build/hiwin_interfaces/rosidl_adapter/hiwin_interfaces/srv/RobotCommand.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl",

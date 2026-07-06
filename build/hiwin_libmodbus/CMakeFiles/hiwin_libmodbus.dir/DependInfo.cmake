@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/zzz/work/src/Hiwin_libmodbus/libmodbus/src/modbus-data.c" "CMakeFiles/hiwin_libmodbus.dir/home/zzz/work/src/Hiwin_libmodbus/libmodbus/src/modbus-data.c.o" "gcc" "CMakeFiles/hiwin_libmodbus.dir/home/zzz/work/src/Hiwin_libmodbus/libmodbus/src/modbus-data.c.o.d"
-  "/home/zzz/work/src/Hiwin_libmodbus/libmodbus/src/modbus-rtu.c" "CMakeFiles/hiwin_libmodbus.dir/home/zzz/work/src/Hiwin_libmodbus/libmodbus/src/modbus-rtu.c.o" "gcc" "CMakeFiles/hiwin_libmodbus.dir/home/zzz/work/src/Hiwin_libmodbus/libmodbus/src/modbus-rtu.c.o.d"
-  "/home/zzz/work/src/Hiwin_libmodbus/libmodbus/src/modbus-tcp.c" "CMakeFiles/hiwin_libmodbus.dir/home/zzz/work/src/Hiwin_libmodbus/libmodbus/src/modbus-tcp.c.o" "gcc" "CMakeFiles/hiwin_libmodbus.dir/home/zzz/work/src/Hiwin_libmodbus/libmodbus/src/modbus-tcp.c.o.d"
-  "/home/zzz/work/src/Hiwin_libmodbus/libmodbus/src/modbus.c" "CMakeFiles/hiwin_libmodbus.dir/home/zzz/work/src/Hiwin_libmodbus/libmodbus/src/modbus.c.o" "gcc" "CMakeFiles/hiwin_libmodbus.dir/home/zzz/work/src/Hiwin_libmodbus/libmodbus/src/modbus.c.o.d"
-  "/home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus.cpp" "CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.o" "gcc" "CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.o.d"
+  "/home/leo/work/src/Hiwin_libmodbus/libmodbus/src/modbus-data.c" "CMakeFiles/hiwin_libmodbus.dir/home/leo/work/src/Hiwin_libmodbus/libmodbus/src/modbus-data.c.o" "gcc" "CMakeFiles/hiwin_libmodbus.dir/home/leo/work/src/Hiwin_libmodbus/libmodbus/src/modbus-data.c.o.d"
+  "/home/leo/work/src/Hiwin_libmodbus/libmodbus/src/modbus-rtu.c" "CMakeFiles/hiwin_libmodbus.dir/home/leo/work/src/Hiwin_libmodbus/libmodbus/src/modbus-rtu.c.o" "gcc" "CMakeFiles/hiwin_libmodbus.dir/home/leo/work/src/Hiwin_libmodbus/libmodbus/src/modbus-rtu.c.o.d"
+  "/home/leo/work/src/Hiwin_libmodbus/libmodbus/src/modbus-tcp.c" "CMakeFiles/hiwin_libmodbus.dir/home/leo/work/src/Hiwin_libmodbus/libmodbus/src/modbus-tcp.c.o" "gcc" "CMakeFiles/hiwin_libmodbus.dir/home/leo/work/src/Hiwin_libmodbus/libmodbus/src/modbus-tcp.c.o.d"
+  "/home/leo/work/src/Hiwin_libmodbus/libmodbus/src/modbus.c" "CMakeFiles/hiwin_libmodbus.dir/home/leo/work/src/Hiwin_libmodbus/libmodbus/src/modbus.c.o" "gcc" "CMakeFiles/hiwin_libmodbus.dir/home/leo/work/src/Hiwin_libmodbus/libmodbus/src/modbus.c.o.d"
+  "/home/leo/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus.cpp" "CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.o" "gcc" "CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.o.d"
   )
 
 # Targets to which this target links.

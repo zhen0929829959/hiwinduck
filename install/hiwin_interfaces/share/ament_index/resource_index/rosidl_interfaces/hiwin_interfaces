@@ -1,1 +1,8 @@
-/home/zzz/work/build/hiwin_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/hiwin_interfaces
+srv/Hiwinmodbus.idl
+srv/Hiwinmodbus.srv
+srv/Hiwinmodbus_Request.msg
+srv/Hiwinmodbus_Response.msg
+srv/RobotCommand.idl
+srv/RobotCommand.srv
+srv/RobotCommand_Request.msg
+srv/RobotCommand_Response.msg

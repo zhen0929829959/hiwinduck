@@ -1,1 +1,6 @@
-/home/zzz/work/build/hiwin_interfaces/ament_cmake_python/hiwin_interfaces/hiwin_interfaces.egg-info/SOURCES.txt
+setup.py
+hiwin_interfaces/__init__.py
+hiwin_interfaces.egg-info/PKG-INFO
+hiwin_interfaces.egg-info/SOURCES.txt
+hiwin_interfaces.egg-info/dependency_links.txt
+hiwin_interfaces.egg-info/top_level.txt

@@ -1,1 +1,2 @@
-/home/zzz/work/build/hiwin_interfaces/rosidl_cmake/srv/Hiwinmodbus_Response.msg
+
+int32 arm_state

@@ -1,1 +1,4 @@
-/home/zzz/work/build/realsense2_camera_msgs/rosidl_cmake/srv/CalibConfigRead_Response.msg
+
+bool success
+string error_message
+string calib_config

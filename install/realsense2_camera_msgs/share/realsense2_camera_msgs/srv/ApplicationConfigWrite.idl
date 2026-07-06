@@ -1,1 +1,17 @@
-/home/zzz/work/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs/srv/ApplicationConfigWrite.idl
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from realsense2_camera_msgs/srv/ApplicationConfigWrite.srv
+// generated code does not contain a copyright notice
+
+
+module realsense2_camera_msgs {
+  module srv {
+    struct ApplicationConfigWrite_Request {
+      string application_config;
+    };
+    struct ApplicationConfigWrite_Response {
+      boolean success;
+
+      string error_message;
+    };
+  };
+};

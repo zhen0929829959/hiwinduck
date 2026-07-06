@@ -1,0 +1,133 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-d3f39c13dc822c75c934.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "hiwin_libmodbus",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_hiwin_libmodbus_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_hiwin_libmodbus_egg-f3be006433bd3357c5ce.json",
+					"name" : "ament_cmake_python_build_hiwin_libmodbus_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_hiwin_libmodbus::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_hiwin_libmodbus-d25bb849f170564161a2.json",
+					"name" : "ament_cmake_python_copy_hiwin_libmodbus",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_libmodbus::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_libmodbus-2ac537f8d4a430dce6b0.json",
+					"name" : "hiwin_libmodbus",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_libmodbus_ctype_wrapper::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_libmodbus_ctype_wrapper-8e185a4a4bd73c9aef98.json",
+					"name" : "hiwin_libmodbus_ctype_wrapper",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_libmodbus_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_libmodbus_node-ed3648a6ad164a1d4630.json",
+					"name" : "hiwin_libmodbus_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_libmodbus_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_libmodbus_uninstall-f052b61f0cdbda13c34c.json",
+					"name" : "hiwin_libmodbus_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwinlibmodbus_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwinlibmodbus_server-70cee99a902418b273da.json",
+					"name" : "hiwinlibmodbus_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwinmodbus_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwinmodbus_server-1379c9e8b04cb8f5ddfe.json",
+					"name" : "hiwinmodbus_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-2e5d57d5773636e7014b.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/leo/work/build/hiwin_libmodbus",
+		"source" : "/home/leo/work/src/Hiwin_libmodbus/hiwin_libmodbus"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

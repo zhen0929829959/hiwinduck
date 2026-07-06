@@ -1,1 +1,1 @@
-/home/zzz/work/build/realsense2_camera_msgs/rosidl_cmake/srv/SafetyPresetRead_Request.msg
+uint8 index

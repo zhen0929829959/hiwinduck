@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwinmodbus_server.cpp" "CMakeFiles/hiwinmodbus_server.dir/src/hiwinmodbus_server.cpp.o" "gcc" "CMakeFiles/hiwinmodbus_server.dir/src/hiwinmodbus_server.cpp.o.d"
+  "/home/leo/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwinmodbus_server.cpp" "CMakeFiles/hiwinmodbus_server.dir/src/hiwinmodbus_server.cpp.o" "gcc" "CMakeFiles/hiwinmodbus_server.dir/src/hiwinmodbus_server.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/zzz/work/build/hiwin_libmodbus/CMakeFiles/hiwin_libmodbus.dir/DependInfo.cmake"
+  "/home/leo/work/build/hiwin_libmodbus/CMakeFiles/hiwin_libmodbus.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

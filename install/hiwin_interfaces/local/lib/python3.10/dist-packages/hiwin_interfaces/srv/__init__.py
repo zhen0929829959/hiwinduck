@@ -1,1 +1,2 @@
-/home/zzz/work/build/hiwin_interfaces/rosidl_generator_py/hiwin_interfaces/srv/__init__.py
+from hiwin_interfaces.srv._hiwinmodbus import Hiwinmodbus  # noqa: F401
+from hiwin_interfaces.srv._robot_command import RobotCommand  # noqa: F401

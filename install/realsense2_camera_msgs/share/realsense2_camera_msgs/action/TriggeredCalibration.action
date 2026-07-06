@@ -1,1 +1,11 @@
-/home/zzz/work/src/realsense-ros/realsense2_camera_msgs/action/TriggeredCalibration.action
+# request
+string json "calib run"
+---
+# result
+bool success
+string error_msg
+string calibration
+float32 health
+---
+# feedback
+float32 progress

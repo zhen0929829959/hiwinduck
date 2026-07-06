@@ -1,1 +1,3 @@
-/home/zzz/work/build/realsense2_camera_msgs/rosidl_cmake/srv/SafetyPresetWrite_Response.msg
+
+bool success
+string error_message

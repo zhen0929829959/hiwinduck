@@ -1,1 +1,4 @@
-/home/zzz/work/build/realsense2_camera_msgs/rosidl_cmake/srv/HardwareMonitorCommandSend_Response.msg
+
+bool success
+uint8[] result
+string error_message

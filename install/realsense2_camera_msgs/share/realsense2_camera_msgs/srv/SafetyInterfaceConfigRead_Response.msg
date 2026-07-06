@@ -1,1 +1,4 @@
-/home/zzz/work/build/realsense2_camera_msgs/rosidl_cmake/srv/SafetyInterfaceConfigRead_Response.msg
+
+bool success
+string error_message
+string safety_interface_config

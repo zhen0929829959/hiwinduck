@@ -1,1 +1,4 @@
-/home/zzz/work/build/realsense2_camera_msgs/rosidl_generator_py/realsense2_camera_msgs/msg/__init__.py
+from realsense2_camera_msgs.msg._extrinsics import Extrinsics  # noqa: F401
+from realsense2_camera_msgs.msg._imu_info import IMUInfo  # noqa: F401
+from realsense2_camera_msgs.msg._metadata import Metadata  # noqa: F401
+from realsense2_camera_msgs.msg._rgbd import RGBD  # noqa: F401
