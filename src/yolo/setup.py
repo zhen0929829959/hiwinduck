@@ -13,8 +13,8 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='leo',
-    maintainer_email='leoyang881988@gmail.com',
+    maintainer='zzz',
+    maintainer_email='zhen0929829959@gmail.com',
     description='TODO: Package description',
     license='TODO: License declaration',
     extras_require={
@@ -24,6 +24,9 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'yolo_pub = yolo.camera_node_pub:main',
+            'yolo_sub = yolo.camera_node_sub:main',
+            'apriltag=yolo.camera_node_apriltag:main',
         ],
     },
 )
