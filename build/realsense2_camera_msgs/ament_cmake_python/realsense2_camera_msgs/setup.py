@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='realsense2_camera_msgs',
-    version='4.57.7',
+    version='4.57.4',
     packages=find_packages(
         include=('realsense2_camera_msgs', 'realsense2_camera_msgs.*')),
 )

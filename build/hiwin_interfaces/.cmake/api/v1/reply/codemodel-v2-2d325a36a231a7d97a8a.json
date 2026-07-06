@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-bb6251c82d4f03ab4114.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "hiwin_interfaces__py",
+					"jsonFile" : "directory-hiwin_interfaces__py-Release-51c222bc12e92aac2330.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/zzz/work/build/hiwin_interfaces/hiwin_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "hiwin_interfaces__rs",
+					"jsonFile" : "directory-hiwin_interfaces__rs-Release-623854f403e5de2d899c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/zzz/work/build/hiwin_interfaces/hiwin_interfaces__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "hiwin_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_hiwin_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_hiwin_interfaces_egg-Release-313d1e8ef34002ed2227.json",
+					"name" : "ament_cmake_python_build_hiwin_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_hiwin_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_hiwin_interfaces-Release-4a5aa45145b22109e805.json",
+					"name" : "ament_cmake_python_copy_hiwin_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_interfaces-Release-7eb3084ac85ae552f727.json",
+					"name" : "hiwin_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_interfaces__cpp-Release-d0512e2799f319d33f7c.json",
+					"name" : "hiwin_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "hiwin_interfaces__py::@f708bebfed7542e6291d",
+					"jsonFile" : "target-hiwin_interfaces__py-Release-2a2b54c44ae0de6fece0.json",
+					"name" : "hiwin_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_interfaces__rosidl_generator_c-Release-550846b81864b2cf3a7d.json",
+					"name" : "hiwin_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_interfaces__rosidl_generator_py-Release-4579462e9dc8f85a44e0.json",
+					"name" : "hiwin_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_interfaces__rosidl_typesupport_c-Release-e9703f508123859615cc.json",
+					"name" : "hiwin_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_interfaces__rosidl_typesupport_c__pyext-Release-e1866dec5cece58a2a2f.json",
+					"name" : "hiwin_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_interfaces__rosidl_typesupport_cpp-Release-badd613d39fdc1ded2e5.json",
+					"name" : "hiwin_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_interfaces__rosidl_typesupport_fastrtps_c-Release-fa8fb107fdacea7f70c7.json",
+					"name" : "hiwin_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_interfaces__rosidl_typesupport_fastrtps_c__pyext-Release-9a8bfdf3446c6f009d53.json",
+					"name" : "hiwin_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_interfaces__rosidl_typesupport_fastrtps_cpp-Release-d101d1a15cae311b481a.json",
+					"name" : "hiwin_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_interfaces__rosidl_typesupport_introspection_c-Release-5d143325b9f690dafa17.json",
+					"name" : "hiwin_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_interfaces__rosidl_typesupport_introspection_c__pyext-Release-4b571f0811113e8890f6.json",
+					"name" : "hiwin_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_interfaces__rosidl_typesupport_introspection_cpp-Release-920fc220cac8196bc37c.json",
+					"name" : "hiwin_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "hiwin_interfaces__rs::@caea6b2bd41d08262c46",
+					"jsonFile" : "target-hiwin_interfaces__rs-Release-56d4c66188c105750a5a.json",
+					"name" : "hiwin_interfaces__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiwin_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiwin_interfaces_uninstall-Release-39e5d811ac625f8b0baa.json",
+					"name" : "hiwin_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-648267e378634ddd5081.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/zzz/work/build/hiwin_interfaces",
+		"source" : "/home/zzz/work/src/Hiwin_libmodbus/hiwin_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

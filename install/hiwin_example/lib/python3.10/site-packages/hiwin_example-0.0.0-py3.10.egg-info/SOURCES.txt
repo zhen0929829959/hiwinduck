@@ -15,15 +15,9 @@ config/cup_cam.yaml
 hiwin_example/YoloDetector.py
 hiwin_example/YoloDetector_class_node.py
 hiwin_example/__init__.py
-hiwin_example/apriltag_sampling_mixin.py
-hiwin_example/camera_flange_matrix2.py
-hiwin_example/center_alignment_mixin.py
 hiwin_example/hand_in_eye_calibration.py
-hiwin_example/hiwin_robot_mixin.py
-hiwin_example/rj45_target_mixin.py
 hiwin_example/strategy_example.py
 hiwin_example/three_points_calibration_example.py
-hiwin_example/tool_pose_mixin.py
 hiwin_example/transformations.py
 launch/bag_three_points_calibration.launch.py
 launch/cup_three_points_calibration.launch.py
