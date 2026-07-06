@@ -56,6 +56,17 @@ ros2 run arduino_bridge force_pub
 執行力量感測節點時，不要開啟 Arduino Serial Monitor，否則序列埠會被占用，ROS 2 節點將無法讀取資料。
 
 ---
+### 常用指令
+```bash
+ros2 run <pkg_name> <entry_point>  //執行節點
+
+ros2 pkg create <pkg_name> --build-type ament_cmake     # 創建新的 ROS 2 C++ 套件
+ros2 pkg create <pkg_name> --build-type ament_python	  # 創建新的 ROS 2 Python 套件
+
+sudo chmod 777 /dev/ttyACM0
+```
+
+---
 
 ### 1. 啟動 Docker 環境
 
