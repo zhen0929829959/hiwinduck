@@ -1,0 +1,20 @@
+[1.536s] Invoking command in '/home/zzz/work/build/yolo': PYTHONPATH=/home/zzz/work/build/yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/yolo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/zzz/work/build/yolo/build --no-deps symlink_data
+[1.728s] running develop
+[1.827s] running egg_info
+[1.827s] writing yolo.egg-info/PKG-INFO
+[1.827s] writing dependency_links to yolo.egg-info/dependency_links.txt
+[1.827s] writing entry points to yolo.egg-info/entry_points.txt
+[1.827s] writing requirements to yolo.egg-info/requires.txt
+[1.827s] writing top-level names to yolo.egg-info/top_level.txt
+[1.828s] reading manifest file 'yolo.egg-info/SOURCES.txt'
+[1.829s] writing manifest file 'yolo.egg-info/SOURCES.txt'
+[1.830s] running build_ext
+[1.830s] Creating /home/zzz/work/install/yolo/lib/python3.10/site-packages/yolo.egg-link (link to .)
+[1.830s] Installing apriltag script to /home/zzz/work/install/yolo/lib/yolo
+[1.831s] Installing yolo_apriltag script to /home/zzz/work/install/yolo/lib/yolo
+[1.831s] Installing yolo_pub script to /home/zzz/work/install/yolo/lib/yolo
+[1.831s] Installing yolo_sub script to /home/zzz/work/install/yolo/lib/yolo
+[1.831s] 
+[1.831s] Installed /home/zzz/work/build/yolo
+[1.831s] running symlink_data
+[1.868s] Invoked command in '/home/zzz/work/build/yolo' returned '0': PYTHONPATH=/home/zzz/work/build/yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/yolo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/zzz/work/build/yolo/build --no-deps symlink_data

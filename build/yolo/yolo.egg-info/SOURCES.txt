@@ -6,6 +6,7 @@ yolo/__init__.py
 yolo/camera_node_apriltag.py
 yolo/camera_node_pub.py
 yolo/camera_node_sub.py
+yolo/camera_node_yolo_apriltag.py
 yolo.egg-info/PKG-INFO
 yolo.egg-info/SOURCES.txt
 yolo.egg-info/dependency_links.txt

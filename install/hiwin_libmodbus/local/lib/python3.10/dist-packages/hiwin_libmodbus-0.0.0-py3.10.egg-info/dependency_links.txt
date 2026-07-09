@@ -1,0 +1,1 @@
+/home/zzz/work/build/hiwin_libmodbus/ament_cmake_python/hiwin_libmodbus/hiwin_libmodbus.egg-info/dependency_links.txt

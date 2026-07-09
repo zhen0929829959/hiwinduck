@@ -1,0 +1,9 @@
+/home/zzz/work/build/hiwin_service_client/CMakeFiles/uninstall.dir
+/home/zzz/work/build/hiwin_service_client/CMakeFiles/hiwin_service_client_uninstall.dir
+/home/zzz/work/build/hiwin_service_client/CMakeFiles/test.dir
+/home/zzz/work/build/hiwin_service_client/CMakeFiles/edit_cache.dir
+/home/zzz/work/build/hiwin_service_client/CMakeFiles/rebuild_cache.dir
+/home/zzz/work/build/hiwin_service_client/CMakeFiles/list_install_components.dir
+/home/zzz/work/build/hiwin_service_client/CMakeFiles/install.dir
+/home/zzz/work/build/hiwin_service_client/CMakeFiles/install/local.dir
+/home/zzz/work/build/hiwin_service_client/CMakeFiles/install/strip.dir

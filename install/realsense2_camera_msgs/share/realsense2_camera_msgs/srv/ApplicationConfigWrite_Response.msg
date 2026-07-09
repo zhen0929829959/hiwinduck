@@ -1,0 +1,1 @@
+/home/zzz/work/build/realsense2_camera_msgs/rosidl_cmake/srv/ApplicationConfigWrite_Response.msg

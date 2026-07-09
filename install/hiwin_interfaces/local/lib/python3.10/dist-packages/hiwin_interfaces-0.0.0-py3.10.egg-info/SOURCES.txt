@@ -1,0 +1,1 @@
+/home/zzz/work/build/hiwin_interfaces/ament_cmake_python/hiwin_interfaces/hiwin_interfaces.egg-info/SOURCES.txt

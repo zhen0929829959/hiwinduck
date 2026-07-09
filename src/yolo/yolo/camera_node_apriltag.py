@@ -34,11 +34,16 @@ class AprilTagSubNode(Node):
             debug=0
         )
 
-        # RealSense color camera intrinsics
-        self.fx = 1362.7784437304256
-        self.fy = 1361.8357978878923
-        self.cx = 962.1412542551096
-        self.cy = 538.5980610605569
+        # # RealSense color camera intrinsics
+        # self.fx = 1362.7784437304256
+        # self.fy = 1361.8357978878923
+        # self.cx = 962.1412542551096
+        # self.cy = 538.5980610605569
+
+        self.fx = 923.5084228515625
+        self.fy = 923.7492065429688
+        self.cx = 641.0979614257812
+        self.cy = 364.9132385253906
 
         # AprilTag black border size, unit: meter
         self.tag_size = 0.0475
@@ -178,10 +183,26 @@ class AprilTagSubNode(Node):
 
     def image_callback(self, msg):
         try:
+            # frame = self.bridge.imgmsg_to_cv2(
+            #     msg,
+            #     desired_encoding='passthrough'
+            # )
             frame = self.bridge.imgmsg_to_cv2(
                 msg,
-                desired_encoding='bgr8'
+                desired_encoding='passthrough'
             )
+
+            if frame is None or frame.size == 0:
+                self.get_logger().warn('Received empty image')
+                return      
+
+            if msg.encoding == 'rgb8':
+                frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
+            elif msg.encoding == 'bgr8':
+                pass
+            else:
+                self.get_logger().warn(f'Unexpected encoding: {msg.encoding}')
+                return
         except Exception as e:
             self.get_logger().error(f'color cv_bridge error: {e}')
             return
@@ -325,8 +346,8 @@ class AprilTagSubNode(Node):
                 2
             )
 
-        cv2.imshow('AprilTag RealSense Detection', frame)
-        cv2.waitKey(1)
+        # cv2.imshow('AprilTag RealSense Detection', frame)
+        # cv2.waitKey(1)
 
 
 def main(args=None):

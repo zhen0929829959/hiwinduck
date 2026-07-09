@@ -35,6 +35,7 @@ class AprilTagSamplingMixin:
 
         self.tag_samples = []
         self.rj45_samples = []
+        self.board_center_samples = []
         self.quat_samples = []
 
         self.center_error_samples = []
@@ -43,6 +44,7 @@ class AprilTagSamplingMixin:
 
         self.latest_tag_position_m = None
         self.latest_tag_rj45_position_m = None
+        self.latest_board_center_position_m = None
         self.latest_tag_quat = None
 
         self.latest_centered = False
@@ -89,6 +91,30 @@ class AprilTagSamplingMixin:
             if len(rj45_position) != 3:
                 raise ValueError(
                     'rj45_position_m must contain 3 values'
+                )
+
+            # ------------------------------------------------
+            # 讀取板中心 Base 座標
+            # ------------------------------------------------
+
+            raw_board_center_position = data.get(
+                'board_center_base_position_m'
+            )
+
+            if raw_board_center_position is None:
+                raise ValueError(
+                    'board_center_base_position_m is missing'
+                )
+
+            board_center_position = [
+                float(value)
+                for value in raw_board_center_position[:3]
+            ]
+
+            if len(board_center_position) != 3:
+                raise ValueError(
+                    'board_center_base_position_m '
+                    'must contain 3 values'
                 )
 
             # ------------------------------------------------
@@ -204,6 +230,10 @@ class AprilTagSamplingMixin:
                 rj45_position
             )
 
+            self.board_center_samples.append(
+                board_center_position
+            )
+
             self.quat_samples.append(
                 quat
             )
@@ -247,6 +277,11 @@ class AprilTagSamplingMixin:
                 dtype=float
             )
 
+            board_center_array = np.array(
+                self.board_center_samples,
+                dtype=float
+            )
+
             center_error_array = np.array(
                 self.center_error_samples,
                 dtype=float
@@ -267,6 +302,13 @@ class AprilTagSamplingMixin:
             self.latest_tag_rj45_position_m = (
                 np.median(
                     rj45_array,
+                    axis=0
+                ).tolist()
+            )
+
+            self.latest_board_center_position_m = (
+                np.median(
+                    board_center_array,
                     axis=0
                 ).tolist()
             )
@@ -333,6 +375,11 @@ class AprilTagSamplingMixin:
             self.get_logger().info(
                 f'RJ45 median: '
                 f'{self.latest_tag_rj45_position_m}'
+            )
+
+            self.get_logger().info(
+                f'Board center median: '
+                f'{self.latest_board_center_position_m}'
             )
 
             self.get_logger().info(

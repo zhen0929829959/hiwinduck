@@ -1,8 +1,8 @@
-# Install script for directory: /home/leo/work/build/hiwin_interfaces/hiwin_interfaces__py
+# Install script for directory: /home/zzz/work/build/hiwin_interfaces/hiwin_interfaces__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/leo/work/install/hiwin_interfaces")
+  set(CMAKE_INSTALL_PREFIX "/home/zzz/work/install/hiwin_interfaces")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

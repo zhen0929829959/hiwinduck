@@ -1,0 +1,25 @@
+[3.259s] Invoking command in '/home/zzz/work/build/hiwin_example': PYTHONPATH=/home/zzz/work/build/hiwin_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/hiwin_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/zzz/work/build/hiwin_example/build --no-deps symlink_data
+[3.736s] running develop
+[3.951s] running egg_info
+[3.951s] writing hiwin_example.egg-info/PKG-INFO
+[3.952s] writing dependency_links to hiwin_example.egg-info/dependency_links.txt
+[3.952s] writing entry points to hiwin_example.egg-info/entry_points.txt
+[3.956s] writing requirements to hiwin_example.egg-info/requires.txt
+[3.956s] writing top-level names to hiwin_example.egg-info/top_level.txt
+[3.959s] reading manifest file 'hiwin_example.egg-info/SOURCES.txt'
+[3.960s] writing manifest file 'hiwin_example.egg-info/SOURCES.txt'
+[3.962s] running build_ext
+[3.963s] Creating /home/zzz/work/install/hiwin_example/lib/python3.10/site-packages/hiwin-example.egg-link (link to .)
+[3.963s] Installing camera_flange_matrix2 script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.964s] Installing check_right script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.966s] Installing hand_in_eye_calibration script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.966s] Installing hiwin_pose_publisher script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.966s] Installing hiwin_tf_tree script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.966s] Installing strategy_example script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.966s] Installing strategy_example_3 script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.966s] Installing strategy_example_mul script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.967s] Installing three_points_calibration_example script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.969s] 
+[3.970s] Installed /home/zzz/work/build/hiwin_example
+[3.971s] running symlink_data
+[4.059s] Invoked command in '/home/zzz/work/build/hiwin_example' returned '0': PYTHONPATH=/home/zzz/work/build/hiwin_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/hiwin_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/zzz/work/build/hiwin_example/build --no-deps symlink_data

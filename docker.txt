@@ -133,6 +133,7 @@ RUN sudo apt update && sudo apt install -y --no-install-recommends \
     libmodbus-dev \
     ros-humble-realsense2-camera \
     ros-humble-realsense2-camera-msgs \
+    ros-humble-diagnostic-updater \
     && sudo apt clean \
     && sudo rm -rf /var/lib/apt/lists/*
 RUN sudo rosdep init || true
@@ -140,8 +141,8 @@ RUN rosdep update
 
 # 安裝 Python 套件
 RUN python3 -m pip install --upgrade pip
-RUN sudo pip3 install \
-    numpy==1.26.4 \
+RUN sudo pip3 install --force-reinstall \
+    numpy==1.24.4 \
     scipy \
     transforms3d \
     pyserial \
@@ -157,7 +158,8 @@ RUN python3 -m pip install \
     ultralytics \
     torch \
     torchvision \
-    torchaudio
+    torchaudio \
+    "numpy==1.24.4"
 
 # 工作目錄
 WORKDIR /home/"${USER}"/work

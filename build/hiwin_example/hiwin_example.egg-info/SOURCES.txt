@@ -5,6 +5,7 @@ config/bag_cali_pose.yaml
 config/bag_cam.yaml
 config/cup_cali_pose.yaml
 config/cup_cam.yaml
+config/hiwin_tf_params.yaml
 hiwin_example/YoloDetector.py
 hiwin_example/YoloDetector_class_node.py
 hiwin_example/__init__.py

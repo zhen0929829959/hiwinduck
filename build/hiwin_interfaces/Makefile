@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/leo/work/src/Hiwin_libmodbus/hiwin_interfaces
+CMAKE_SOURCE_DIR = /home/zzz/work/src/Hiwin_libmodbus/hiwin_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/leo/work/build/hiwin_interfaces
+CMAKE_BINARY_DIR = /home/zzz/work/build/hiwin_interfaces
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leo/work/build/hiwin_interfaces/CMakeFiles /home/leo/work/build/hiwin_interfaces//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zzz/work/build/hiwin_interfaces/CMakeFiles /home/zzz/work/build/hiwin_interfaces//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leo/work/build/hiwin_interfaces/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zzz/work/build/hiwin_interfaces/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

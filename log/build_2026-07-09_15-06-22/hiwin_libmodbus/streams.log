@@ -1,0 +1,58 @@
+[0.120s] Invoking command in '/home/zzz/work/build/hiwin_libmodbus': AMENT_PREFIX_PATH=/home/zzz/work/install/hiwin_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zzz/work/install/hiwin_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/hiwin_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zzz/work/install/hiwin_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/zzz/work/build/hiwin_libmodbus -- -j12 -l12
+[0.309s] [ 42%] Built target hiwin_libmodbus
+[0.412s] [ 42%] Built target ament_cmake_python_symlink_hiwin_libmodbus
+[0.479s] [ 57%] Built target hiwinlibmodbus_server
+[0.794s] running egg_info
+[0.795s] writing hiwin_libmodbus.egg-info/PKG-INFO
+[0.795s] writing dependency_links to hiwin_libmodbus.egg-info/dependency_links.txt
+[0.796s] writing top-level names to hiwin_libmodbus.egg-info/top_level.txt
+[0.798s] reading manifest file 'hiwin_libmodbus.egg-info/SOURCES.txt'
+[0.803s] writing manifest file 'hiwin_libmodbus.egg-info/SOURCES.txt'
+[0.855s] [ 57%] Built target ament_cmake_python_build_hiwin_libmodbus_egg
+[0.941s] [ 71%] Built target hiwinmodbus_server
+[0.986s] [ 85%] Built target hiwin_libmodbus_node
+[1.067s] [100%] Built target hiwin_libmodbus_ctype_wrapper
+[1.127s] Invoked command in '/home/zzz/work/build/hiwin_libmodbus' returned '0': AMENT_PREFIX_PATH=/home/zzz/work/install/hiwin_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zzz/work/install/hiwin_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/hiwin_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zzz/work/install/hiwin_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/zzz/work/build/hiwin_libmodbus -- -j12 -l12
+[1.128s] Invoking command in '/home/zzz/work/build/hiwin_libmodbus': AMENT_PREFIX_PATH=/home/zzz/work/install/hiwin_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zzz/work/install/hiwin_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/hiwin_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zzz/work/install/hiwin_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/zzz/work/build/hiwin_libmodbus
+[1.133s] -- Install configuration: ""
+[1.136s] -- Execute custom install script
+[1.138s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/include/hiwin_libmodbus/hiwin_libmodbus.hpp
+[1.139s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/include/hiwin_libmodbus/visibility_control.h
+[1.139s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/lib/hiwin_libmodbus/hiwinmodbus_server
+[1.140s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/lib/hiwin_libmodbus/hiwinlibmodbus_server
+[1.143s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/lib/hiwin_libmodbus/hiwin_libmodbus_node
+[1.143s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/environment/pythonpath.sh
+[1.144s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/environment/pythonpath.dsv
+[1.145s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/local/lib/python3.10/dist-packages/hiwin_libmodbus-0.0.0-py3.10.egg-info/PKG-INFO
+[1.145s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/local/lib/python3.10/dist-packages/hiwin_libmodbus-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.146s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/local/lib/python3.10/dist-packages/hiwin_libmodbus-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.150s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/local/lib/python3.10/dist-packages/hiwin_libmodbus-0.0.0-py3.10.egg-info/top_level.txt
+[1.150s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/local/lib/python3.10/dist-packages/hiwin_libmodbus/__init__.py
+[1.150s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/local/lib/python3.10/dist-packages/hiwin_libmodbus/hiwin_libmodbus.py
+[1.150s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/lib/hiwin_libmodbus/Hiwin_API_test.py
+[1.151s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/environment/library_path.sh
+[1.151s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/environment/library_path.dsv
+[1.151s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/ament_index/resource_index/package_run_dependencies/hiwin_libmodbus
+[1.151s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/ament_index/resource_index/parent_prefix_path/hiwin_libmodbus
+[1.151s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/environment/ament_prefix_path.sh
+[1.151s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/environment/ament_prefix_path.dsv
+[1.151s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/environment/path.sh
+[1.151s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/environment/path.dsv
+[1.151s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/local_setup.bash
+[1.151s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/local_setup.sh
+[1.151s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/local_setup.zsh
+[1.151s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/local_setup.dsv
+[1.151s] -- Symlinking: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/package.dsv
+[1.160s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/ament_index/resource_index/packages/hiwin_libmodbus
+[1.160s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.160s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/cmake/ament_cmake_export_libraries-extras.cmake
+[1.160s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/cmake/ament_cmake_export_targets-extras.cmake
+[1.160s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/cmake/hiwin_libmodbusConfig.cmake
+[1.161s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/cmake/hiwin_libmodbusConfig-version.cmake
+[1.161s] -- Up-to-date symlink: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/package.xml
+[1.161s] -- Up-to-date: /home/zzz/work/install/hiwin_libmodbus/lib/libhiwin_libmodbus.so
+[1.161s] -- Up-to-date: /home/zzz/work/install/hiwin_libmodbus/lib/libhiwin_libmodbus_ctype_wrapper.so
+[1.193s] Listing '/home/zzz/work/install/hiwin_libmodbus/local/lib/python3.10/dist-packages/hiwin_libmodbus'...
+[1.206s] -- Up-to-date: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/cmake/export_hiwin_libmodbusExport.cmake
+[1.206s] -- Up-to-date: /home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/cmake/export_hiwin_libmodbusExport-noconfig.cmake
+[1.231s] Invoked command in '/home/zzz/work/build/hiwin_libmodbus' returned '0': AMENT_PREFIX_PATH=/home/zzz/work/install/hiwin_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zzz/work/install/hiwin_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/hiwin_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zzz/work/install/hiwin_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/zzz/work/build/hiwin_libmodbus

@@ -35,7 +35,22 @@ class AprilTagBaseNode(Node):
             '/apriltag/pose_base',
             10
         )
+
+        self.yolo_base_pub = self.create_publisher(
+            String,
+            '/yolo/detections_base',
+            10
+        )
+
         self.latest_center_error = None
+        self.latest_yolo_detection = None
+
+        self.create_subscription(
+            String,
+            '/yolo/detections',
+            self.yolo_detections_callback,
+            10
+        )
 
         self.create_subscription(
             String,
@@ -45,6 +60,77 @@ class AprilTagBaseNode(Node):
         )
 
         self.get_logger().info('AprilTag matrix node started')
+    
+    def publish_yolo_detections_base(self, detections):
+        T_base_tool7 = self.get_T_base_tool7()
+
+        if T_base_tool7 is None:
+            self.get_logger().warn(
+                'No Tool7 pose yet, cannot transform YOLO detections'
+            )
+            return False
+
+        T_base_camera = (
+            T_base_tool7
+            @ self.get_T_tool7_camera_optical()
+        )
+
+        output_detections = []
+
+        for det in detections:
+            # 只轉 RJ45，不轉 RJ45_card
+            if det.get('class_name') != 'RJ45':
+                continue
+
+            camera_xyz = det.get('camera_xyz')
+
+            if (
+                camera_xyz is None
+                or len(camera_xyz) != 3
+                or any(v is None for v in camera_xyz)
+            ):
+                continue
+
+            x_mm, y_mm, z_mm = camera_xyz
+
+            P_camera = np.array([
+                float(x_mm) / 1000.0,
+                float(y_mm) / 1000.0,
+                float(z_mm) / 1000.0,
+                1.0
+            ])
+
+            P_base = T_base_camera @ P_camera
+
+            output_detections.append({
+                'class_name': det.get('class_name'),
+                'stable_id': det.get('stable_id'),
+                'track_key': det.get('track_key'),
+                'confidence': det.get('confidence'),
+                'class_id': det.get('class_id'),
+                'angle': det.get('angle'),
+                'pixel_center': det.get('pixel_center'),
+                'center_source': det.get('center_source'),
+                'camera_xyz_mm': camera_xyz,
+                'detection_base_position_m': P_base[:3].tolist()
+            })
+
+        if not output_detections:
+            return False
+
+        output = String()
+        output.data = json.dumps({
+            'frame': 'base',
+            'detections': output_detections
+        })
+
+        self.yolo_base_pub.publish(output)
+
+        self.get_logger().info(
+            f'Published {len(output_detections)} YOLO detections in base frame'
+        )
+
+        return True
 
     def tool_pose_callback(self, msg):
         try:
@@ -69,6 +155,29 @@ class AprilTagBaseNode(Node):
         except Exception as exc:
             self.get_logger().error(
                 f'Failed to parse center error: {exc}'
+            )
+
+    def yolo_detections_callback(self, msg):
+        try:
+            data = json.loads(msg.data)
+
+            if isinstance(data, dict):
+                detections = data.get('detections', [])
+            elif isinstance(data, list):
+                detections = data
+            else:
+                self.get_logger().warn(
+                    'YOLO detections format is not list or dict'
+                )
+                return
+
+            self.publish_yolo_detections_base(
+                detections
+            )
+
+        except Exception as exc:
+            self.get_logger().error(
+                f'Failed to parse YOLO detections: {exc}'
             )
 
     def get_T_base_tool7(self):
@@ -126,6 +235,102 @@ class AprilTagBaseNode(Node):
             @ self.get_T_flange_camera_optical()
         )
 
+    # def calculate_camera_aligned_tool7_pose(
+    #     self,
+    #     T_base_tag
+    # ):
+    #     """
+    #     計算相機正對 AprilTag 時，需要的 Base → Tool7。
+
+    #     目標軸向：
+    #         Camera X =  Tag X
+    #         Camera Y = -Tag Y
+    #         Camera Z = -Tag Z
+
+    #     也就是 Camera 相對 Tag X 軸旋轉 180 度。
+    #     """
+
+    #     if T_base_tag.shape != (4, 4):
+    #         raise ValueError(
+    #             'T_base_tag must be a 4x4 matrix'
+    #         )
+
+    #     # ------------------------------------------------
+    #     # Tag → 期望 Camera
+    #     # ------------------------------------------------
+
+    #     T_tag_camera_desired = np.eye(4)
+
+    #     T_tag_camera_desired[:3, :3] = (
+    #         R.from_euler(
+    #             'x',
+    #             180.0,
+    #             degrees=True
+    #         ).as_matrix()
+    #     )
+
+    #     # ------------------------------------------------
+    #     # Base → 期望 Camera
+    #     # ------------------------------------------------
+
+    #     T_base_camera_target = (
+    #         T_base_tag
+    #         @ T_tag_camera_desired
+    #     )
+
+    #     # ------------------------------------------------
+    #     # 已知 Tool7 → Camera optical
+    #     # ------------------------------------------------
+
+    #     T_tool7_camera = (
+    #         self.get_T_tool7_camera_optical()
+    #     )
+
+    #     # ------------------------------------------------
+    #     # 反推出 Base → Tool7
+    #     #
+    #     # Base→Camera
+    #     # = Base→Tool7 × Tool7→Camera
+    #     #
+    #     # 所以：
+    #     # Base→Tool7
+    #     # = Base→Camera × Camera→Tool7
+    #     # ------------------------------------------------
+
+    #     T_base_tool7_target = (
+    #         T_base_camera_target
+    #         @ np.linalg.inv(
+    #             T_tool7_camera
+    #         )
+    #     )
+
+    #     tool_position_m = (
+    #         T_base_tool7_target[:3, 3]
+    #     )
+
+    #     tool_rotation = R.from_matrix(
+    #         T_base_tool7_target[:3, :3]
+    #     )
+
+    #     tool_quat = tool_rotation.as_quat()
+
+    #     tool_euler_deg = tool_rotation.as_euler(
+    #         'xyz',
+    #         degrees=True
+    #     )
+
+    #     return {
+    #         'position_m': (
+    #             tool_position_m.tolist()
+    #         ),
+    #         'orientation_quat_xyzw': (
+    #             tool_quat.tolist()
+    #         ),
+    #         'euler_deg': (
+    #             tool_euler_deg.tolist()
+    #         )
+    #     }
+
     def pose_msg_to_matrix(self, msg):
         quat = np.array([
             msg.pose.orientation.x,
@@ -150,6 +355,90 @@ class AprilTagBaseNode(Node):
         ]
 
         return T
+    
+    def camera_xyz_mm_to_base(self, camera_xyz_mm):
+        T_base_tool7 = self.get_T_base_tool7()
+
+        if T_base_tool7 is None:
+            self.get_logger().warn(
+                'No Tool7 pose yet, cannot transform YOLO target'
+            )
+            return None
+
+        T_base_camera = (
+            T_base_tool7
+            @ self.get_T_tool7_camera_optical()
+        )
+
+        x_mm, y_mm, z_mm = camera_xyz_mm
+
+        P_camera = np.array([
+            float(x_mm) / 1000.0,
+            float(y_mm) / 1000.0,
+            float(z_mm) / 1000.0,
+            1.0
+        ])
+
+        P_base = T_base_camera @ P_camera
+
+        return P_base[:3]
+        
+    def get_latest_yolo_detection_base(self):
+        if self.latest_yolo_detection is None:
+            self.get_logger().warn(
+                'No valid YOLO detection yet'
+            )
+            return None
+
+        camera_xyz_mm = self.latest_yolo_detection.get(
+            'camera_xyz'
+        )
+
+        if (
+            camera_xyz_mm is None
+            or len(camera_xyz_mm) != 3
+            or any(v is None for v in camera_xyz_mm)
+        ):
+            self.get_logger().warn(
+                'Latest YOLO detection has invalid camera_xyz'
+            )
+            return None
+
+        detection_base = self.camera_xyz_mm_to_base(
+            camera_xyz_mm
+        )
+
+        if detection_base is None:
+            return None
+
+        return {
+            'position_m': detection_base.tolist(),
+            'class_name': self.latest_yolo_detection.get(
+                'class_name'
+            ),
+            'stable_id': self.latest_yolo_detection.get(
+                'stable_id'
+            ),
+            'track_key': self.latest_yolo_detection.get(
+                'track_key'
+            ),
+            'confidence': self.latest_yolo_detection.get(
+                'confidence'
+            ),
+            'class_id': self.latest_yolo_detection.get(
+                'class_id'
+            ),
+            'angle': self.latest_yolo_detection.get(
+                'angle'
+            ),
+            'pixel_center': self.latest_yolo_detection.get(
+                'pixel_center'
+            ),
+            'center_source': self.latest_yolo_detection.get(
+                'center_source'
+            ),
+            'camera_xyz_mm': camera_xyz_mm
+        }
 
     def apriltag_callback(self, msg):
         if msg.header.frame_id != 'camera_color_optical_frame':
@@ -226,14 +515,39 @@ class AprilTagBaseNode(Node):
 
         P_base_rj45 = T_base_tag @ P_tag_rj45
 
+        P_tag_board_center = np.array([
+            0.027976,
+            -0.129544,
+            0.0,
+            1.0
+        ])
+
+        P_base_board_center = T_base_tag @ P_tag_board_center
+
         tag_position = T_base_tag[:3, 3]
         tag_quat = R.from_matrix(
             T_base_tag[:3, :3]
         ).as_quat()
 
+        # data = {
+        #     'frame': 'base',
+        #     'position_m': tag_position.tolist(),
+        #     'rj45_position_m': P_base_rj45[:3].tolist(),
+        #     'orientation_quat_xyzw': tag_quat.tolist(),
+
+        #     'centered': centered,
+        #     'center_error_px': center_error_px,
+        #     'center_threshold_px': center_threshold_px,
+
+        #     # 手臂在 Base 座標需要修正的 XYZ
+        #     'center_correction_base_m': correction_base_m
+        # }
+
+
         data = {
             'frame': 'base',
             'position_m': tag_position.tolist(),
+            'board_center_base_position_m': P_base_board_center[:3].tolist(),
             'rj45_position_m': P_base_rj45[:3].tolist(),
             'orientation_quat_xyzw': tag_quat.tolist(),
 
@@ -252,7 +566,11 @@ class AprilTagBaseNode(Node):
         self.get_logger().info(
             f'tag base position: 'f'({tag_position[0]:.6f}, 'f'{tag_position[1]:.6f}, 'f'{tag_position[2]:.6f}) m'
             f'RJ45 base position: 'f'({P_base_rj45[0]:.6f}, 'f'{P_base_rj45[1]:.6f}, 'f'{P_base_rj45[2]:.6f}) m'
+            f'board center base position: 'f'({P_base_board_center[0]:.6f}, 'f'{P_base_board_center[1]:.6f}, 'f'{P_base_board_center[2]:.6f}) m'
         )
+
+
+
 
 
 def main(args=None):
