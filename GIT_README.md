@@ -16,22 +16,11 @@ ubuntu22.04_ros2
 
 ```bash
 git clone --recurse-submodules https://github.com/zhen0929829959/hiwinduck.git
-git submodule update --init --recursive
 
 #進docker
 sudo apt update 
 rosdep update
 rosdep install --from-paths src --ignore-src -y
-
-
-cd ~/work/src/Hiwin_libmodbus
-git submodule sync
-git submodule update --init --recursive
-
-
-cd ~/hiwinduck/src/realsense-ros
-git checkout 4.57.7
-cd ~/hiwinduck
 
 ```
 ---
@@ -39,29 +28,20 @@ cd ~/hiwinduck
 ### 常用指令重點整理
 開始工作前
 ```bash
-cd ~/work
 git pull --rebase origin main
-git submodule update --init --recursive
 ```
 
 修改完成後
-
-1.提交Hiwin_libmodbus內的修改
 ```bash
-cd ~/work/src/Hiwin_libmodbus
 git add .
 git commit -m "修改內容"
 git pull --rebase origin main
 git push origin main
 ```
-2.提交hiwinduck 更新submodule版本
-```bash
-cd ~/work
-git add src/Hiwin_libmodbus
-git commit -m "Update Hiwin_libmodbus submodule"
-git pull --rebase origin main
-git push origin main
-```
+---
+# 以下都不用看
+# 以下都不用看
+# 以下都不用看
 
 ---
 #### 注記：
