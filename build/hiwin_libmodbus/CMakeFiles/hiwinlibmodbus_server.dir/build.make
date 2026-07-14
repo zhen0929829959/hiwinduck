@@ -73,15 +73,15 @@ CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.o: CMakeFiles
 CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.o: /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwinlibmodbus_server.cpp
 CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.o: CMakeFiles/hiwinlibmodbus_server.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zzz/work/build/hiwin_libmodbus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.o -MF CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.o.d -o CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.o -c /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwinlibmodbus_server.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.o -MF CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.o.d -o CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.o -c /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwinlibmodbus_server.cpp
 
 CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwinlibmodbus_server.cpp > CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwinlibmodbus_server.cpp > CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.i
 
 CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwinlibmodbus_server.cpp -o CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwinlibmodbus_server.cpp -o CMakeFiles/hiwinlibmodbus_server.dir/src/hiwinlibmodbus_server.cpp.s
 
 # Object files for target hiwinlibmodbus_server
 hiwinlibmodbus_server_OBJECTS = \

@@ -1,0 +1,43 @@
+[0.014s] Invoking command in '/home/zzz/work/build/realsense2_rviz_plugin': AMENT_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/zzz/work/src/realsense-ros/realsense2_rgbd_plugin -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/zzz/work/install/realsense2_rviz_plugin
+[0.079s] -- The C compiler identification is GNU 11.4.0
+[0.147s] -- The CXX compiler identification is GNU 11.4.0
+[0.156s] -- Detecting C compiler ABI info
+[0.240s] -- Detecting C compiler ABI info - done
+[0.247s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.247s] -- Detecting C compile features
+[0.247s] -- Detecting C compile features - done
+[0.251s] -- Detecting CXX compiler ABI info
+[0.348s] -- Detecting CXX compiler ABI info - done
+[0.354s] -- Check for working CXX compiler: /usr/bin/g++ - skipped
+[0.355s] -- Detecting CXX compile features
+[0.355s] -- Detecting CXX compile features - done
+[0.359s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.777s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.853s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.884s] -- RVIZ_RGBD_PLUGIN is DISABLED: Plugin will not be built.
+[0.941s] -- Configuring done
+[0.944s] -- Generating done
+[0.945s] -- Build files have been written to: /home/zzz/work/build/realsense2_rviz_plugin
+[0.949s] Invoked command in '/home/zzz/work/build/realsense2_rviz_plugin' returned '0': AMENT_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/zzz/work/src/realsense-ros/realsense2_rgbd_plugin -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/zzz/work/install/realsense2_rviz_plugin
+[0.951s] Invoking command in '/home/zzz/work/build/realsense2_rviz_plugin': AMENT_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/zzz/work/build/realsense2_rviz_plugin -- -j12 -l12
+[0.992s] Invoked command in '/home/zzz/work/build/realsense2_rviz_plugin' returned '0': AMENT_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/zzz/work/build/realsense2_rviz_plugin -- -j12 -l12
+[0.994s] Invoking command in '/home/zzz/work/build/realsense2_rviz_plugin': AMENT_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/zzz/work/build/realsense2_rviz_plugin
+[1.003s] -- Install configuration: ""
+[1.003s] -- Execute custom install script
+[1.003s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/config/rviz_rgbd_plugin_settings.yaml
+[1.016s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/ament_index/resource_index/package_run_dependencies/realsense2_rviz_plugin
+[1.026s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/ament_index/resource_index/parent_prefix_path/realsense2_rviz_plugin
+[1.038s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/environment/ament_prefix_path.sh
+[1.047s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/environment/ament_prefix_path.dsv
+[1.056s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/environment/path.sh
+[1.067s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/environment/path.dsv
+[1.077s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/local_setup.bash
+[1.087s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/local_setup.sh
+[1.098s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/local_setup.zsh
+[1.109s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/local_setup.dsv
+[1.121s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/package.dsv
+[1.131s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/ament_index/resource_index/packages/realsense2_rviz_plugin
+[1.142s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/cmake/realsense2_rviz_pluginConfig.cmake
+[1.152s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/cmake/realsense2_rviz_pluginConfig-version.cmake
+[1.163s] -- Symlinking: /home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/package.xml
+[1.177s] Invoked command in '/home/zzz/work/build/realsense2_rviz_plugin' returned '0': AMENT_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/zzz/work/build/realsense2_rviz_plugin

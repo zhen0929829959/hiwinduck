@@ -73,15 +73,15 @@ CMakeFiles/gtest_template.dir/test/gtest_template.cpp.o: CMakeFiles/gtest_templa
 CMakeFiles/gtest_template.dir/test/gtest_template.cpp.o: /home/zzz/work/src/realsense-ros/realsense2_camera/test/gtest_template.cpp
 CMakeFiles/gtest_template.dir/test/gtest_template.cpp.o: CMakeFiles/gtest_template.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zzz/work/build/realsense2_camera/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gtest_template.dir/test/gtest_template.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gtest_template.dir/test/gtest_template.cpp.o -MF CMakeFiles/gtest_template.dir/test/gtest_template.cpp.o.d -o CMakeFiles/gtest_template.dir/test/gtest_template.cpp.o -c /home/zzz/work/src/realsense-ros/realsense2_camera/test/gtest_template.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gtest_template.dir/test/gtest_template.cpp.o -MF CMakeFiles/gtest_template.dir/test/gtest_template.cpp.o.d -o CMakeFiles/gtest_template.dir/test/gtest_template.cpp.o -c /home/zzz/work/src/realsense-ros/realsense2_camera/test/gtest_template.cpp
 
 CMakeFiles/gtest_template.dir/test/gtest_template.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtest_template.dir/test/gtest_template.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zzz/work/src/realsense-ros/realsense2_camera/test/gtest_template.cpp > CMakeFiles/gtest_template.dir/test/gtest_template.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zzz/work/src/realsense-ros/realsense2_camera/test/gtest_template.cpp > CMakeFiles/gtest_template.dir/test/gtest_template.cpp.i
 
 CMakeFiles/gtest_template.dir/test/gtest_template.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtest_template.dir/test/gtest_template.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zzz/work/src/realsense-ros/realsense2_camera/test/gtest_template.cpp -o CMakeFiles/gtest_template.dir/test/gtest_template.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zzz/work/src/realsense-ros/realsense2_camera/test/gtest_template.cpp -o CMakeFiles/gtest_template.dir/test/gtest_template.cpp.s
 
 # Object files for target gtest_template
 gtest_template_OBJECTS = \

@@ -1,0 +1,33 @@
+running egg_info
+creating ../../build/arduino_bridge/arduino_bridge.egg-info
+writing ../../build/arduino_bridge/arduino_bridge.egg-info/PKG-INFO
+writing dependency_links to ../../build/arduino_bridge/arduino_bridge.egg-info/dependency_links.txt
+writing entry points to ../../build/arduino_bridge/arduino_bridge.egg-info/entry_points.txt
+writing requirements to ../../build/arduino_bridge/arduino_bridge.egg-info/requires.txt
+writing top-level names to ../../build/arduino_bridge/arduino_bridge.egg-info/top_level.txt
+writing manifest file '../../build/arduino_bridge/arduino_bridge.egg-info/SOURCES.txt'
+reading manifest file '../../build/arduino_bridge/arduino_bridge.egg-info/SOURCES.txt'
+writing manifest file '../../build/arduino_bridge/arduino_bridge.egg-info/SOURCES.txt'
+running build
+running build_py
+warning: build_py: byte-compiling is disabled, skipping.
+
+creating /home/zzz/work/build/arduino_bridge/build/lib/arduino_bridge
+copying arduino_bridge/force.py -> /home/zzz/work/build/arduino_bridge/build/lib/arduino_bridge
+copying arduino_bridge/__init__.py -> /home/zzz/work/build/arduino_bridge/build/lib/arduino_bridge
+running install
+running install_lib
+creating /home/zzz/work/install/arduino_bridge/lib/python3.10/site-packages/arduino_bridge
+copying /home/zzz/work/build/arduino_bridge/build/lib/arduino_bridge/force.py -> /home/zzz/work/install/arduino_bridge/lib/python3.10/site-packages/arduino_bridge
+warning: install_lib: byte-compiling is disabled, skipping.
+
+copying /home/zzz/work/build/arduino_bridge/build/lib/arduino_bridge/__init__.py -> /home/zzz/work/install/arduino_bridge/lib/python3.10/site-packages/arduino_bridge
+running install_data
+creating /home/zzz/work/install/arduino_bridge/share/ament_index/resource_index/packages
+copying resource/arduino_bridge -> /home/zzz/work/install/arduino_bridge/share/ament_index/resource_index/packages
+copying package.xml -> /home/zzz/work/install/arduino_bridge/share/arduino_bridge
+running install_egg_info
+Copying ../../build/arduino_bridge/arduino_bridge.egg-info to /home/zzz/work/install/arduino_bridge/lib/python3.10/site-packages/arduino_bridge-0.0.0-py3.10.egg-info
+running install_scripts
+Installing force_pub script to /home/zzz/work/install/arduino_bridge/lib/arduino_bridge
+writing list of installed files to '/home/zzz/work/build/arduino_bridge/install.log'

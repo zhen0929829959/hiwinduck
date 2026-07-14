@@ -56,7 +56,7 @@ CMAKE_BUILD_TYPE:STRING=
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -259,7 +259,7 @@ SITE:STRING=zzz-ASUS-TUF-Gaming-A16-FA607NUG-FA607NUG
 _lib:FILEPATH=/opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_fastrtps_cpp.so
 
 //Path to a file.
-_numpy_h:FILEPATH=/usr/include/python3.10/numpy/numpyconfig.h
+_numpy_h:FILEPATH=_numpy_h-NOTFOUND
 
 //The directory containing a CMake configuration file for action_msgs.
 action_msgs_DIR:PATH=/opt/ros/humble/share/action_msgs/cmake

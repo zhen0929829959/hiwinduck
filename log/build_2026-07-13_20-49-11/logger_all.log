@@ -1,0 +1,1119 @@
+[0.112s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.113s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x79129d4a6980>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x79129d6701c0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x79129d6701c0>>, mixin_verb=('build',))
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.154s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/zzz/work'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus) by extensions ['ignore', 'ignore_ament_install']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus) by extension 'ignore_ament_install'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus) by extensions ['colcon_pkg']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus) by extension 'colcon_pkg'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus) by extensions ['colcon_meta']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus) by extension 'colcon_meta'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus) by extensions ['ros']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus) by extension 'ros'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus) by extensions ['cmake', 'python']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus) by extension 'cmake'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus) by extension 'python'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus) by extensions ['python_setup_py']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus) by extension 'python_setup_py'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_example) by extensions ['ignore', 'ignore_ament_install']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_example) by extension 'ignore'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_example) by extension 'ignore_ament_install'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_example) by extensions ['colcon_pkg']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_example) by extension 'colcon_pkg'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_example) by extensions ['colcon_meta']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_example) by extension 'colcon_meta'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_example) by extensions ['ros']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_example) by extension 'ros'
+[0.171s] DEBUG:colcon.colcon_core.package_identification:Package 'src/Hiwin_libmodbus/hiwin_example' with type 'ros.ament_python' and name 'hiwin_example'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_interfaces) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_interfaces) by extension 'ignore_ament_install'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_interfaces) by extensions ['colcon_pkg']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_interfaces) by extension 'colcon_pkg'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_interfaces) by extensions ['colcon_meta']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_interfaces) by extension 'colcon_meta'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_interfaces) by extensions ['ros']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_interfaces) by extension 'ros'
+[0.173s] DEBUG:colcon.colcon_core.package_identification:Package 'src/Hiwin_libmodbus/hiwin_interfaces' with type 'ros.ament_cmake' and name 'hiwin_interfaces'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_libmodbus) by extensions ['ignore', 'ignore_ament_install']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_libmodbus) by extension 'ignore'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_libmodbus) by extension 'ignore_ament_install'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_libmodbus) by extensions ['colcon_pkg']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_libmodbus) by extension 'colcon_pkg'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_libmodbus) by extensions ['colcon_meta']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_libmodbus) by extension 'colcon_meta'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_libmodbus) by extensions ['ros']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_libmodbus) by extension 'ros'
+[0.174s] DEBUG:colcon.colcon_core.package_identification:Package 'src/Hiwin_libmodbus/hiwin_libmodbus' with type 'ros.ament_cmake' and name 'hiwin_libmodbus'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_service_client) by extensions ['ignore', 'ignore_ament_install']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_service_client) by extension 'ignore'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_service_client) by extension 'ignore_ament_install'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_service_client) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_service_client) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_service_client) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_service_client) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_service_client) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/hiwin_service_client) by extension 'ros'
+[0.177s] DEBUG:colcon.colcon_core.package_identification:Package 'src/Hiwin_libmodbus/hiwin_service_client' with type 'ros.ament_cmake' and name 'hiwin_service_client'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus) by extension 'ignore_ament_install'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus) by extensions ['colcon_pkg']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus) by extension 'colcon_pkg'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus) by extensions ['colcon_meta']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus) by extension 'colcon_meta'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus) by extensions ['ros']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus) by extension 'ros'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus) by extensions ['cmake', 'python']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus) by extension 'cmake'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus) by extension 'python'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus) by extensions ['python_setup_py']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus) by extension 'python_setup_py'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/autom4te.cache) by extensions ['ignore', 'ignore_ament_install']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/autom4te.cache) by extension 'ignore'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/autom4te.cache) by extension 'ignore_ament_install'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/autom4te.cache) by extensions ['colcon_pkg']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/autom4te.cache) by extension 'colcon_pkg'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/autom4te.cache) by extensions ['colcon_meta']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/autom4te.cache) by extension 'colcon_meta'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/autom4te.cache) by extensions ['ros']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/autom4te.cache) by extension 'ros'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/autom4te.cache) by extensions ['cmake', 'python']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/autom4te.cache) by extension 'cmake'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/autom4te.cache) by extension 'python'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/autom4te.cache) by extensions ['python_setup_py']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/autom4te.cache) by extension 'python_setup_py'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/build-aux) by extensions ['ignore', 'ignore_ament_install']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/build-aux) by extension 'ignore'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/build-aux) by extension 'ignore_ament_install'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/build-aux) by extensions ['colcon_pkg']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/build-aux) by extension 'colcon_pkg'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/build-aux) by extensions ['colcon_meta']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/build-aux) by extension 'colcon_meta'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/build-aux) by extensions ['ros']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/build-aux) by extension 'ros'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/build-aux) by extensions ['cmake', 'python']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/build-aux) by extension 'cmake'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/build-aux) by extension 'python'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/build-aux) by extensions ['python_setup_py']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/build-aux) by extension 'python_setup_py'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs) by extension 'ignore'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs) by extension 'ignore_ament_install'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs) by extensions ['colcon_pkg']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs) by extension 'colcon_pkg'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs) by extensions ['colcon_meta']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs) by extension 'colcon_meta'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs) by extensions ['ros']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs) by extension 'ros'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs) by extensions ['cmake', 'python']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs) by extension 'cmake'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs) by extension 'python'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs) by extensions ['python_setup_py']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs) by extension 'python_setup_py'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs/assets) by extensions ['ignore', 'ignore_ament_install']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs/assets) by extension 'ignore'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs/assets) by extension 'ignore_ament_install'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs/assets) by extensions ['colcon_pkg']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs/assets) by extension 'colcon_pkg'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs/assets) by extensions ['colcon_meta']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs/assets) by extension 'colcon_meta'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs/assets) by extensions ['ros']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs/assets) by extension 'ros'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs/assets) by extensions ['cmake', 'python']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs/assets) by extension 'cmake'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs/assets) by extension 'python'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs/assets) by extensions ['python_setup_py']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/docs/assets) by extension 'python_setup_py'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/m4) by extensions ['ignore', 'ignore_ament_install']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/m4) by extension 'ignore'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/m4) by extension 'ignore_ament_install'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/m4) by extensions ['colcon_pkg']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/m4) by extension 'colcon_pkg'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/m4) by extensions ['colcon_meta']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/m4) by extension 'colcon_meta'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/m4) by extensions ['ros']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/m4) by extension 'ros'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/m4) by extensions ['cmake', 'python']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/m4) by extension 'cmake'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/m4) by extension 'python'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/m4) by extensions ['python_setup_py']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/m4) by extension 'python_setup_py'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src) by extensions ['ignore', 'ignore_ament_install']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src) by extension 'ignore'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src) by extension 'ignore_ament_install'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src) by extensions ['colcon_pkg']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src) by extension 'colcon_pkg'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src) by extensions ['colcon_meta']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src) by extension 'colcon_meta'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src) by extensions ['ros']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src) by extension 'ros'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src) by extensions ['cmake', 'python']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src) by extension 'cmake'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src) by extension 'python'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src) by extensions ['python_setup_py']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src) by extension 'python_setup_py'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src/win32) by extensions ['ignore', 'ignore_ament_install']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src/win32) by extension 'ignore'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src/win32) by extension 'ignore_ament_install'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src/win32) by extensions ['colcon_pkg']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src/win32) by extension 'colcon_pkg'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src/win32) by extensions ['colcon_meta']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src/win32) by extension 'colcon_meta'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src/win32) by extensions ['ros']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src/win32) by extension 'ros'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src/win32) by extensions ['cmake', 'python']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src/win32) by extension 'cmake'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src/win32) by extension 'python'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src/win32) by extensions ['python_setup_py']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/src/win32) by extension 'python_setup_py'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/tests) by extensions ['ignore', 'ignore_ament_install']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/tests) by extension 'ignore'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/tests) by extension 'ignore_ament_install'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/tests) by extensions ['colcon_pkg']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/tests) by extension 'colcon_pkg'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/tests) by extensions ['colcon_meta']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/tests) by extension 'colcon_meta'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/tests) by extensions ['ros']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/tests) by extension 'ros'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/tests) by extensions ['cmake', 'python']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/tests) by extension 'cmake'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/tests) by extension 'python'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/tests) by extensions ['python_setup_py']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/Hiwin_libmodbus/libmodbus/tests) by extension 'python_setup_py'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_bridge) by extension 'ignore'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_bridge) by extension 'ignore_ament_install'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_bridge) by extensions ['colcon_pkg']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_bridge) by extension 'colcon_pkg'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_bridge) by extensions ['colcon_meta']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_bridge) by extension 'colcon_meta'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_bridge) by extensions ['ros']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_bridge) by extension 'ros'
+[0.189s] DEBUG:colcon.colcon_core.package_identification:Package 'src/arduino_bridge' with type 'ros.ament_python' and name 'arduino_bridge'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extensions ['ignore', 'ignore_ament_install']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'ignore'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'ignore_ament_install'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extensions ['colcon_pkg']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'colcon_pkg'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extensions ['colcon_meta']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'colcon_meta'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extensions ['ros']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'ros'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extensions ['cmake', 'python']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'cmake'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'python'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extensions ['python_setup_py']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'python_setup_py'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/build) by extensions ['ignore', 'ignore_ament_install']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/build) by extension 'ignore'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/build) ignored
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/install) by extensions ['ignore', 'ignore_ament_install']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/install) by extension 'ignore'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/install) ignored
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/log) by extensions ['ignore', 'ignore_ament_install']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/log) by extension 'ignore'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/log) ignored
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extension 'ignore'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extension 'ignore_ament_install'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extensions ['colcon_pkg']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extension 'colcon_pkg'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extensions ['colcon_meta']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extension 'colcon_meta'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extensions ['ros']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extension 'ros'
+[0.200s] DEBUG:colcon.colcon_core.package_identification:Package 'src/realsense-ros/realsense2_camera' with type 'ros.ament_cmake' and name 'realsense2_camera'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extension 'ignore'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extension 'ignore_ament_install'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extensions ['colcon_pkg']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extension 'colcon_pkg'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extensions ['colcon_meta']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extension 'colcon_meta'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extensions ['ros']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extension 'ros'
+[0.203s] DEBUG:colcon.colcon_core.package_identification:Package 'src/realsense-ros/realsense2_camera_msgs' with type 'ros.ament_cmake' and name 'realsense2_camera_msgs'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extension 'ignore_ament_install'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extensions ['colcon_pkg']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extension 'colcon_pkg'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extensions ['colcon_meta']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extension 'colcon_meta'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extension 'ros'
+[0.207s] DEBUG:colcon.colcon_core.package_identification:Package 'src/realsense-ros/realsense2_description' with type 'ros.ament_cmake' and name 'realsense2_description'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extension 'ignore_ament_install'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extensions ['colcon_pkg']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extension 'colcon_pkg'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extensions ['colcon_meta']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extension 'colcon_meta'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extensions ['ros']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extension 'ros'
+[0.208s] DEBUG:colcon.colcon_core.package_identification:Package 'src/realsense-ros/realsense2_rgbd_plugin' with type 'ros.ament_cmake' and name 'realsense2_rviz_plugin'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extension 'ignore_ament_install'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extensions ['colcon_pkg']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extension 'colcon_pkg'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extensions ['colcon_meta']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extension 'colcon_meta'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extensions ['ros']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extension 'ros'
+[0.210s] DEBUG:colcon.colcon_core.package_identification:Package 'src/realsense-ros/realsense2_ros_mqtt_bridge' with type 'ros.ament_python' and name 'realsense2_ros_mqtt_bridge'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extensions ['ignore', 'ignore_ament_install']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'ignore'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'ignore_ament_install'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extensions ['colcon_pkg']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'colcon_pkg'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extensions ['colcon_meta']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'colcon_meta'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extensions ['ros']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'ros'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extensions ['cmake', 'python']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'cmake'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'python'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extensions ['python_setup_py']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'python_setup_py'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'colcon_meta'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extensions ['ros']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'ros'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extensions ['cmake', 'python']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'cmake'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'python'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extensions ['python_setup_py']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'python_setup_py'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo) by extension 'colcon_meta'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo) by extensions ['ros']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo) by extension 'ros'
+[0.212s] DEBUG:colcon.colcon_core.package_identification:Package 'src/yolo' with type 'ros.ament_python' and name 'yolo'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'ignore'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'ignore_ament_install'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extensions ['colcon_pkg']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'colcon_pkg'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extensions ['colcon_meta']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'colcon_meta'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extensions ['ros']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'ros'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extensions ['cmake', 'python']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'cmake'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'python'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extensions ['python_setup_py']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2) by extension 'python_setup_py'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extensions ['ignore', 'ignore_ament_install']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'ignore'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'ignore_ament_install'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extensions ['colcon_pkg']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'colcon_pkg'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extensions ['colcon_meta']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'colcon_meta'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extensions ['ros']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'ros'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extensions ['cmake', 'python']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'cmake'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'python'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extensions ['python_setup_py']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose) by extension 'python_setup_py'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extensions ['ignore', 'ignore_ament_install']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'ignore'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'ignore_ament_install'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extensions ['colcon_pkg']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'colcon_pkg'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extensions ['colcon_meta']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'colcon_meta'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extensions ['ros']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'ros'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extensions ['cmake', 'python']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'cmake'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'python'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extensions ['python_setup_py']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config) by extension 'python_setup_py'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extensions ['ignore', 'ignore_ament_install']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'ignore'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'ignore_ament_install'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extensions ['colcon_pkg']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'colcon_pkg'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extensions ['colcon_meta']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'colcon_meta'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extensions ['ros']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'ros'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extensions ['cmake', 'python']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'cmake'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'python'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extensions ['python_setup_py']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/pip) by extension 'python_setup_py'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extensions ['ignore', 'ignore_ament_install']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'ignore'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'ignore_ament_install'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extensions ['colcon_pkg']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'colcon_pkg'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extensions ['colcon_meta']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'colcon_meta'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extensions ['ros']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'ros'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extensions ['cmake', 'python']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'cmake'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'python'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extensions ['python_setup_py']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell) by extension 'python_setup_py'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extensions ['ignore', 'ignore_ament_install']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'ignore'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'ignore_ament_install'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extensions ['colcon_pkg']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'colcon_pkg'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extensions ['colcon_meta']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'colcon_meta'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extensions ['ros']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'ros'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extensions ['cmake', 'python']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'cmake'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'python'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extensions ['python_setup_py']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/terminator) by extension 'python_setup_py'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extensions ['ignore', 'ignore_ament_install']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'ignore'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'ignore_ament_install'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extensions ['colcon_pkg']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'colcon_pkg'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extensions ['colcon_meta']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'colcon_meta'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extensions ['ros']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'ros'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extensions ['cmake', 'python']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'cmake'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'python'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extensions ['python_setup_py']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/compose/config/shell/tmux) by extension 'python_setup_py'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extensions ['ignore', 'ignore_ament_install']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'ignore'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'ignore_ament_install'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extensions ['colcon_pkg']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'colcon_pkg'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extensions ['colcon_meta']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'colcon_meta'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extensions ['ros']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'ros'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extensions ['cmake', 'python']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'cmake'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'python'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extensions ['python_setup_py']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config) by extension 'python_setup_py'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extensions ['ignore', 'ignore_ament_install']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'ignore'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'ignore_ament_install'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extensions ['colcon_pkg']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'colcon_pkg'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extensions ['colcon_meta']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'colcon_meta'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extensions ['ros']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'ros'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extensions ['cmake', 'python']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'cmake'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'python'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extensions ['python_setup_py']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/pip) by extension 'python_setup_py'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extensions ['ignore', 'ignore_ament_install']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'ignore'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'ignore_ament_install'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extensions ['colcon_pkg']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'colcon_pkg'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extensions ['colcon_meta']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'colcon_meta'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extensions ['ros']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'ros'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extensions ['cmake', 'python']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'cmake'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'python'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extensions ['python_setup_py']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell) by extension 'python_setup_py'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extensions ['ignore', 'ignore_ament_install']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'ignore'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'ignore_ament_install'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extensions ['colcon_pkg']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'colcon_pkg'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extensions ['colcon_meta']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'colcon_meta'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extensions ['ros']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'ros'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extensions ['cmake', 'python']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'cmake'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'python'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extensions ['python_setup_py']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/terminator) by extension 'python_setup_py'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extensions ['ignore', 'ignore_ament_install']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'ignore'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'ignore_ament_install'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extensions ['colcon_pkg']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'colcon_pkg'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extensions ['colcon_meta']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'colcon_meta'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extensions ['ros']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'ros'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extensions ['cmake', 'python']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'cmake'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'python'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extensions ['python_setup_py']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(ubuntu22.04_ros2/config/shell/tmux) by extension 'python_setup_py'
+[0.217s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.217s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.217s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.217s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.217s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.235s] Level 5:colcon.colcon_core.verb:set package 'arduino_bridge' build argument 'cmake_args' from command line to 'None'
+[0.235s] Level 5:colcon.colcon_core.verb:set package 'arduino_bridge' build argument 'cmake_target' from command line to 'None'
+[0.235s] Level 5:colcon.colcon_core.verb:set package 'arduino_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.235s] Level 5:colcon.colcon_core.verb:set package 'arduino_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'arduino_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'arduino_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'arduino_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'arduino_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'arduino_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.236s] DEBUG:colcon.colcon_core.verb:Building package 'arduino_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zzz/work/build/arduino_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zzz/work/install/arduino_bridge', 'merge_install': False, 'path': '/home/zzz/work/src/arduino_bridge', 'symlink_install': True, 'test_result_base': None}
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_example' build argument 'cmake_args' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_example' build argument 'cmake_target' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_example' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_example' build argument 'cmake_clean_cache' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_example' build argument 'cmake_clean_first' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_example' build argument 'cmake_force_configure' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_example' build argument 'ament_cmake_args' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_example' build argument 'catkin_cmake_args' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_example' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.236s] DEBUG:colcon.colcon_core.verb:Building package 'hiwin_example' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zzz/work/build/hiwin_example', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zzz/work/install/hiwin_example', 'merge_install': False, 'path': '/home/zzz/work/src/Hiwin_libmodbus/hiwin_example', 'symlink_install': True, 'test_result_base': None}
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hiwin_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.236s] DEBUG:colcon.colcon_core.verb:Building package 'hiwin_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zzz/work/build/hiwin_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zzz/work/install/hiwin_interfaces', 'merge_install': False, 'path': '/home/zzz/work/src/Hiwin_libmodbus/hiwin_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'cmake_args' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'cmake_target' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.236s] DEBUG:colcon.colcon_core.verb:Building package 'realsense2_camera_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zzz/work/build/realsense2_camera_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zzz/work/install/realsense2_camera_msgs', 'merge_install': False, 'path': '/home/zzz/work/src/realsense-ros/realsense2_camera_msgs', 'symlink_install': True, 'test_result_base': None}
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_ros_mqtt_bridge' build argument 'cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_ros_mqtt_bridge' build argument 'cmake_target' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_ros_mqtt_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_ros_mqtt_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_ros_mqtt_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_ros_mqtt_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_ros_mqtt_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_ros_mqtt_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_ros_mqtt_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.237s] DEBUG:colcon.colcon_core.verb:Building package 'realsense2_ros_mqtt_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zzz/work/build/realsense2_ros_mqtt_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zzz/work/install/realsense2_ros_mqtt_bridge', 'merge_install': False, 'path': '/home/zzz/work/src/realsense-ros/realsense2_ros_mqtt_bridge', 'symlink_install': True, 'test_result_base': None}
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'yolo' build argument 'cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'yolo' build argument 'cmake_target' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'yolo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'yolo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'yolo' build argument 'cmake_clean_first' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'yolo' build argument 'cmake_force_configure' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'yolo' build argument 'ament_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'yolo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'yolo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.237s] DEBUG:colcon.colcon_core.verb:Building package 'yolo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zzz/work/build/yolo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zzz/work/install/yolo', 'merge_install': False, 'path': '/home/zzz/work/src/yolo', 'symlink_install': True, 'test_result_base': None}
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'hiwin_libmodbus' build argument 'cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'hiwin_libmodbus' build argument 'cmake_target' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'hiwin_libmodbus' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'hiwin_libmodbus' build argument 'cmake_clean_cache' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'hiwin_libmodbus' build argument 'cmake_clean_first' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'hiwin_libmodbus' build argument 'cmake_force_configure' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'hiwin_libmodbus' build argument 'ament_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'hiwin_libmodbus' build argument 'catkin_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'hiwin_libmodbus' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.237s] DEBUG:colcon.colcon_core.verb:Building package 'hiwin_libmodbus' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zzz/work/build/hiwin_libmodbus', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zzz/work/install/hiwin_libmodbus', 'merge_install': False, 'path': '/home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus', 'symlink_install': True, 'test_result_base': None}
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'cmake_target' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'cmake_clean_first' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'cmake_force_configure' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'ament_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.238s] DEBUG:colcon.colcon_core.verb:Building package 'realsense2_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zzz/work/build/realsense2_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zzz/work/install/realsense2_camera', 'merge_install': False, 'path': '/home/zzz/work/src/realsense-ros/realsense2_camera', 'symlink_install': True, 'test_result_base': None}
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'cmake_target' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.238s] DEBUG:colcon.colcon_core.verb:Building package 'realsense2_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zzz/work/build/realsense2_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zzz/work/install/realsense2_description', 'merge_install': False, 'path': '/home/zzz/work/src/realsense-ros/realsense2_description', 'symlink_install': True, 'test_result_base': None}
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_rviz_plugin' build argument 'cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_rviz_plugin' build argument 'cmake_target' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_rviz_plugin' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_rviz_plugin' build argument 'cmake_clean_cache' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_rviz_plugin' build argument 'cmake_clean_first' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_rviz_plugin' build argument 'cmake_force_configure' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_rviz_plugin' build argument 'ament_cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_rviz_plugin' build argument 'catkin_cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'realsense2_rviz_plugin' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.238s] DEBUG:colcon.colcon_core.verb:Building package 'realsense2_rviz_plugin' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zzz/work/build/realsense2_rviz_plugin', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zzz/work/install/realsense2_rviz_plugin', 'merge_install': False, 'path': '/home/zzz/work/src/realsense-ros/realsense2_rgbd_plugin', 'symlink_install': True, 'test_result_base': None}
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'hiwin_service_client' build argument 'cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'hiwin_service_client' build argument 'cmake_target' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'hiwin_service_client' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'hiwin_service_client' build argument 'cmake_clean_cache' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'hiwin_service_client' build argument 'cmake_clean_first' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'hiwin_service_client' build argument 'cmake_force_configure' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'hiwin_service_client' build argument 'ament_cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'hiwin_service_client' build argument 'catkin_cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'hiwin_service_client' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.238s] DEBUG:colcon.colcon_core.verb:Building package 'hiwin_service_client' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zzz/work/build/hiwin_service_client', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zzz/work/install/hiwin_service_client', 'merge_install': False, 'path': '/home/zzz/work/src/Hiwin_libmodbus/hiwin_service_client', 'symlink_install': True, 'test_result_base': None}
+[0.238s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.240s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.240s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zzz/work/src/realsense-ros/realsense2_camera_msgs' with build type 'ament_cmake'
+[0.240s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zzz/work/src/realsense-ros/realsense2_camera_msgs'
+[0.242s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.243s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.243s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.248s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zzz/work/src/Hiwin_libmodbus/hiwin_interfaces' with build type 'ament_cmake'
+[0.249s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zzz/work/src/Hiwin_libmodbus/hiwin_interfaces'
+[0.249s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.249s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.255s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/zzz/work/src/arduino_bridge' with build type 'ament_python'
+[0.255s] Level 1:colcon.colcon_core.shell:create_environment_hook('arduino_bridge', 'ament_prefix_path')
+[0.256s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/arduino_bridge/share/arduino_bridge/hook/ament_prefix_path.ps1'
+[0.257s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/arduino_bridge/share/arduino_bridge/hook/ament_prefix_path.dsv'
+[0.258s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/arduino_bridge/share/arduino_bridge/hook/ament_prefix_path.sh'
+[0.259s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.260s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.266s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/zzz/work/src/Hiwin_libmodbus/hiwin_example' with build type 'ament_python'
+[0.266s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiwin_example', 'ament_prefix_path')
+[0.267s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_example/share/hiwin_example/hook/ament_prefix_path.ps1'
+[0.267s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/hiwin_example/share/hiwin_example/hook/ament_prefix_path.dsv'
+[0.267s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_example/share/hiwin_example/hook/ament_prefix_path.sh'
+[0.268s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.268s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.272s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/zzz/work/src/realsense-ros/realsense2_ros_mqtt_bridge' with build type 'ament_python'
+[0.273s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_ros_mqtt_bridge', 'ament_prefix_path')
+[0.273s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_ros_mqtt_bridge/share/realsense2_ros_mqtt_bridge/hook/ament_prefix_path.ps1'
+[0.273s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/realsense2_ros_mqtt_bridge/share/realsense2_ros_mqtt_bridge/hook/ament_prefix_path.dsv'
+[0.274s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_ros_mqtt_bridge/share/realsense2_ros_mqtt_bridge/hook/ament_prefix_path.sh'
+[0.274s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.274s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.278s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/zzz/work/src/yolo' with build type 'ament_python'
+[0.278s] Level 1:colcon.colcon_core.shell:create_environment_hook('yolo', 'ament_prefix_path')
+[0.278s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/yolo/share/yolo/hook/ament_prefix_path.ps1'
+[0.279s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/yolo/share/yolo/hook/ament_prefix_path.dsv'
+[0.279s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/yolo/share/yolo/hook/ament_prefix_path.sh'
+[0.280s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.280s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.296s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/build/realsense2_camera_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble /usr/bin/cmake --build /home/zzz/work/build/realsense2_camera_msgs -- -j12 -l12
+[0.301s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/build/hiwin_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble /usr/bin/cmake --build /home/zzz/work/build/hiwin_interfaces -- -j12 -l12
+[0.674s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/zzz/work/src/arduino_bridge'
+[0.675s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.675s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.161s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/zzz/work/src/Hiwin_libmodbus/hiwin_example'
+[1.161s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.161s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.466s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/zzz/work/src/realsense-ros/realsense2_ros_mqtt_bridge'
+[1.467s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.467s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.804s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/zzz/work/src/yolo'
+[1.804s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.804s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.838s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/build/hiwin_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble /usr/bin/cmake --build /home/zzz/work/build/hiwin_interfaces -- -j12 -l12
+[1.868s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/build/hiwin_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble /usr/bin/cmake --install /home/zzz/work/build/hiwin_interfaces
+[1.875s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/build/realsense2_camera_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble /usr/bin/cmake --build /home/zzz/work/build/realsense2_camera_msgs -- -j12 -l12
+[1.878s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/build/realsense2_camera_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble /usr/bin/cmake --install /home/zzz/work/build/realsense2_camera_msgs
+[2.046s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hiwin_interfaces)
+[2.047s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/build/hiwin_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble /usr/bin/cmake --install /home/zzz/work/build/hiwin_interfaces
+[2.050s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_interfaces' for CMake module files
+[2.051s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_interfaces' for CMake config files
+[2.052s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiwin_interfaces', 'cmake_prefix_path')
+[2.052s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/hook/cmake_prefix_path.ps1'
+[2.053s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/hook/cmake_prefix_path.dsv'
+[2.053s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/hook/cmake_prefix_path.sh'
+[2.054s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_interfaces/lib'
+[2.055s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiwin_interfaces', 'ld_library_path_lib')
+[2.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/hook/ld_library_path_lib.ps1'
+[2.056s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/hook/ld_library_path_lib.dsv'
+[2.057s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/hook/ld_library_path_lib.sh'
+[2.058s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_interfaces/bin'
+[2.058s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_interfaces/lib/pkgconfig/hiwin_interfaces.pc'
+[2.058s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_interfaces/lib/python3.10/site-packages'
+[2.059s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_interfaces/bin'
+[2.059s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/package.ps1'
+[2.061s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/package.dsv'
+[2.062s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/package.sh'
+[2.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/package.bash'
+[2.064s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/package.zsh'
+[2.065s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/hiwin_interfaces/share/colcon-core/packages/hiwin_interfaces)
+[2.070s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hiwin_interfaces)
+[2.071s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_interfaces' for CMake module files
+[2.073s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_interfaces' for CMake config files
+[2.075s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiwin_interfaces', 'cmake_prefix_path')
+[2.076s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/hook/cmake_prefix_path.ps1'
+[2.079s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/hook/cmake_prefix_path.dsv'
+[2.080s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/hook/cmake_prefix_path.sh'
+[2.082s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_interfaces/lib'
+[2.083s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiwin_interfaces', 'ld_library_path_lib')
+[2.084s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/hook/ld_library_path_lib.ps1'
+[2.085s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/hook/ld_library_path_lib.dsv'
+[2.086s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/hook/ld_library_path_lib.sh'
+[2.088s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_interfaces/bin'
+[2.088s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_interfaces/lib/pkgconfig/hiwin_interfaces.pc'
+[2.089s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_interfaces/lib/python3.10/site-packages'
+[2.089s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_interfaces/bin'
+[2.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/package.ps1'
+[2.091s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/package.dsv'
+[2.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/package.sh'
+[2.093s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/package.bash'
+[2.093s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_interfaces/share/hiwin_interfaces/package.zsh'
+[2.094s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/hiwin_interfaces/share/colcon-core/packages/hiwin_interfaces)
+[2.095s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus' with build type 'ament_cmake'
+[2.095s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus'
+[2.096s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.096s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.114s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/build/hiwin_libmodbus': CMAKE_PREFIX_PATH=/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/hiwin_interfaces/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/zzz/work/build/hiwin_libmodbus -- -j12 -l12
+[2.188s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2_camera_msgs)
+[2.189s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera_msgs' for CMake module files
+[2.189s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/build/realsense2_camera_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble /usr/bin/cmake --install /home/zzz/work/build/realsense2_camera_msgs
+[2.190s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera_msgs' for CMake config files
+[2.191s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera_msgs', 'cmake_prefix_path')
+[2.192s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/cmake_prefix_path.ps1'
+[2.192s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/cmake_prefix_path.dsv'
+[2.193s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/cmake_prefix_path.sh'
+[2.193s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera_msgs/lib'
+[2.194s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera_msgs', 'ld_library_path_lib')
+[2.194s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/ld_library_path_lib.ps1'
+[2.194s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/ld_library_path_lib.dsv'
+[2.195s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/ld_library_path_lib.sh'
+[2.196s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera_msgs/bin'
+[2.196s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera_msgs/lib/pkgconfig/realsense2_camera_msgs.pc'
+[2.196s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera_msgs/lib/python3.10/site-packages'
+[2.197s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera_msgs/bin'
+[2.197s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.ps1'
+[2.198s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.dsv'
+[2.199s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.sh'
+[2.199s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.bash'
+[2.200s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.zsh'
+[2.200s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/realsense2_camera_msgs/share/colcon-core/packages/realsense2_camera_msgs)
+[2.201s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2_camera_msgs)
+[2.201s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera_msgs' for CMake module files
+[2.202s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera_msgs' for CMake config files
+[2.204s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera_msgs', 'cmake_prefix_path')
+[2.205s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/cmake_prefix_path.ps1'
+[2.206s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/cmake_prefix_path.dsv'
+[2.206s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/cmake_prefix_path.sh'
+[2.207s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera_msgs/lib'
+[2.208s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera_msgs', 'ld_library_path_lib')
+[2.208s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/ld_library_path_lib.ps1'
+[2.209s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/ld_library_path_lib.dsv'
+[2.210s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/ld_library_path_lib.sh'
+[2.211s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera_msgs/bin'
+[2.211s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera_msgs/lib/pkgconfig/realsense2_camera_msgs.pc'
+[2.212s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera_msgs/lib/python3.10/site-packages'
+[2.212s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera_msgs/bin'
+[2.213s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.ps1'
+[2.215s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.dsv'
+[2.218s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.sh'
+[2.218s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.bash'
+[2.219s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.zsh'
+[2.219s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/realsense2_camera_msgs/share/colcon-core/packages/realsense2_camera_msgs)
+[2.221s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zzz/work/src/realsense-ros/realsense2_camera' with build type 'ament_cmake'
+[2.222s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zzz/work/src/realsense-ros/realsense2_camera'
+[2.222s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.222s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.230s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zzz/work/src/realsense-ros/realsense2_description' with build type 'ament_cmake'
+[2.230s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zzz/work/src/realsense-ros/realsense2_description'
+[2.231s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.231s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.246s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zzz/work/src/realsense-ros/realsense2_rgbd_plugin' with build type 'ament_cmake'
+[2.246s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zzz/work/src/realsense-ros/realsense2_rgbd_plugin'
+[2.246s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.246s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.285s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/build/realsense2_description': CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/zzz/work/build/realsense2_description -- -j12 -l12
+[2.293s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/build/realsense2_camera': CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/zzz/work/build/realsense2_camera -- -j12 -l12
+[2.301s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/build/realsense2_rviz_plugin': CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/zzz/work/build/realsense2_rviz_plugin -- -j12 -l12
+[2.428s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/build/realsense2_description' returned '0': CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/zzz/work/build/realsense2_description -- -j12 -l12
+[2.441s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/build/realsense2_description': CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/zzz/work/build/realsense2_description
+[2.490s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/build/realsense2_rviz_plugin' returned '0': CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/zzz/work/build/realsense2_rviz_plugin -- -j12 -l12
+[2.491s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/build/realsense2_rviz_plugin': CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/zzz/work/build/realsense2_rviz_plugin
+[2.532s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2_description)
+[2.538s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_description' for CMake module files
+[2.544s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/build/realsense2_description' returned '0': CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/zzz/work/build/realsense2_description
+[2.557s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_description' for CMake config files
+[2.562s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_description', 'cmake_prefix_path')
+[2.563s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_description/share/realsense2_description/hook/cmake_prefix_path.ps1'
+[2.566s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/realsense2_description/share/realsense2_description/hook/cmake_prefix_path.dsv'
+[2.572s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_description/share/realsense2_description/hook/cmake_prefix_path.sh'
+[2.573s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_description/bin'
+[2.573s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_description/lib/pkgconfig/realsense2_description.pc'
+[2.574s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_description/lib/python3.10/site-packages'
+[2.574s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_description/bin'
+[2.575s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_description/share/realsense2_description/package.ps1'
+[2.581s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/realsense2_description/share/realsense2_description/package.dsv'
+[2.587s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_description/share/realsense2_description/package.sh'
+[2.588s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_description/share/realsense2_description/package.bash'
+[2.589s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_description/share/realsense2_description/package.zsh'
+[2.590s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/realsense2_description/share/colcon-core/packages/realsense2_description)
+[2.594s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2_description)
+[2.595s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_description' for CMake module files
+[2.595s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_description' for CMake config files
+[2.597s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_description', 'cmake_prefix_path')
+[2.597s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_description/share/realsense2_description/hook/cmake_prefix_path.ps1'
+[2.598s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/realsense2_description/share/realsense2_description/hook/cmake_prefix_path.dsv'
+[2.599s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_description/share/realsense2_description/hook/cmake_prefix_path.sh'
+[2.600s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_description/bin'
+[2.600s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_description/lib/pkgconfig/realsense2_description.pc'
+[2.601s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_description/lib/python3.10/site-packages'
+[2.601s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_description/bin'
+[2.602s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_description/share/realsense2_description/package.ps1'
+[2.603s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/realsense2_description/share/realsense2_description/package.dsv'
+[2.604s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_description/share/realsense2_description/package.sh'
+[2.605s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_description/share/realsense2_description/package.bash'
+[2.610s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_description/share/realsense2_description/package.zsh'
+[2.611s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/realsense2_description/share/colcon-core/packages/realsense2_description)
+[2.613s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2_rviz_plugin)
+[2.613s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/build/realsense2_rviz_plugin' returned '0': CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/zzz/work/build/realsense2_rviz_plugin
+[2.614s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_rviz_plugin' for CMake module files
+[2.615s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_rviz_plugin' for CMake config files
+[2.618s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_rviz_plugin', 'cmake_prefix_path')
+[2.618s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/hook/cmake_prefix_path.ps1'
+[2.619s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/hook/cmake_prefix_path.dsv'
+[2.620s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/hook/cmake_prefix_path.sh'
+[2.621s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_rviz_plugin/bin'
+[2.621s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_rviz_plugin/lib/pkgconfig/realsense2_rviz_plugin.pc'
+[2.624s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_rviz_plugin/lib/python3.10/site-packages'
+[2.625s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_rviz_plugin/bin'
+[2.626s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/package.ps1'
+[2.627s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/package.dsv'
+[2.630s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/package.sh'
+[2.632s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/package.bash'
+[2.633s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/package.zsh'
+[2.636s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/realsense2_rviz_plugin/share/colcon-core/packages/realsense2_rviz_plugin)
+[2.639s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2_rviz_plugin)
+[2.642s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_rviz_plugin' for CMake module files
+[2.643s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_rviz_plugin' for CMake config files
+[2.643s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_rviz_plugin', 'cmake_prefix_path')
+[2.643s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/hook/cmake_prefix_path.ps1'
+[2.645s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/hook/cmake_prefix_path.dsv'
+[2.646s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/hook/cmake_prefix_path.sh'
+[2.648s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_rviz_plugin/bin'
+[2.648s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_rviz_plugin/lib/pkgconfig/realsense2_rviz_plugin.pc'
+[2.648s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_rviz_plugin/lib/python3.10/site-packages'
+[2.649s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_rviz_plugin/bin'
+[2.649s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/package.ps1'
+[2.650s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/package.dsv'
+[2.651s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/package.sh'
+[2.652s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/package.bash'
+[2.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_rviz_plugin/share/realsense2_rviz_plugin/package.zsh'
+[2.654s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/realsense2_rviz_plugin/share/colcon-core/packages/realsense2_rviz_plugin)
+[2.655s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: init_catalog, develop, install_egg_info, rotate, extract_messages, install_lib, bdist, bdist_dumb, dist_info, alias, clean, bdist_wheel, install_scripts, easy_install, bdist_egg, saveopts, build_scripts, bdist_rpm, update_catalog, setopt, compile_catalog, build, build_ext, build_py, install_data, editable_wheel, install, check, egg_info, install_headers, build_clib, sdist, symlink_data
+[2.760s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: init_catalog, develop, install_egg_info, rotate, extract_messages, install_lib, bdist, bdist_dumb, dist_info, alias, clean, bdist_wheel, install_scripts, easy_install, bdist_egg, saveopts, build_scripts, bdist_rpm, update_catalog, setopt, compile_catalog, build, build_ext, build_py, install_data, editable_wheel, install, check, egg_info, install_headers, build_clib, sdist, symlink_data
+[2.782s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: init_catalog, develop, install_egg_info, rotate, extract_messages, install_lib, bdist, bdist_dumb, dist_info, alias, clean, bdist_wheel, install_scripts, easy_install, bdist_egg, saveopts, build_scripts, bdist_rpm, update_catalog, setopt, compile_catalog, build, build_ext, build_py, install_data, editable_wheel, install, check, egg_info, install_headers, build_clib, sdist, symlink_data
+[2.899s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/build/realsense2_camera' returned '0': CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/zzz/work/build/realsense2_camera -- -j12 -l12
+[2.899s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/build/realsense2_camera': CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/zzz/work/build/realsense2_camera
+[2.901s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: init_catalog, develop, install_egg_info, rotate, extract_messages, install_lib, bdist, bdist_dumb, dist_info, alias, clean, bdist_wheel, install_scripts, easy_install, bdist_egg, saveopts, build_scripts, bdist_rpm, update_catalog, setopt, compile_catalog, build, build_ext, build_py, install_data, editable_wheel, install, check, egg_info, install_headers, build_clib, sdist, symlink_data
+[2.972s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2_camera)
+[2.973s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera' for CMake module files
+[2.974s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/build/realsense2_camera' returned '0': CMAKE_PREFIX_PATH=/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/zzz/work/build/realsense2_camera
+[2.975s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera' for CMake config files
+[2.976s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera', 'cmake_prefix_path')
+[2.978s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/hook/cmake_prefix_path.ps1'
+[2.981s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/hook/cmake_prefix_path.dsv'
+[2.982s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/hook/cmake_prefix_path.sh'
+[2.983s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera/lib'
+[2.983s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera', 'ld_library_path_lib')
+[2.983s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/hook/ld_library_path_lib.ps1'
+[2.984s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/hook/ld_library_path_lib.dsv'
+[2.985s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/hook/ld_library_path_lib.sh'
+[2.986s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera/bin'
+[2.986s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera/lib/pkgconfig/realsense2_camera.pc'
+[2.987s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera/lib/python3.10/site-packages'
+[2.987s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera/bin'
+[2.988s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/package.ps1'
+[2.989s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/package.dsv'
+[2.990s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/package.sh'
+[2.991s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/package.bash'
+[2.991s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/package.zsh'
+[2.992s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/realsense2_camera/share/colcon-core/packages/realsense2_camera)
+[2.994s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2_camera)
+[2.995s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera' for CMake module files
+[2.996s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera' for CMake config files
+[3.001s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera', 'cmake_prefix_path')
+[3.002s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/hook/cmake_prefix_path.ps1'
+[3.003s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/hook/cmake_prefix_path.dsv'
+[3.004s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/hook/cmake_prefix_path.sh'
+[3.005s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera/lib'
+[3.005s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera', 'ld_library_path_lib')
+[3.006s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/hook/ld_library_path_lib.ps1'
+[3.007s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/hook/ld_library_path_lib.dsv'
+[3.007s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/hook/ld_library_path_lib.sh'
+[3.009s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera/bin'
+[3.009s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera/lib/pkgconfig/realsense2_camera.pc'
+[3.009s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera/lib/python3.10/site-packages'
+[3.010s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_camera/bin'
+[3.011s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/package.ps1'
+[3.012s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/package.dsv'
+[3.013s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/package.sh'
+[3.014s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/package.bash'
+[3.014s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_camera/share/realsense2_camera/package.zsh'
+[3.015s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/realsense2_camera/share/colcon-core/packages/realsense2_camera)
+[3.131s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --install-dir, --quiet, --help, --user, --no-deps, --no-user-cfg, --index-url, --prefix, --verbose
+[3.131s] INFO:colcon.colcon_core.task.python.build:No '--editable' capability in setuptools, falling back to full install
+[3.134s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/src/yolo': PYTHONPATH=/home/zzz/work/build/yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/yolo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo build --build-base /home/zzz/work/build/yolo/build install --record /home/zzz/work/build/yolo/install.log --install-scripts $base/lib/yolo --single-version-externally-managed install_data
+[3.158s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --install-dir, --quiet, --help, --user, --no-deps, --no-user-cfg, --index-url, --prefix, --verbose
+[3.158s] INFO:colcon.colcon_core.task.python.build:No '--editable' capability in setuptools, falling back to full install
+[3.160s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/src/arduino_bridge': PYTHONPATH=/home/zzz/work/build/arduino_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/arduino_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/arduino_bridge build --build-base /home/zzz/work/build/arduino_bridge/build install --record /home/zzz/work/build/arduino_bridge/install.log --install-scripts $base/lib/arduino_bridge --single-version-externally-managed install_data
+[3.214s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --install-dir, --quiet, --help, --user, --no-deps, --no-user-cfg, --index-url, --prefix, --verbose
+[3.214s] INFO:colcon.colcon_core.task.python.build:No '--editable' capability in setuptools, falling back to full install
+[3.224s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/src/realsense-ros/realsense2_ros_mqtt_bridge': PYTHONPATH=/home/zzz/work/build/realsense2_ros_mqtt_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/realsense2_ros_mqtt_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/realsense2_ros_mqtt_bridge build --build-base /home/zzz/work/build/realsense2_ros_mqtt_bridge/build install --record /home/zzz/work/build/realsense2_ros_mqtt_bridge/install.log --install-scripts $base/lib/realsense2_ros_mqtt_bridge --single-version-externally-managed install_data
+[3.322s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --install-dir, --quiet, --help, --user, --no-deps, --no-user-cfg, --index-url, --prefix, --verbose
+[3.322s] INFO:colcon.colcon_core.task.python.build:No '--editable' capability in setuptools, falling back to full install
+[3.341s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/src/Hiwin_libmodbus/hiwin_example': PYTHONPATH=/home/zzz/work/build/hiwin_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/hiwin_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/hiwin_example build --build-base /home/zzz/work/build/hiwin_example/build install --record /home/zzz/work/build/hiwin_example/install.log --install-scripts $base/lib/hiwin_example --single-version-externally-managed install_data
+[3.424s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/build/hiwin_libmodbus' returned '0': CMAKE_PREFIX_PATH=/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/hiwin_interfaces/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/zzz/work/build/hiwin_libmodbus -- -j12 -l12
+[3.426s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/build/hiwin_libmodbus': CMAKE_PREFIX_PATH=/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/hiwin_interfaces/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/zzz/work/build/hiwin_libmodbus
+[3.581s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hiwin_libmodbus)
+[3.581s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_libmodbus' for CMake module files
+[3.582s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_libmodbus' for CMake config files
+[3.582s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/build/hiwin_libmodbus' returned '0': CMAKE_PREFIX_PATH=/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/hiwin_interfaces/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/realsense2_camera_msgs/lib:/home/zzz/work/install/hiwin_libmodbus/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/zzz/work/build/hiwin_libmodbus
+[3.583s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiwin_libmodbus', 'cmake_prefix_path')
+[3.584s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/hook/cmake_prefix_path.ps1'
+[3.585s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/hook/cmake_prefix_path.dsv'
+[3.585s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/hook/cmake_prefix_path.sh'
+[3.587s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_libmodbus/lib'
+[3.587s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiwin_libmodbus', 'ld_library_path_lib')
+[3.588s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/hook/ld_library_path_lib.ps1'
+[3.589s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/hook/ld_library_path_lib.dsv'
+[3.591s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/hook/ld_library_path_lib.sh'
+[3.593s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_libmodbus/bin'
+[3.593s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_libmodbus/lib/pkgconfig/hiwin_libmodbus.pc'
+[3.594s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_libmodbus/lib/python3.10/site-packages'
+[3.594s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_libmodbus/bin'
+[3.595s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/package.ps1'
+[3.598s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/package.dsv'
+[3.599s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/package.sh'
+[3.600s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/package.bash'
+[3.601s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/package.zsh'
+[3.602s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/hiwin_libmodbus/share/colcon-core/packages/hiwin_libmodbus)
+[3.603s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hiwin_libmodbus)
+[3.603s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_libmodbus' for CMake module files
+[3.604s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_libmodbus' for CMake config files
+[3.605s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiwin_libmodbus', 'cmake_prefix_path')
+[3.605s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/hook/cmake_prefix_path.ps1'
+[3.608s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/hook/cmake_prefix_path.dsv'
+[3.610s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/hook/cmake_prefix_path.sh'
+[3.611s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_libmodbus/lib'
+[3.611s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiwin_libmodbus', 'ld_library_path_lib')
+[3.611s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/hook/ld_library_path_lib.ps1'
+[3.612s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/hook/ld_library_path_lib.dsv'
+[3.613s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/hook/ld_library_path_lib.sh'
+[3.613s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_libmodbus/bin'
+[3.614s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_libmodbus/lib/pkgconfig/hiwin_libmodbus.pc'
+[3.614s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_libmodbus/lib/python3.10/site-packages'
+[3.614s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_libmodbus/bin'
+[3.615s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/package.ps1'
+[3.617s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/package.dsv'
+[3.618s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/package.sh'
+[3.619s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/package.bash'
+[3.620s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_libmodbus/share/hiwin_libmodbus/package.zsh'
+[3.621s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/hiwin_libmodbus/share/colcon-core/packages/hiwin_libmodbus)
+[3.622s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zzz/work/src/Hiwin_libmodbus/hiwin_service_client' with build type 'ament_cmake'
+[3.623s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zzz/work/src/Hiwin_libmodbus/hiwin_service_client'
+[3.624s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.624s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.637s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/yolo' for CMake module files
+[3.640s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/src/yolo' returned '0': PYTHONPATH=/home/zzz/work/build/yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/yolo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo build --build-base /home/zzz/work/build/yolo/build install --record /home/zzz/work/build/yolo/install.log --install-scripts $base/lib/yolo --single-version-externally-managed install_data
+[3.640s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/yolo' for CMake config files
+[3.641s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/yolo/lib'
+[3.642s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/yolo/bin'
+[3.642s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/yolo/lib/pkgconfig/yolo.pc'
+[3.642s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/yolo/lib/python3.10/site-packages'
+[3.642s] Level 1:colcon.colcon_core.shell:create_environment_hook('yolo', 'pythonpath')
+[3.643s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/yolo/share/yolo/hook/pythonpath.ps1'
+[3.644s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/yolo/share/yolo/hook/pythonpath.dsv'
+[3.645s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/yolo/share/yolo/hook/pythonpath.sh'
+[3.647s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/yolo/bin'
+[3.647s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yolo)
+[3.648s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/yolo/share/yolo/package.ps1'
+[3.650s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/yolo/share/yolo/package.dsv'
+[3.651s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/yolo/share/yolo/package.sh'
+[3.652s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/yolo/share/yolo/package.bash'
+[3.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/yolo/share/yolo/package.zsh'
+[3.654s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/yolo/share/colcon-core/packages/yolo)
+[3.661s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/build/hiwin_service_client': CMAKE_PREFIX_PATH=/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/realsense2_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/zzz/work/build/hiwin_service_client -- -j12 -l12
+[3.746s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/build/hiwin_service_client' returned '0': CMAKE_PREFIX_PATH=/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/realsense2_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/zzz/work/build/hiwin_service_client -- -j12 -l12
+[3.749s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zzz/work/build/hiwin_service_client': CMAKE_PREFIX_PATH=/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/realsense2_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/zzz/work/build/hiwin_service_client
+[3.810s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hiwin_service_client)
+[3.811s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_service_client' for CMake module files
+[3.812s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/build/hiwin_service_client' returned '0': CMAKE_PREFIX_PATH=/home/zzz/work/install/hiwin_libmodbus:/home/zzz/work/install/hiwin_interfaces:/home/zzz/work/install/realsense2_rviz_plugin:/home/zzz/work/install/realsense2_description:/home/zzz/work/install/realsense2_camera:/home/zzz/work/install/realsense2_camera_msgs:/home/zzz/work/install/hiwin_service_client:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/zzz/work/install/hiwin_libmodbus/lib:/home/zzz/work/install/hiwin_interfaces/lib:/home/zzz/work/install/realsense2_camera/lib:/home/zzz/work/install/realsense2_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/zzz/work/build/hiwin_service_client
+[3.812s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_service_client' for CMake config files
+[3.813s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiwin_service_client', 'cmake_prefix_path')
+[3.813s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/hook/cmake_prefix_path.ps1'
+[3.814s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/hook/cmake_prefix_path.dsv'
+[3.814s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/hook/cmake_prefix_path.sh'
+[3.815s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_service_client/bin'
+[3.815s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_service_client/lib/pkgconfig/hiwin_service_client.pc'
+[3.816s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_service_client/lib/python3.10/site-packages'
+[3.816s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_service_client/bin'
+[3.817s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/package.ps1'
+[3.817s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/package.dsv'
+[3.818s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/package.sh'
+[3.818s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/package.bash'
+[3.819s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/package.zsh'
+[3.819s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/hiwin_service_client/share/colcon-core/packages/hiwin_service_client)
+[3.820s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hiwin_service_client)
+[3.822s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_service_client' for CMake module files
+[3.822s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_service_client' for CMake config files
+[3.823s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiwin_service_client', 'cmake_prefix_path')
+[3.823s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/hook/cmake_prefix_path.ps1'
+[3.824s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/hook/cmake_prefix_path.dsv'
+[3.824s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/hook/cmake_prefix_path.sh'
+[3.825s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_service_client/bin'
+[3.825s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_service_client/lib/pkgconfig/hiwin_service_client.pc'
+[3.825s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_service_client/lib/python3.10/site-packages'
+[3.825s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_service_client/bin'
+[3.826s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/package.ps1'
+[3.827s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/package.dsv'
+[3.827s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/package.sh'
+[3.828s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/package.bash'
+[3.828s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_service_client/share/hiwin_service_client/package.zsh'
+[3.829s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/hiwin_service_client/share/colcon-core/packages/hiwin_service_client)
+[3.829s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/arduino_bridge' for CMake module files
+[3.831s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/arduino_bridge' for CMake config files
+[3.831s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/src/arduino_bridge' returned '0': PYTHONPATH=/home/zzz/work/build/arduino_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/arduino_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/arduino_bridge build --build-base /home/zzz/work/build/arduino_bridge/build install --record /home/zzz/work/build/arduino_bridge/install.log --install-scripts $base/lib/arduino_bridge --single-version-externally-managed install_data
+[3.832s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/arduino_bridge/lib'
+[3.832s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/arduino_bridge/bin'
+[3.832s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/arduino_bridge/lib/pkgconfig/arduino_bridge.pc'
+[3.832s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/arduino_bridge/lib/python3.10/site-packages'
+[3.832s] Level 1:colcon.colcon_core.shell:create_environment_hook('arduino_bridge', 'pythonpath')
+[3.833s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/arduino_bridge/share/arduino_bridge/hook/pythonpath.ps1'
+[3.835s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/arduino_bridge/share/arduino_bridge/hook/pythonpath.dsv'
+[3.836s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/arduino_bridge/share/arduino_bridge/hook/pythonpath.sh'
+[3.838s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/arduino_bridge/bin'
+[3.838s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arduino_bridge)
+[3.839s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/arduino_bridge/share/arduino_bridge/package.ps1'
+[3.842s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/arduino_bridge/share/arduino_bridge/package.dsv'
+[3.843s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/arduino_bridge/share/arduino_bridge/package.sh'
+[3.844s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/arduino_bridge/share/arduino_bridge/package.bash'
+[3.844s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/arduino_bridge/share/arduino_bridge/package.zsh'
+[3.846s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/arduino_bridge/share/colcon-core/packages/arduino_bridge)
+[3.911s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_ros_mqtt_bridge' for CMake module files
+[3.912s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/src/realsense-ros/realsense2_ros_mqtt_bridge' returned '0': PYTHONPATH=/home/zzz/work/build/realsense2_ros_mqtt_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/realsense2_ros_mqtt_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/realsense2_ros_mqtt_bridge build --build-base /home/zzz/work/build/realsense2_ros_mqtt_bridge/build install --record /home/zzz/work/build/realsense2_ros_mqtt_bridge/install.log --install-scripts $base/lib/realsense2_ros_mqtt_bridge --single-version-externally-managed install_data
+[3.913s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_ros_mqtt_bridge' for CMake config files
+[3.913s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_ros_mqtt_bridge/lib'
+[3.913s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_ros_mqtt_bridge/bin'
+[3.913s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_ros_mqtt_bridge/lib/pkgconfig/realsense2_ros_mqtt_bridge.pc'
+[3.914s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_ros_mqtt_bridge/lib/python3.10/site-packages'
+[3.914s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_ros_mqtt_bridge', 'pythonpath')
+[3.914s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_ros_mqtt_bridge/share/realsense2_ros_mqtt_bridge/hook/pythonpath.ps1'
+[3.915s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/realsense2_ros_mqtt_bridge/share/realsense2_ros_mqtt_bridge/hook/pythonpath.dsv'
+[3.915s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/realsense2_ros_mqtt_bridge/share/realsense2_ros_mqtt_bridge/hook/pythonpath.sh'
+[3.916s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/realsense2_ros_mqtt_bridge/bin'
+[3.916s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2_ros_mqtt_bridge)
+[3.916s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_ros_mqtt_bridge/share/realsense2_ros_mqtt_bridge/package.ps1'
+[3.916s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/realsense2_ros_mqtt_bridge/share/realsense2_ros_mqtt_bridge/package.dsv'
+[3.917s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_ros_mqtt_bridge/share/realsense2_ros_mqtt_bridge/package.sh'
+[3.917s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_ros_mqtt_bridge/share/realsense2_ros_mqtt_bridge/package.bash'
+[3.918s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/realsense2_ros_mqtt_bridge/share/realsense2_ros_mqtt_bridge/package.zsh'
+[3.918s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/realsense2_ros_mqtt_bridge/share/colcon-core/packages/realsense2_ros_mqtt_bridge)
+[4.173s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_example' for CMake module files
+[4.174s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zzz/work/src/Hiwin_libmodbus/hiwin_example' returned '0': PYTHONPATH=/home/zzz/work/build/hiwin_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/hiwin_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/hiwin_example build --build-base /home/zzz/work/build/hiwin_example/build install --record /home/zzz/work/build/hiwin_example/install.log --install-scripts $base/lib/hiwin_example --single-version-externally-managed install_data
+[4.174s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_example' for CMake config files
+[4.175s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_example/lib'
+[4.175s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_example/bin'
+[4.176s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_example/lib/pkgconfig/hiwin_example.pc'
+[4.176s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_example/lib/python3.10/site-packages'
+[4.176s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiwin_example', 'pythonpath')
+[4.176s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_example/share/hiwin_example/hook/pythonpath.ps1'
+[4.177s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zzz/work/install/hiwin_example/share/hiwin_example/hook/pythonpath.dsv'
+[4.177s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zzz/work/install/hiwin_example/share/hiwin_example/hook/pythonpath.sh'
+[4.179s] Level 1:colcon.colcon_core.environment:checking '/home/zzz/work/install/hiwin_example/bin'
+[4.179s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hiwin_example)
+[4.180s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_example/share/hiwin_example/package.ps1'
+[4.181s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zzz/work/install/hiwin_example/share/hiwin_example/package.dsv'
+[4.181s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_example/share/hiwin_example/package.sh'
+[4.182s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_example/share/hiwin_example/package.bash'
+[4.182s] INFO:colcon.colcon_core.shell:Creating package script '/home/zzz/work/install/hiwin_example/share/hiwin_example/package.zsh'
+[4.183s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zzz/work/install/hiwin_example/share/colcon-core/packages/hiwin_example)
+[4.184s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.184s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.184s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.185s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.195s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[4.195s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.195s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.195s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.198s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[4.199s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.200s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zzz/work/install/local_setup.ps1'
+[4.201s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/zzz/work/install/_local_setup_util_ps1.py'
+[4.203s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zzz/work/install/setup.ps1'
+[4.205s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zzz/work/install/local_setup.sh'
+[4.206s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/zzz/work/install/_local_setup_util_sh.py'
+[4.207s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zzz/work/install/setup.sh'
+[4.209s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zzz/work/install/local_setup.bash'
+[4.210s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zzz/work/install/setup.bash'
+[4.212s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zzz/work/install/local_setup.zsh'
+[4.212s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zzz/work/install/setup.zsh'

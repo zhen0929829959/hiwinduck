@@ -1,0 +1,52 @@
+running egg_info
+writing ../../../build/hiwin_example/hiwin_example.egg-info/PKG-INFO
+writing dependency_links to ../../../build/hiwin_example/hiwin_example.egg-info/dependency_links.txt
+writing entry points to ../../../build/hiwin_example/hiwin_example.egg-info/entry_points.txt
+writing requirements to ../../../build/hiwin_example/hiwin_example.egg-info/requires.txt
+writing top-level names to ../../../build/hiwin_example/hiwin_example.egg-info/top_level.txt
+reading manifest file '../../../build/hiwin_example/hiwin_example.egg-info/SOURCES.txt'
+writing manifest file '../../../build/hiwin_example/hiwin_example.egg-info/SOURCES.txt'
+running build
+running build_py
+copying hiwin_example/tool_pose_mixin.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+copying hiwin_example/three_points_calibration_example.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+copying hiwin_example/__init__.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+copying hiwin_example/YoloDetector_class_node.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+copying hiwin_example/strategy_example.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+copying hiwin_example/transformations.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+copying hiwin_example/hand_in_eye_calibration.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+copying hiwin_example/YoloDetector.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+copying hiwin_example/rj45_target_mixin.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+copying hiwin_example/camera_flange_matrix2.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+copying hiwin_example/center_alignment_mixin.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+copying hiwin_example/apriltag_sampling_mixin.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+copying hiwin_example/hiwin_robot_mixin.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+running install
+running install_lib
+copying /home/zzz/work/build/hiwin_example/build/lib/hiwin_example/strategy_example.py -> /home/zzz/work/install/hiwin_example/lib/python3.10/site-packages/hiwin_example
+copying /home/zzz/work/build/hiwin_example/build/lib/hiwin_example/apriltag_sampling_mixin.py -> /home/zzz/work/install/hiwin_example/lib/python3.10/site-packages/hiwin_example
+running install_data
+copying resource/hiwin_example -> /home/zzz/work/install/hiwin_example/share/ament_index/resource_index/packages
+copying config/hiwin_tf_params.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
+copying package.xml -> /home/zzz/work/install/hiwin_example/share/hiwin_example
+copying launch/bag_three_points_calibration.launch.py -> /home/zzz/work/install/hiwin_example/share/hiwin_example/launch
+copying launch/cup_three_points_calibration.launch.py -> /home/zzz/work/install/hiwin_example/share/hiwin_example/launch
+copying config/cup_cam.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
+copying config/bag_cali_pose.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
+copying config/cup_cali_pose.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
+copying config/hiwin_tf_params.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
+copying config/bag_cam.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
+running install_egg_info
+removing '/home/zzz/work/install/hiwin_example/lib/python3.10/site-packages/hiwin_example-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../../build/hiwin_example/hiwin_example.egg-info to /home/zzz/work/install/hiwin_example/lib/python3.10/site-packages/hiwin_example-0.0.0-py3.10.egg-info
+running install_scripts
+Installing camera_flange_matrix2 script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+Installing check_right script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+Installing hand_in_eye_calibration script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+Installing hiwin_pose_publisher script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+Installing hiwin_tf_tree script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+Installing strategy_example script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+Installing strategy_example_3 script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+Installing strategy_example_mul script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+Installing three_points_calibration_example script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+writing list of installed files to '/home/zzz/work/build/hiwin_example/install.log'

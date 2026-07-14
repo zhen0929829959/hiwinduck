@@ -196,16 +196,16 @@ CMakeFiles/realsense2_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/r
  /usr/include/python3.10/cpython/pyfpe.h \
  /usr/include/python3.10/tracemalloc.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
- /usr/include/python3.10/numpy/ndarrayobject.h \
- /usr/include/python3.10/numpy/ndarraytypes.h \
- /usr/include/python3.10/numpy/npy_common.h \
- /usr/include/python3.10/numpy/numpyconfig.h \
- /usr/include/python3.10/numpy/_numpyconfig.h \
- /usr/include/python3.10/numpy/npy_endian.h \
- /usr/include/python3.10/numpy/npy_cpu.h \
- /usr/include/python3.10/numpy/utils.h \
- /usr/include/python3.10/numpy/_neighborhood_iterator_imp.h \
- /usr/include/python3.10/numpy/__multiarray_api.h \
+ /usr/local/lib/python3.10/dist-packages/numpy/core/include/numpy/ndarrayobject.h \
+ /usr/local/lib/python3.10/dist-packages/numpy/core/include/numpy/ndarraytypes.h \
+ /usr/local/lib/python3.10/dist-packages/numpy/core/include/numpy/npy_common.h \
+ /usr/local/lib/python3.10/dist-packages/numpy/core/include/numpy/numpyconfig.h \
+ /usr/local/lib/python3.10/dist-packages/numpy/core/include/numpy/_numpyconfig.h \
+ /usr/local/lib/python3.10/dist-packages/numpy/core/include/numpy/npy_endian.h \
+ /usr/local/lib/python3.10/dist-packages/numpy/core/include/numpy/npy_cpu.h \
+ /usr/local/lib/python3.10/dist-packages/numpy/core/include/numpy/utils.h \
+ /usr/local/lib/python3.10/dist-packages/numpy/core/include/numpy/_neighborhood_iterator_imp.h \
+ /usr/local/lib/python3.10/dist-packages/numpy/core/include/numpy/__multiarray_api.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
  /home/zzz/work/build/realsense2_camera_msgs/rosidl_generator_c/realsense2_camera_msgs/srv/detail/application_config_read__struct.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \

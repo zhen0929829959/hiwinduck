@@ -1,0 +1,29 @@
+[1.352s] Invoking command in '/home/zzz/work/src/arduino_bridge': PYTHONPATH=/home/zzz/work/build/arduino_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/arduino_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/arduino_bridge build --build-base /home/zzz/work/build/arduino_bridge/build install --record /home/zzz/work/build/arduino_bridge/install.log --install-scripts $base/lib/arduino_bridge --single-version-externally-managed install_data
+[1.582s] running egg_info
+[1.592s] writing ../../build/arduino_bridge/arduino_bridge.egg-info/PKG-INFO
+[1.593s] writing dependency_links to ../../build/arduino_bridge/arduino_bridge.egg-info/dependency_links.txt
+[1.593s] writing entry points to ../../build/arduino_bridge/arduino_bridge.egg-info/entry_points.txt
+[1.593s] writing requirements to ../../build/arduino_bridge/arduino_bridge.egg-info/requires.txt
+[1.593s] writing top-level names to ../../build/arduino_bridge/arduino_bridge.egg-info/top_level.txt
+[1.611s] reading manifest file '../../build/arduino_bridge/arduino_bridge.egg-info/SOURCES.txt'
+[1.612s] writing manifest file '../../build/arduino_bridge/arduino_bridge.egg-info/SOURCES.txt'
+[1.612s] running build
+[1.612s] running build_py
+[1.613s] copying arduino_bridge/force.py -> /home/zzz/work/build/arduino_bridge/build/lib/arduino_bridge
+[1.613s] copying arduino_bridge/__init__.py -> /home/zzz/work/build/arduino_bridge/build/lib/arduino_bridge
+[1.613s] running install
+[1.613s] warning: build_py: byte-compiling is disabled, skipping.
+[1.613s] 
+[1.615s] running install_lib
+[1.623s] warning: install_lib: byte-compiling is disabled, skipping.
+[1.623s] 
+[1.623s] running install_data
+[1.624s] copying resource/arduino_bridge -> /home/zzz/work/install/arduino_bridge/share/ament_index/resource_index/packages
+[1.624s] copying package.xml -> /home/zzz/work/install/arduino_bridge/share/arduino_bridge
+[1.624s] running install_egg_info
+[1.632s] removing '/home/zzz/work/install/arduino_bridge/lib/python3.10/site-packages/arduino_bridge-0.0.0-py3.10.egg-info' (and everything under it)
+[1.632s] Copying ../../build/arduino_bridge/arduino_bridge.egg-info to /home/zzz/work/install/arduino_bridge/lib/python3.10/site-packages/arduino_bridge-0.0.0-py3.10.egg-info
+[1.633s] running install_scripts
+[1.653s] Installing force_pub script to /home/zzz/work/install/arduino_bridge/lib/arduino_bridge
+[1.653s] writing list of installed files to '/home/zzz/work/build/arduino_bridge/install.log'
+[1.681s] Invoked command in '/home/zzz/work/src/arduino_bridge' returned '0': PYTHONPATH=/home/zzz/work/build/arduino_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/arduino_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/arduino_bridge build --build-base /home/zzz/work/build/arduino_bridge/build install --record /home/zzz/work/build/arduino_bridge/install.log --install-scripts $base/lib/arduino_bridge --single-version-externally-managed install_data

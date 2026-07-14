@@ -73,15 +73,15 @@ CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.o: CMakeFiles/hiwin_libmo
 CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.o: /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus.cpp
 CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.o: CMakeFiles/hiwin_libmodbus.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zzz/work/build/hiwin_libmodbus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.o -MF CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.o.d -o CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.o -c /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.o -MF CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.o.d -o CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.o -c /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus.cpp
 
 CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus.cpp > CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus.cpp > CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.i
 
 CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus.cpp -o CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus.cpp -o CMakeFiles/hiwin_libmodbus.dir/src/hiwin_libmodbus.cpp.s
 
 CMakeFiles/hiwin_libmodbus.dir/home/zzz/work/src/Hiwin_libmodbus/libmodbus/src/modbus-data.c.o: CMakeFiles/hiwin_libmodbus.dir/flags.make
 CMakeFiles/hiwin_libmodbus.dir/home/zzz/work/src/Hiwin_libmodbus/libmodbus/src/modbus-data.c.o: /home/zzz/work/src/Hiwin_libmodbus/libmodbus/src/modbus-data.c

@@ -1,0 +1,393 @@
+[0.072s] Invoking command in '/home/zzz/work/build/realsense2_camera_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble /usr/bin/cmake --build /home/zzz/work/build/realsense2_camera_msgs -- -j12 -l12
+[1.179s] [  0%] Built target realsense2_camera_msgs__cpp
+[1.179s] [  1%] Built target realsense2_camera_msgs__rs
+[1.180s] [ 13%] Built target realsense2_camera_msgs__rosidl_generator_c
+[1.181s] [ 13%] Built target ament_cmake_python_symlink_realsense2_camera_msgs
+[1.182s] [ 25%] Built target realsense2_camera_msgs__rosidl_typesupport_introspection_cpp
+[1.183s] [ 43%] Built target realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp
+[1.188s] [ 49%] Built target realsense2_camera_msgs__rosidl_typesupport_cpp
+[1.188s] [ 61%] Built target realsense2_camera_msgs__rosidl_typesupport_fastrtps_c
+[1.188s] [ 73%] Built target realsense2_camera_msgs__rosidl_typesupport_introspection_c
+[1.188s] [ 85%] Built target realsense2_camera_msgs__rosidl_typesupport_c
+[1.188s] [ 85%] Built target realsense2_camera_msgs
+[1.188s] [ 86%] Built target realsense2_camera_msgs__py
+[1.188s] [ 97%] Built target realsense2_camera_msgs__rosidl_generator_py
+[1.188s] [ 98%] Built target realsense2_camera_msgs__rosidl_typesupport_fastrtps_c__pyext
+[1.188s] [ 99%] Built target realsense2_camera_msgs__rosidl_typesupport_introspection_c__pyext
+[1.188s] [100%] Built target realsense2_camera_msgs__rosidl_typesupport_c__pyext
+[1.188s] running egg_info
+[1.188s] writing realsense2_camera_msgs.egg-info/PKG-INFO
+[1.188s] writing dependency_links to realsense2_camera_msgs.egg-info/dependency_links.txt
+[1.188s] writing top-level names to realsense2_camera_msgs.egg-info/top_level.txt
+[1.188s] reading manifest file 'realsense2_camera_msgs.egg-info/SOURCES.txt'
+[1.189s] writing manifest file 'realsense2_camera_msgs.egg-info/SOURCES.txt'
+[1.189s] [100%] Built target ament_cmake_python_build_realsense2_camera_msgs_egg
+[1.561s] Invoked command in '/home/zzz/work/build/realsense2_camera_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble /usr/bin/cmake --build /home/zzz/work/build/realsense2_camera_msgs -- -j12 -l12
+[1.562s] Invoking command in '/home/zzz/work/build/realsense2_camera_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble /usr/bin/cmake --install /home/zzz/work/build/realsense2_camera_msgs
+[1.607s] -- Install configuration: ""
+[1.607s] -- Execute custom install script
+[1.607s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/ament_index/resource_index/rosidl_interfaces/realsense2_camera_msgs
+[1.607s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/action/detail/triggered_calibration__functions.h
+[1.607s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/action/detail/triggered_calibration__struct.h
+[1.607s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/action/detail/triggered_calibration__type_support.h
+[1.607s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/action/triggered_calibration.h
+[1.607s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__functions.h
+[1.607s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__struct.h
+[1.607s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__type_support.h
+[1.608s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__functions.h
+[1.608s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__struct.h
+[1.608s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__type_support.h
+[1.609s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__functions.h
+[1.611s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__struct.h
+[1.611s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__type_support.h
+[1.611s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__functions.h
+[1.612s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__struct.h
+[1.612s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__type_support.h
+[1.612s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/extrinsics.h
+[1.613s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/imu_info.h
+[1.614s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/metadata.h
+[1.615s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rgbd.h
+[1.615s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rosidl_generator_c__visibility_control.h
+[1.615s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/application_config_read.h
+[1.615s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/application_config_write.h
+[1.615s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/calib_config_read.h
+[1.615s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/calib_config_write.h
+[1.615s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_read__functions.h
+[1.615s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_read__struct.h
+[1.615s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_read__type_support.h
+[1.616s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_write__functions.h
+[1.616s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_write__struct.h
+[1.616s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_write__type_support.h
+[1.616s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_read__functions.h
+[1.616s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_read__struct.h
+[1.616s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_read__type_support.h
+[1.616s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_write__functions.h
+[1.616s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_write__struct.h
+[1.616s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_write__type_support.h
+[1.616s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__functions.h
+[1.616s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__struct.h
+[1.616s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__type_support.h
+[1.616s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__functions.h
+[1.616s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__struct.h
+[1.616s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__type_support.h
+[1.618s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_read__functions.h
+[1.619s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_read__struct.h
+[1.619s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_read__type_support.h
+[1.620s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_write__functions.h
+[1.620s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_write__struct.h
+[1.620s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_write__type_support.h
+[1.620s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_read__functions.h
+[1.621s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_read__struct.h
+[1.621s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_read__type_support.h
+[1.621s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_write__functions.h
+[1.621s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_write__struct.h
+[1.622s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_write__type_support.h
+[1.626s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/device_info.h
+[1.627s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/hardware_monitor_command_send.h
+[1.628s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/safety_interface_config_read.h
+[1.629s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/safety_interface_config_write.h
+[1.629s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/safety_preset_read.h
+[1.630s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/safety_preset_write.h
+[1.634s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/library_path.sh
+[1.634s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/library_path.dsv
+[1.635s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/action/detail/triggered_calibration__rosidl_typesupport_fastrtps_c.h
+[1.635s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_fastrtps_c.h
+[1.636s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_fastrtps_c.h
+[1.637s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_fastrtps_c.h
+[1.638s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__rosidl_typesupport_fastrtps_c.h
+[1.638s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.639s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_read__rosidl_typesupport_fastrtps_c.h
+[1.640s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_write__rosidl_typesupport_fastrtps_c.h
+[1.640s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_read__rosidl_typesupport_fastrtps_c.h
+[1.642s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_write__rosidl_typesupport_fastrtps_c.h
+[1.643s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_fastrtps_c.h
+[1.644s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__rosidl_typesupport_fastrtps_c.h
+[1.644s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_read__rosidl_typesupport_fastrtps_c.h
+[1.645s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_write__rosidl_typesupport_fastrtps_c.h
+[1.645s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_read__rosidl_typesupport_fastrtps_c.h
+[1.645s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_write__rosidl_typesupport_fastrtps_c.h
+[1.646s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/action/detail/triggered_calibration__rosidl_typesupport_introspection_c.h
+[1.646s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_introspection_c.h
+[1.646s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_introspection_c.h
+[1.647s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_introspection_c.h
+[1.647s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__rosidl_typesupport_introspection_c.h
+[1.647s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.647s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_read__rosidl_typesupport_introspection_c.h
+[1.647s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_write__rosidl_typesupport_introspection_c.h
+[1.647s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_read__rosidl_typesupport_introspection_c.h
+[1.647s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_write__rosidl_typesupport_introspection_c.h
+[1.647s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_introspection_c.h
+[1.647s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__rosidl_typesupport_introspection_c.h
+[1.647s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_read__rosidl_typesupport_introspection_c.h
+[1.647s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_write__rosidl_typesupport_introspection_c.h
+[1.647s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_read__rosidl_typesupport_introspection_c.h
+[1.647s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_write__rosidl_typesupport_introspection_c.h
+[1.650s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/action/detail/triggered_calibration__builder.hpp
+[1.650s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/action/detail/triggered_calibration__struct.hpp
+[1.650s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/action/detail/triggered_calibration__traits.hpp
+[1.651s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/action/detail/triggered_calibration__type_support.hpp
+[1.651s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/action/triggered_calibration.hpp
+[1.651s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__builder.hpp
+[1.651s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__struct.hpp
+[1.651s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__traits.hpp
+[1.651s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__type_support.hpp
+[1.651s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__builder.hpp
+[1.651s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__struct.hpp
+[1.651s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__traits.hpp
+[1.651s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__type_support.hpp
+[1.651s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__builder.hpp
+[1.651s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__struct.hpp
+[1.651s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__traits.hpp
+[1.652s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__type_support.hpp
+[1.654s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__builder.hpp
+[1.655s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__struct.hpp
+[1.655s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__traits.hpp
+[1.655s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__type_support.hpp
+[1.655s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/extrinsics.hpp
+[1.656s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/imu_info.hpp
+[1.657s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/metadata.hpp
+[1.657s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rgbd.hpp
+[1.659s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.660s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/application_config_read.hpp
+[1.661s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/application_config_write.hpp
+[1.664s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/calib_config_read.hpp
+[1.666s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/calib_config_write.hpp
+[1.666s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_read__builder.hpp
+[1.668s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_read__struct.hpp
+[1.669s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_read__traits.hpp
+[1.670s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_read__type_support.hpp
+[1.671s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_write__builder.hpp
+[1.672s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_write__struct.hpp
+[1.672s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_write__traits.hpp
+[1.672s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_write__type_support.hpp
+[1.672s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_read__builder.hpp
+[1.672s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_read__struct.hpp
+[1.673s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_read__traits.hpp
+[1.674s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_read__type_support.hpp
+[1.676s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_write__builder.hpp
+[1.676s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_write__struct.hpp
+[1.676s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_write__traits.hpp
+[1.676s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_write__type_support.hpp
+[1.676s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__builder.hpp
+[1.676s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__struct.hpp
+[1.676s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__traits.hpp
+[1.676s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__type_support.hpp
+[1.676s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__builder.hpp
+[1.677s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__struct.hpp
+[1.677s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__traits.hpp
+[1.677s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__type_support.hpp
+[1.677s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_read__builder.hpp
+[1.677s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_read__struct.hpp
+[1.677s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_read__traits.hpp
+[1.677s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_read__type_support.hpp
+[1.677s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_write__builder.hpp
+[1.677s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_write__struct.hpp
+[1.677s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_write__traits.hpp
+[1.677s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_write__type_support.hpp
+[1.677s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_read__builder.hpp
+[1.677s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_read__struct.hpp
+[1.677s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_read__traits.hpp
+[1.677s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_read__type_support.hpp
+[1.678s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_write__builder.hpp
+[1.681s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_write__struct.hpp
+[1.682s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_write__traits.hpp
+[1.683s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_write__type_support.hpp
+[1.683s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/device_info.hpp
+[1.684s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/hardware_monitor_command_send.hpp
+[1.685s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/safety_interface_config_read.hpp
+[1.685s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/safety_interface_config_write.hpp
+[1.685s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/safety_preset_read.hpp
+[1.686s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/safety_preset_write.hpp
+[1.687s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/action/detail/triggered_calibration__rosidl_typesupport_fastrtps_cpp.hpp
+[1.687s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_fastrtps_cpp.hpp
+[1.688s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_fastrtps_cpp.hpp
+[1.691s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_fastrtps_cpp.hpp
+[1.692s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__rosidl_typesupport_fastrtps_cpp.hpp
+[1.694s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.695s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_read__rosidl_typesupport_fastrtps_cpp.hpp
+[1.696s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_write__rosidl_typesupport_fastrtps_cpp.hpp
+[1.696s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_read__rosidl_typesupport_fastrtps_cpp.hpp
+[1.698s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_write__rosidl_typesupport_fastrtps_cpp.hpp
+[1.700s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_fastrtps_cpp.hpp
+[1.702s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__rosidl_typesupport_fastrtps_cpp.hpp
+[1.704s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_read__rosidl_typesupport_fastrtps_cpp.hpp
+[1.704s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_write__rosidl_typesupport_fastrtps_cpp.hpp
+[1.704s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_read__rosidl_typesupport_fastrtps_cpp.hpp
+[1.706s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_write__rosidl_typesupport_fastrtps_cpp.hpp
+[1.709s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/action/detail/triggered_calibration__rosidl_typesupport_introspection_cpp.hpp
+[1.710s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_introspection_cpp.hpp
+[1.710s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_introspection_cpp.hpp
+[1.710s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_introspection_cpp.hpp
+[1.711s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/rgbd__rosidl_typesupport_introspection_cpp.hpp
+[1.711s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_read__rosidl_typesupport_introspection_cpp.hpp
+[1.711s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/application_config_write__rosidl_typesupport_introspection_cpp.hpp
+[1.711s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_read__rosidl_typesupport_introspection_cpp.hpp
+[1.712s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/calib_config_write__rosidl_typesupport_introspection_cpp.hpp
+[1.714s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_introspection_cpp.hpp
+[1.714s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__rosidl_typesupport_introspection_cpp.hpp
+[1.715s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_read__rosidl_typesupport_introspection_cpp.hpp
+[1.715s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_interface_config_write__rosidl_typesupport_introspection_cpp.hpp
+[1.716s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_read__rosidl_typesupport_introspection_cpp.hpp
+[1.716s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/safety_preset_write__rosidl_typesupport_introspection_cpp.hpp
+[1.716s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/pythonpath.sh
+[1.716s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/pythonpath.dsv
+[1.716s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs-4.57.4-py3.10.egg-info/PKG-INFO
+[1.716s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs-4.57.4-py3.10.egg-info/SOURCES.txt
+[1.716s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs-4.57.4-py3.10.egg-info/dependency_links.txt
+[1.716s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs-4.57.4-py3.10.egg-info/top_level.txt
+[1.717s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/__init__.py
+[1.717s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_c.c
+[1.717s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.717s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[1.717s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/action/__init__.py
+[1.717s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/action/_triggered_calibration.py
+[1.717s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/action/_triggered_calibration_s.c
+[1.717s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/librealsense2_camera_msgs__rosidl_generator_py.so
+[1.721s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/__init__.py
+[1.722s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_extrinsics.py
+[1.723s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_extrinsics_s.c
+[1.725s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_imu_info.py
+[1.726s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_imu_info_s.c
+[1.726s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_metadata.py
+[1.727s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_metadata_s.c
+[1.729s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_rgbd.py
+[1.732s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_rgbd_s.c
+[1.733s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.733s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.733s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.733s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/__init__.py
+[1.733s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_application_config_read.py
+[1.733s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_application_config_read_s.c
+[1.733s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_application_config_write.py
+[1.733s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_application_config_write_s.c
+[1.733s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_calib_config_read.py
+[1.733s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_calib_config_read_s.c
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_calib_config_write.py
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_calib_config_write_s.c
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_device_info.py
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_device_info_s.c
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_hardware_monitor_command_send.py
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_hardware_monitor_command_send_s.c
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_safety_interface_config_read.py
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_safety_interface_config_read_s.c
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_safety_interface_config_write.py
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_safety_interface_config_write_s.c
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_safety_preset_read.py
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_safety_preset_read_s.c
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_safety_preset_write.py
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_safety_preset_write_s.c
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.734s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.737s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.737s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/ament_index/resource_index/rust_packages/realsense2_camera_msgs
+[1.738s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/rust/Cargo.toml
+[1.739s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/rust/build.rs
+[1.739s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/rust/src/action.rs
+[1.739s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/rust/src/action/rmw.rs
+[1.739s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/rust/src/lib.rs
+[1.740s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/rust/src/msg.rs
+[1.740s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/rust/src/msg/rmw.rs
+[1.740s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/rust/src/srv.rs
+[1.740s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/rust/src/srv/rmw.rs
+[1.740s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/IMUInfo.idl
+[1.740s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Extrinsics.idl
+[1.740s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Metadata.idl
+[1.740s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/RGBD.idl
+[1.740s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo.idl
+[1.740s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyPresetRead.idl
+[1.740s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyPresetWrite.idl
+[1.740s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyInterfaceConfigRead.idl
+[1.740s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyInterfaceConfigWrite.idl
+[1.740s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/CalibConfigRead.idl
+[1.741s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/CalibConfigWrite.idl
+[1.741s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/ApplicationConfigRead.idl
+[1.741s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/ApplicationConfigWrite.idl
+[1.741s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/HardwareMonitorCommandSend.idl
+[1.741s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/action/TriggeredCalibration.idl
+[1.741s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/IMUInfo.msg
+[1.741s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Extrinsics.msg
+[1.741s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Metadata.msg
+[1.741s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/RGBD.msg
+[1.741s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo.srv
+[1.741s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo_Request.msg
+[1.741s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo_Response.msg
+[1.741s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyPresetRead.srv
+[1.741s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyPresetRead_Request.msg
+[1.745s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyPresetRead_Response.msg
+[1.747s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyPresetWrite.srv
+[1.747s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyPresetWrite_Request.msg
+[1.747s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyPresetWrite_Response.msg
+[1.748s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyInterfaceConfigRead.srv
+[1.749s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyInterfaceConfigRead_Request.msg
+[1.750s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyInterfaceConfigRead_Response.msg
+[1.751s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyInterfaceConfigWrite.srv
+[1.752s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyInterfaceConfigWrite_Request.msg
+[1.752s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/SafetyInterfaceConfigWrite_Response.msg
+[1.752s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/CalibConfigRead.srv
+[1.752s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/CalibConfigRead_Request.msg
+[1.753s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/CalibConfigRead_Response.msg
+[1.753s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/CalibConfigWrite.srv
+[1.753s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/CalibConfigWrite_Request.msg
+[1.753s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/CalibConfigWrite_Response.msg
+[1.754s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/ApplicationConfigRead.srv
+[1.755s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/ApplicationConfigRead_Request.msg
+[1.755s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/ApplicationConfigRead_Response.msg
+[1.755s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/ApplicationConfigWrite.srv
+[1.755s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/ApplicationConfigWrite_Request.msg
+[1.756s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/ApplicationConfigWrite_Response.msg
+[1.756s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/HardwareMonitorCommandSend.srv
+[1.756s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/HardwareMonitorCommandSend_Request.msg
+[1.756s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/HardwareMonitorCommandSend_Response.msg
+[1.756s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/action/TriggeredCalibration.action
+[1.756s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/ament_index/resource_index/package_run_dependencies/realsense2_camera_msgs
+[1.756s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/ament_index/resource_index/parent_prefix_path/realsense2_camera_msgs
+[1.756s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/ament_prefix_path.sh
+[1.756s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/ament_prefix_path.dsv
+[1.757s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/path.sh
+[1.757s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/path.dsv
+[1.757s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.bash
+[1.758s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.sh
+[1.758s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.zsh
+[1.758s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.dsv
+[1.759s] -- Symlinking: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.dsv
+[1.760s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/ament_index/resource_index/packages/realsense2_camera_msgs
+[1.760s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/rosidl_cmake-extras.cmake
+[1.760s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.760s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.760s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[1.760s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[1.760s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.760s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.760s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgsConfig.cmake
+[1.760s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgsConfig-version.cmake
+[1.760s] -- Up-to-date symlink: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.xml
+[1.760s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_generator_c.so
+[1.760s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_fastrtps_c.so
+[1.760s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_introspection_c.so
+[1.761s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_c.so
+[1.761s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.so
+[1.767s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_introspection_cpp.so
+[1.767s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_cpp.so
+[1.818s] Listing '/home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs'...
+[1.819s] Listing '/home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/action'...
+[1.819s] Listing '/home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg'...
+[1.819s] Listing '/home/zzz/work/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv'...
+[1.834s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_generator_py.so
+[1.836s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_cExport.cmake
+[1.836s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_cExport-noconfig.cmake
+[1.837s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[1.837s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.838s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cExport.cmake
+[1.839s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.839s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cExport.cmake
+[1.840s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[1.841s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_cppExport.cmake
+[1.842s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.842s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.842s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[1.843s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.846s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cppExport.cmake
+[1.846s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[1.846s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_pyExport.cmake
+[1.846s] -- Up-to-date: /home/zzz/work/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_pyExport-noconfig.cmake
+[1.853s] Invoked command in '/home/zzz/work/build/realsense2_camera_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zzz/work/install/yolo:/home/zzz/work/install/realsense2_ros_mqtt_bridge:/home/zzz/work/install/hiwin_example:/home/zzz/work/install/arduino_bridge:/opt/ros/humble /usr/bin/cmake --install /home/zzz/work/build/realsense2_camera_msgs

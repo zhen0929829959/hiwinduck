@@ -73,15 +73,15 @@ CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.c
 CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.o: /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus_ctype_wrapper.cpp
 CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.o: CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zzz/work/build/hiwin_libmodbus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.o -MF CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.o.d -o CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.o -c /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus_ctype_wrapper.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.o -MF CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.o.d -o CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.o -c /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus_ctype_wrapper.cpp
 
 CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus_ctype_wrapper.cpp > CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus_ctype_wrapper.cpp > CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.i
 
 CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus_ctype_wrapper.cpp -o CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus_ctype_wrapper.cpp -o CMakeFiles/hiwin_libmodbus_ctype_wrapper.dir/src/hiwin_libmodbus_ctype_wrapper.cpp.s
 
 # Object files for target hiwin_libmodbus_ctype_wrapper
 hiwin_libmodbus_ctype_wrapper_OBJECTS = \

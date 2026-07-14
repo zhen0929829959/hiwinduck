@@ -73,15 +73,15 @@ CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.o: CMakeFiles/h
 CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.o: /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus_node.cpp
 CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.o: CMakeFiles/hiwin_libmodbus_node.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zzz/work/build/hiwin_libmodbus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.o -MF CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.o.d -o CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.o -c /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus_node.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.o -MF CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.o.d -o CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.o -c /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus_node.cpp
 
 CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus_node.cpp > CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus_node.cpp > CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.i
 
 CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus_node.cpp -o CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/src/hiwin_libmodbus_node.cpp -o CMakeFiles/hiwin_libmodbus_node.dir/src/hiwin_libmodbus_node.cpp.s
 
 # Object files for target hiwin_libmodbus_node
 hiwin_libmodbus_node_OBJECTS = \

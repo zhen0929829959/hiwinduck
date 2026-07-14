@@ -1,0 +1,59 @@
+[2.622s] Invoking command in '/home/zzz/work/src/Hiwin_libmodbus/hiwin_example': PYTHONPATH=/home/zzz/work/build/hiwin_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/hiwin_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/hiwin_example build --build-base /home/zzz/work/build/hiwin_example/build install --record /home/zzz/work/build/hiwin_example/install.log --install-scripts $base/lib/hiwin_example --single-version-externally-managed install_data
+[2.946s] /usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py:288: UserWarning: Unknown distribution option: 'tests_require'
+[2.946s]   warnings.warn(msg)
+[3.176s] running egg_info
+[3.189s] writing ../../../build/hiwin_example/hiwin_example.egg-info/PKG-INFO
+[3.189s] writing dependency_links to ../../../build/hiwin_example/hiwin_example.egg-info/dependency_links.txt
+[3.190s] writing entry points to ../../../build/hiwin_example/hiwin_example.egg-info/entry_points.txt
+[3.190s] writing requirements to ../../../build/hiwin_example/hiwin_example.egg-info/requires.txt
+[3.191s] writing top-level names to ../../../build/hiwin_example/hiwin_example.egg-info/top_level.txt
+[3.227s] reading manifest file '../../../build/hiwin_example/hiwin_example.egg-info/SOURCES.txt'
+[3.232s] writing manifest file '../../../build/hiwin_example/hiwin_example.egg-info/SOURCES.txt'
+[3.233s] running build
+[3.233s] running build_py
+[3.237s] copying hiwin_example/tool_pose_mixin.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+[3.239s] copying hiwin_example/three_points_calibration_example.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+[3.239s] copying hiwin_example/__init__.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+[3.239s] copying hiwin_example/YoloDetector_class_node.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+[3.239s] copying hiwin_example/strategy_example.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+[3.239s] copying hiwin_example/transformations.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+[3.239s] copying hiwin_example/hand_in_eye_calibration.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+[3.239s] copying hiwin_example/YoloDetector.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+[3.240s] copying hiwin_example/rj45_target_mixin.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+[3.240s] copying hiwin_example/camera_flange_matrix2.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+[3.240s] copying hiwin_example/center_alignment_mixin.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+[3.241s] copying hiwin_example/apriltag_sampling_mixin.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+[3.242s] copying hiwin_example/hiwin_robot_mixin.py -> /home/zzz/work/build/hiwin_example/build/lib/hiwin_example
+[3.242s] warning: build_py: byte-compiling is disabled, skipping.
+[3.242s] 
+[3.242s] running install
+[3.248s] running install_lib
+[3.268s] copying /home/zzz/work/build/hiwin_example/build/lib/hiwin_example/strategy_example.py -> /home/zzz/work/install/hiwin_example/lib/python3.10/site-packages/hiwin_example
+[3.268s] warning: install_lib: byte-compiling is disabled, skipping.
+[3.268s] 
+[3.269s] running install_data
+[3.269s] copying resource/hiwin_example -> /home/zzz/work/install/hiwin_example/share/ament_index/resource_index/packages
+[3.270s] copying config/hiwin_tf_params.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
+[3.270s] copying package.xml -> /home/zzz/work/install/hiwin_example/share/hiwin_example
+[3.270s] copying launch/bag_three_points_calibration.launch.py -> /home/zzz/work/install/hiwin_example/share/hiwin_example/launch
+[3.270s] copying launch/cup_three_points_calibration.launch.py -> /home/zzz/work/install/hiwin_example/share/hiwin_example/launch
+[3.271s] copying config/cup_cam.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
+[3.271s] copying config/bag_cali_pose.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
+[3.271s] copying config/cup_cali_pose.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
+[3.271s] copying config/hiwin_tf_params.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
+[3.271s] copying config/bag_cam.yaml -> /home/zzz/work/install/hiwin_example/share/hiwin_example/config
+[3.271s] running install_egg_info
+[3.283s] removing '/home/zzz/work/install/hiwin_example/lib/python3.10/site-packages/hiwin_example-0.0.0-py3.10.egg-info' (and everything under it)
+[3.284s] Copying ../../../build/hiwin_example/hiwin_example.egg-info to /home/zzz/work/install/hiwin_example/lib/python3.10/site-packages/hiwin_example-0.0.0-py3.10.egg-info
+[3.285s] running install_scripts
+[3.315s] Installing camera_flange_matrix2 script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.316s] Installing check_right script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.316s] Installing hand_in_eye_calibration script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.317s] Installing hiwin_pose_publisher script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.317s] Installing hiwin_tf_tree script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.317s] Installing strategy_example script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.318s] Installing strategy_example_3 script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.318s] Installing strategy_example_mul script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.318s] Installing three_points_calibration_example script to /home/zzz/work/install/hiwin_example/lib/hiwin_example
+[3.319s] writing list of installed files to '/home/zzz/work/build/hiwin_example/install.log'
+[3.366s] Invoked command in '/home/zzz/work/src/Hiwin_libmodbus/hiwin_example' returned '0': PYTHONPATH=/home/zzz/work/build/hiwin_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/hiwin_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/hiwin_example build --build-base /home/zzz/work/build/hiwin_example/build install --record /home/zzz/work/build/hiwin_example/install.log --install-scripts $base/lib/hiwin_example --single-version-externally-managed install_data

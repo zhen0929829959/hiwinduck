@@ -1,0 +1,36 @@
+[2.015s] Invoking command in '/home/zzz/work/src/yolo': PYTHONPATH=/home/zzz/work/build/yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/yolo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo build --build-base /home/zzz/work/build/yolo/build install --record /home/zzz/work/build/yolo/install.log --install-scripts $base/lib/yolo --single-version-externally-managed install_data
+[2.318s] running egg_info
+[2.331s] writing ../../build/yolo/yolo.egg-info/PKG-INFO
+[2.332s] writing dependency_links to ../../build/yolo/yolo.egg-info/dependency_links.txt
+[2.332s] writing entry points to ../../build/yolo/yolo.egg-info/entry_points.txt
+[2.332s] writing requirements to ../../build/yolo/yolo.egg-info/requires.txt
+[2.333s] writing top-level names to ../../build/yolo/yolo.egg-info/top_level.txt
+[2.383s] reading manifest file '../../build/yolo/yolo.egg-info/SOURCES.txt'
+[2.385s] writing manifest file '../../build/yolo/yolo.egg-info/SOURCES.txt'
+[2.386s] running build
+[2.386s] running build_py
+[2.386s] copying yolo/__init__.py -> /home/zzz/work/build/yolo/build/lib/yolo
+[2.386s] copying yolo/camera_node_apriltag.py -> /home/zzz/work/build/yolo/build/lib/yolo
+[2.387s] copying yolo/camera_node_sub.py -> /home/zzz/work/build/yolo/build/lib/yolo
+[2.387s] copying yolo/camera_node_yolo_apriltag.py -> /home/zzz/work/build/yolo/build/lib/yolo
+[2.387s] copying yolo/camera_node_pub.py -> /home/zzz/work/build/yolo/build/lib/yolo
+[2.388s] running install
+[2.388s] warning: build_py: byte-compiling is disabled, skipping.
+[2.388s] 
+[2.395s] running install_lib
+[2.413s] copying /home/zzz/work/build/yolo/build/lib/yolo/camera_node_sub.py -> /home/zzz/work/install/yolo/lib/python3.10/site-packages/yolo
+[2.414s] warning: install_lib: byte-compiling is disabled, skipping.
+[2.414s] 
+[2.414s] running install_data
+[2.414s] copying resource/yolo -> /home/zzz/work/install/yolo/share/ament_index/resource_index/packages
+[2.414s] copying package.xml -> /home/zzz/work/install/yolo/share/yolo
+[2.414s] running install_egg_info
+[2.429s] removing '/home/zzz/work/install/yolo/lib/python3.10/site-packages/yolo-0.0.0-py3.10.egg-info' (and everything under it)
+[2.430s] Copying ../../build/yolo/yolo.egg-info to /home/zzz/work/install/yolo/lib/python3.10/site-packages/yolo-0.0.0-py3.10.egg-info
+[2.432s] running install_scripts
+[2.460s] Installing apriltag script to /home/zzz/work/install/yolo/lib/yolo
+[2.460s] Installing yolo_apriltag script to /home/zzz/work/install/yolo/lib/yolo
+[2.460s] Installing yolo_pub script to /home/zzz/work/install/yolo/lib/yolo
+[2.460s] Installing yolo_sub script to /home/zzz/work/install/yolo/lib/yolo
+[2.461s] writing list of installed files to '/home/zzz/work/build/yolo/install.log'
+[2.495s] Invoked command in '/home/zzz/work/src/yolo' returned '0': PYTHONPATH=/home/zzz/work/build/yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zzz/work/install/yolo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo build --build-base /home/zzz/work/build/yolo/build install --record /home/zzz/work/build/yolo/install.log --install-scripts $base/lib/yolo --single-version-externally-managed install_data
