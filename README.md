@@ -15,7 +15,7 @@ source install/setup.bash
 
 #### 1. 啟動 RealSense 相機
 ```bash
-ros2 launch realsense2_camera rs_align_depth_launch.py
+ros2 launch realsense2_camera rs_launch.py
 ```
 #### 2. 啟動 AprilTag
 ```bash
