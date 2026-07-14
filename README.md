@@ -17,19 +17,27 @@ source install/setup.bash
 ```bash
 ros2 launch realsense2_camera rs_align_depth_launch.py
 ```
-#### 2. 啟動 YOLO
+#### 2. 啟動 AprilTag
+```bash
+ros2 run yolo apriltag
+```
+#### 3. 啟動 YOLO
 ```bash
 ros2 run yolo yolo_sub
 ```
-#### 3. 啟動 HIWIN 手臂連線
+#### 4. 啟動 HIWIN 手臂連線
 ```bash
 ros2 run hiwin_libmodbus hiwinlibmodbus_server
 ```
-#### 4. 執行手臂控制程式
+#### 5. 轉換矩陣
+```bash
+ros2 run hiwin_example camera_flange_matrix2
+```
+#### 6. 執行手臂控制程式
 ```bash
 ros2 run hiwin_example strategy_example
 ```
-#### 5. 啟動力量感測器
+#### 7. 啟動力量感測器
 1.開arduino
 
 2.貼上force_kg 執行 
