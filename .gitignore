@@ -1,3 +1,11 @@
 *.AppImage
 librealsense/
 librealsense/
+
+build/
+install/
+log/
+
+/src/realsense-ros/
+/ubuntu22.04_ros2/
+

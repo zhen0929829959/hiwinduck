@@ -1,0 +1,52 @@
+# request
+
+# cmd_mode
+uint8 ON=1
+uint8 RESET=2
+uint8 OPEN=3
+uint8 CLOSE=4
+uint8 MOVE=5
+uint8 EXPERT=6
+uint8 OFF=7
+
+
+uint8 cmd_mode
+
+# for CLOSE mode
+#int64 distance=100
+#int64 speed=4800
+#int64 flag=1
+
+# for OPEN mode
+#int64 distance=3200
+#int64 speed=4800
+#int64 flag=1
+
+# for MOVE mode
+#int64 distance
+#int64 speed
+#int64 flag
+
+
+# for EXPERT mode
+int64 direction
+int64 distance
+int64 speed
+int64 holding_stroke
+int64 holding_speed
+int64 holding_force
+int64 flag
+
+
+---
+#gripper_state
+uint8 IDLE=0
+uint8 BUSY=1
+uint8 POSITION=2
+uint8 HOLD=3
+uint8 POS_FAILURE=4
+uint8 MOVE_ALARM=5
+uint8 HOME_RESET_FAILURE=6
+uint8 EMERGENCY_STOP=7
+
+uint8 gripper_state

@@ -1,1 +1,0 @@
-/home/zzz/work/build/realsense2_camera_msgs/rosidl_cmake/srv/SafetyInterfaceConfigWrite_Request.msg

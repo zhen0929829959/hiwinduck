@@ -1,1 +1,0 @@
-/home/zzz/work/build/hiwin_interfaces/rosidl_generator_c/hiwin_interfaces/srv/robot_command.h

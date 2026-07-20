@@ -1,1 +1,0 @@
-/home/zzz/work/build/realsense2_camera_msgs/rosidl_generator_rs/realsense2_camera_msgs/rust/src/srv.rs

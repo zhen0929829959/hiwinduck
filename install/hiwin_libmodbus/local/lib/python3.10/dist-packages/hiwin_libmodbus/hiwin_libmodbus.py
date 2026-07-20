@@ -1,1 +1,0 @@
-/home/zzz/work/src/Hiwin_libmodbus/hiwin_libmodbus/hiwin_libmodbus/hiwin_libmodbus.py

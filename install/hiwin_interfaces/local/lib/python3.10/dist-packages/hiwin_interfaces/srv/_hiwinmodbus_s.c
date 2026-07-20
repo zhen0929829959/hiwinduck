@@ -1,1 +1,0 @@
-/home/zzz/work/build/hiwin_interfaces/rosidl_generator_py/hiwin_interfaces/srv/_hiwinmodbus_s.c

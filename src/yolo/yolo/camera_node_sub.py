@@ -12,6 +12,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import Image
 from std_msgs.msg import String
 from ultralytics import YOLO
+from std_msgs.msg import Bool, String
 
 
 class YoloNode(Node):
@@ -37,6 +38,8 @@ class YoloNode(Node):
 
         # 最新 AprilTag Z 深度，單位：公尺
         self.latest_tag_z_m = None
+        # 手臂位於 AprilTag 上方時凍結的 PnP Z
+        self.frozen_tag_z_m = None
 
         # ====================================================
         # YOLO 裝置
@@ -84,6 +87,13 @@ class YoloNode(Node):
             10
         )
 
+        self.freeze_pnp_z_sub = self.create_subscription(
+            Bool,
+            '/apriltag/freeze_pnp_z',
+            self.freeze_pnp_z_callback,
+            10
+        )
+
         # ====================================================
         # ROS publisher
         # ====================================================
@@ -118,6 +128,25 @@ class YoloNode(Node):
         self.get_logger().info(
             f'Updated AprilTag Z: '
             f'{self.latest_tag_z_m:.4f} m'
+        )
+
+
+    def freeze_pnp_z_callback(self, msg):
+        if not msg.data:
+            return
+
+        if self.latest_tag_z_m is None:
+            self.get_logger().error(
+                'Cannot freeze PnP Z: '
+                'latest_tag_z_m is None'
+            )
+            return
+
+        self.frozen_tag_z_m = float(self.latest_tag_z_m)
+
+        self.get_logger().info(
+            f'Frozen AprilTag PnP Z: '
+            f'{self.frozen_tag_z_m:.6f} m'
         )
 
     # ========================================================
@@ -245,17 +274,30 @@ class YoloNode(Node):
     # ========================================================
 
     def pixel_to_camera_xyz(self, u, v):
-        if self.latest_tag_z_m is None:
+        # if self.latest_tag_z_m is None:
+        #     return None
+        # z_m = (
+        #     self.latest_tag_z_m
+        #     + self.yolo_plane_offset_m
+        # )
+
+        # z_m = 0.2805-self.yolo_plane_offset_m
+        # z_m = 0.175
+
+        if self.frozen_tag_z_m is None:
             return None
 
         z_m = (
-            self.latest_tag_z_m
+            self.frozen_tag_z_m
             + self.yolo_plane_offset_m
         )
 
-        # z_m = 0.2805-self.yolo_plane_offset_m
-        # z_m = 0.17
-
+        if z_m <= 0.0:
+            self.get_logger().error(
+                f'Invalid YOLO plane Z: '
+                f'{z_m:.6f} m'
+            )
+            return None
 
         x_m = (
             (float(u) - self.cx)
@@ -267,6 +309,11 @@ class YoloNode(Node):
             (float(v) - self.cy)
             * z_m
             / self.fy 
+        )
+        self.get_logger().info(
+            f'latest_tag_z_m={self.latest_tag_z_m:.6f}, '
+            f'frozen_tag_z_m={self.frozen_tag_z_m:.6f}, '
+            f'yolo_z_m={z_m:.6f}'
         )
 
         return [
@@ -535,6 +582,9 @@ class YoloNode(Node):
                     (0, 0, 255),
                     2
                 )
+                self.get_logger().info(
+                    f'camera_xyz_m = {camera_xyz_m}'
+                )
 
             detections.append({
                 'class_name': class_name,
@@ -577,10 +627,9 @@ class YoloNode(Node):
             msg_out
         )
 
-        self.get_logger().info(
-            f'Publishing YOLO detections: '
-            f'{len(detections)}'
-        )
+        # self.get_logger().info(
+        #     f'camera_xyz_m = {camera_xyz_m}'
+        # )
 
         cv2.imshow(
             'YOLO Detection',

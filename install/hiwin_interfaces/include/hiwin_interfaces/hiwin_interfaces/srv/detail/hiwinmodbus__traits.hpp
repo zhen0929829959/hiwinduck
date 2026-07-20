@@ -1,1 +1,0 @@
-/home/zzz/work/build/hiwin_interfaces/rosidl_generator_cpp/hiwin_interfaces/srv/detail/hiwinmodbus__traits.hpp

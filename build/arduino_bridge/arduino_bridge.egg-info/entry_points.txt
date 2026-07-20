@@ -1,2 +1,0 @@
-[console_scripts]
-force_pub = arduino_bridge.force:main

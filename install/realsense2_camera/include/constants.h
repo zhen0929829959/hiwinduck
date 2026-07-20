@@ -1,1 +1,0 @@
-/home/zzz/work/src/realsense-ros/realsense2_camera/include/constants.h

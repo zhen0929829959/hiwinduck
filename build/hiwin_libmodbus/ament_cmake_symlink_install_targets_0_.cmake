@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/zzz/work/build/hiwin_libmodbus/hiwinmodbus_server" "/home/zzz/work/build/hiwin_libmodbus/hiwinlibmodbus_server" "/home/zzz/work/build/hiwin_libmodbus/hiwin_libmodbus_node" "TARGETS" "hiwinmodbus_server" "hiwinlibmodbus_server" "hiwin_libmodbus_node" "DESTINATION" "lib/hiwin_libmodbus")

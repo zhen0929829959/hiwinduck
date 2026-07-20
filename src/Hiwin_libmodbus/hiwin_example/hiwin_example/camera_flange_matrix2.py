@@ -580,7 +580,7 @@ class AprilTagBaseNode(Node):
 
         P_tag_board_center = np.array([
             0.029976,
-            -0.129544,
+            -0.139544,
             0.0,
             1.0
         ])

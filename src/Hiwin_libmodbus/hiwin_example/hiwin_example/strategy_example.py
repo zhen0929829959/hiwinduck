@@ -11,6 +11,7 @@ from hiwin_interfaces.srv import RobotCommand
 from rclpy.node import Node
 from scipy.spatial.transform import Rotation as R
 from std_msgs.msg import String
+from std_msgs.msg import Bool, String
 
 from hiwin_example.apriltag_sampling_mixin import AprilTagSamplingMixin
 from hiwin_example.hiwin_robot_mixin import HiwinRobotMixin
@@ -89,10 +90,10 @@ PHOTO_POSE = [
 ]
 
 # 第一次定位後，移至 AprilTag 上方的距離
-TAG_APPROACH_Z_MM = 140.0
+TAG_APPROACH_Z_MM = 160.0
 
 # 最後移至 RJ45 上方的距離
-RJ45_APPROACH_Z_MM = 60.0
+RJ45_APPROACH_Z_MM = 15.0
 
 TARGET_RZ_OFFSET = 180.0
 CAMERA_RX_OFFSET_DEG = 30.0
@@ -154,6 +155,12 @@ class ExampleStrategy(
             10
         )
 
+        self.freeze_pnp_z_pub = self.create_publisher(
+            Bool,
+            '/apriltag/freeze_pnp_z',
+            10
+        )
+
         # 訂閱轉換成 Base 座標後的 AprilTag 資料
         self.tag_sub = self.create_subscription(
             String,
@@ -199,6 +206,7 @@ class ExampleStrategy(
         self.latest_board_center_position_m = None
         self.latest_tag_quat = None
         self.latest_camera_aligned_tool7_pose_base = None
+        self.tag_above_z_mm = None
 
         self.latest_yolo_detection_base_m = None
         self.latest_yolo_detection_info = None
@@ -271,6 +279,14 @@ class ExampleStrategy(
 
         except Exception as exc:
             self.get_logger().error( f'Failed to parse YOLO detections base: {exc}' )
+
+    def freeze_current_pnp_z(self):
+        msg = Bool()
+        msg.data = True
+
+        self.freeze_pnp_z_pub.publish(msg)
+
+        self.get_logger().info('Published freeze PnP Z command')
 
     # ========================================================
     # 狀態機
@@ -406,6 +422,27 @@ class ExampleStrategy(
             if response is None:
                 self.get_logger().error( 'Move above AprilTag failed' )
                 return States.FINISH
+            
+            #存z
+            time.sleep(1.0)
+
+            current_pose = self.get_current_robot_pose()
+            if current_pose is None:
+                self.get_logger().error(
+                    'Cannot read pose above AprilTag'
+                )
+                return States.FINISH
+
+            # current_pose 預期為：
+            # [x, y, z, rx, ry, rz]
+            self.tag_above_z_mm = float(
+                current_pose[2]
+            )
+
+            self.get_logger().info(
+                f'Saved Tag-above Z: '
+                f'{self.tag_above_z_mm:.3f} mm'
+            )
 
             # 接下來才開始計算第二階段置中次數
             self.center_align_count = 0
@@ -443,6 +480,9 @@ class ExampleStrategy(
             if self.latest_center_error_px is None:
                 self.get_logger().error( 'Center error data is missing' )
                 return States.FINISH
+
+            self.freeze_current_pnp_z()
+            time.sleep(3)
 
             error_u, error_v = self.latest_center_error_px
 
@@ -532,16 +572,22 @@ class ExampleStrategy(
             if self.latest_camera_aligned_tool7_pose_base is None:
                 self.get_logger().error('Camera-aligned Tool7 pose is missing')
                 return States.FINISH
+            
+
+            if self.tag_above_z_mm is None:
+                self.get_logger().error('Saved Tag-above Z is missing')
+                return States.FINISH
 
             board_x, board_y, _ = self.latest_board_center_position_m
-            _, _, tag_z = self.latest_tag_position_m
+            # _, _, tag_z = self.latest_tag_position_m
             rx, ry, rz = self.latest_camera_aligned_tool7_pose_base['euler_deg']
 
             pose = Twist()
 
             pose.linear.x = float(board_x) * 1000.0
             pose.linear.y = float(board_y) * 1000.0
-            pose.linear.z = (float(tag_z) * 1000.0 + TAG_APPROACH_Z_MM)
+            # pose.linear.z = (float(tag_z) * 1000.0 + TAG_APPROACH_Z_MM)
+            pose.linear.z = float(self.tag_above_z_mm)
 
             pose.angular.x = float(rx)
             pose.angular.y = float(ry)
@@ -678,18 +724,18 @@ class ExampleStrategy(
             y_raw = float(target_y) * 1000.0
             z_raw = float(target_z) * 1000.0
 
-            corrected_x_mm, corrected_y_mm = self.correct_xy(
-                x_raw,
-                y_raw
-            )
+            # corrected_x_mm, corrected_y_mm = self.correct_xy(
+            #     x_raw,
+            #     y_raw
+            # )
 
             pose = Twist()
 
-            # pose.linear.x = x_raw
-            # pose.linear.y = y_raw
+            pose.linear.x = x_raw
+            pose.linear.y = y_raw
 
-            pose.linear.x = corrected_x_mm
-            pose.linear.y = corrected_y_mm
+            # pose.linear.x = corrected_x_mm
+            # pose.linear.y = corrected_y_mm
 
             # YOLO 的 z + 安全高度
             pose.linear.z = (
@@ -701,10 +747,7 @@ class ExampleStrategy(
             pose.angular.x = float(rx)
             pose.angular.y = float(ry)
 
-            pose.angular.z = (
-                float(rz)
-                - TARGET_RZ_OFFSET
-            )
+            pose.angular.z = (float(rz)- TARGET_RZ_OFFSET)
 
             self.get_logger().info(
                 f'Target above YOLO RJ45: '
@@ -744,78 +787,78 @@ class ExampleStrategy(
         # 確認最後位置
         # ----------------------------------------------------
 
-        # if state == States.CHECK_POSE:
-        #     self.get_logger().info( 'CHECK_POSE' )
-
-        #     current_pose = self.get_current_robot_pose()
-
-        #     if current_pose is not None:
-        #         self.get_logger().info( f'Current position: {current_pose}' )
-
-        #     return States.FINISH
-
-        # return States.FINISH
-
-
         if state == States.CHECK_POSE:
-            self.get_logger().info(
-                'CHECK_POSE'
-            )
+            self.get_logger().info( 'CHECK_POSE' )
 
             current_pose = self.get_current_robot_pose()
 
             if current_pose is not None:
-                self.get_logger().info(
-                    f'Current position: {current_pose}'
-                )
-            else:
-                self.get_logger().warning(
-                    'Current robot pose is unavailable'
-                )
+                self.get_logger().info( f'Current position: {current_pose}' )
 
-            if self.latest_tag_quat is not None:
-                qx, qy, qz, qw = self.latest_tag_quat
-
-                self.get_logger().info(
-                    f'Latest AprilTag quaternion: '
-                    f'qx={qx:.6f}, '
-                    f'qy={qy:.6f}, '
-                    f'qz={qz:.6f}, '
-                    f'qw={qw:.6f}'
-                )
-
-                try:
-                    tag_rx, tag_ry, tag_rz = (
-                        R.from_quat(
-                            [qx, qy, qz, qw]
-                        ).as_euler(
-                            'xyz',
-                            degrees=True
-                        )
-                    )
-
-                    self.get_logger().info(
-                        f'Latest AprilTag Euler: '
-                        f'rx={tag_rx:.3f}, '
-                        f'ry={tag_ry:.3f}, '
-                        f'rz={tag_rz:.3f}'
-                    )
-
-                except Exception as exc:
-                    self.get_logger().error(
-                        f'Quaternion conversion failed: {exc}'
-                    )
-
-            else:
-                self.get_logger().warning(
-                    'Latest AprilTag quaternion is unavailable'
-                )
-
-            # 避免迴圈印得太快
-            time.sleep(0.5)
-
-            # 不結束，繼續停留在 CHECK_POSE
             return States.FINISH
+
+        return States.FINISH
+
+
+        # if state == States.CHECK_POSE:
+        #     self.get_logger().info(
+        #         'CHECK_POSE'
+        #     )
+
+        #     current_pose = self.get_current_robot_pose()
+
+        #     if current_pose is not None:
+        #         self.get_logger().info(
+        #             f'Current position: {current_pose}'
+        #         )
+        #     else:
+        #         self.get_logger().warning(
+        #             'Current robot pose is unavailable'
+        #         )
+
+        #     if self.latest_tag_quat is not None:
+        #         qx, qy, qz, qw = self.latest_tag_quat
+
+        #         self.get_logger().info(
+        #             f'Latest AprilTag quaternion: '
+        #             f'qx={qx:.6f}, '
+        #             f'qy={qy:.6f}, '
+        #             f'qz={qz:.6f}, '
+        #             f'qw={qw:.6f}'
+        #         )
+
+        #         try:
+        #             tag_rx, tag_ry, tag_rz = (
+        #                 R.from_quat(
+        #                     [qx, qy, qz, qw]
+        #                 ).as_euler(
+        #                     'xyz',
+        #                     degrees=True
+        #                 )
+        #             )
+
+        #             self.get_logger().info(
+        #                 f'Latest AprilTag Euler: '
+        #                 f'rx={tag_rx:.3f}, '
+        #                 f'ry={tag_ry:.3f}, '
+        #                 f'rz={tag_rz:.3f}'
+        #             )
+
+        #         except Exception as exc:
+        #             self.get_logger().error(
+        #                 f'Quaternion conversion failed: {exc}'
+        #             )
+
+        #     else:
+        #         self.get_logger().warning(
+        #             'Latest AprilTag quaternion is unavailable'
+        #         )
+
+        #     # 避免迴圈印得太快
+        #     time.sleep(0.5)
+
+        #     # 不結束，繼續停留在 CHECK_POSE
+        #     return States.FINISH
 
         return States.FINISH
 
