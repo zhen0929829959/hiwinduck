@@ -63,6 +63,19 @@ ros2 run arduino_bridge force_pub
 
 執行力量感測節點時，不要開啟 Arduino Serial Monitor，否則序列埠會被占用，ROS 2 節點將無法讀取資料。
 
+
+#### 8. 夾爪
+docker內進資料夾
+```bash
+cd src/hiwin_gripper/HIWIN_XEG32/src/controller
+```
+執行夾爪程式
+```bash
+python3 Hiwin_API_pretest.py
+```
+
+
+
 ---
 ### 常用指令
 ```bash
