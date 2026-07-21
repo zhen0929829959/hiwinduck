@@ -59,7 +59,7 @@ class YoloNode(Node):
             )
 
         self.model = YOLO(
-            'src/yolo/best3.pt'
+            'src/yolo/best.pt'
         )
 
         # ====================================================

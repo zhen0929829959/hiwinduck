@@ -18,6 +18,7 @@ from hiwin_example.hiwin_robot_mixin import HiwinRobotMixin
 from hiwin_example.tool_pose_mixin import ToolPoseMixin
 from hiwin_example.center_alignment_mixin import CenterAlignmentMixin
 from hiwin_example.rj45_target_mixin import Rj45TargetMixin
+from hiwin_example.visual_alignment_mixin import VisualAlignmentMixin
 
 # ============================================================
 # HIWIN 基本設定
@@ -46,7 +47,7 @@ TAG_TIMEOUT_SEC = 10.0
 APRILTAG_TOPIC = '/apriltag/pose_base'
 YOLO_DETECTIONS_BASE_TOPIC = '/yolo/detections_base'
 
-TARGET_RJ45_TRACK_KEY = 'RJ45_1'
+TARGET_RJ45_TRACK_KEY = 'RJ45_0'
 
 # ============================================================
 # AprilTag 置中設定
@@ -75,6 +76,31 @@ DEFAULT_CENTER_THRESHOLD_PX = 8.0
 # 將這裡改成 -1.0。
 CENTER_CORRECTION_SIGN = 1.0
 
+# ============================================================
+# YOLO 視覺微調設定
+# ============================================================
+
+# 插頭在畫面中的中心，之後實際調整
+PLUG_CENTER_U = 1282.0
+PLUG_CENTER_V = 625.0
+# 相機內參
+CAMERA_FX = 1362.7784437304256
+CAMERA_FY = 1361.8357978878923
+
+# 微調高度時，相機到孔平面的距離
+VISUAL_ALIGN_DEPTH_M = 0.20
+# 每次移動理論值的一半
+VISUAL_ALIGN_KP = 0.5
+# 小於 4 pixel 視為對準
+VISUAL_ALIGN_THRESHOLD_PX = 4.0
+# 單次最多移動 2 mm
+MAX_VISUAL_ALIGN_STEP_MM = 2.0
+# 實際方向相反時改成 -1
+VISUAL_ALIGN_X_SIGN = 1.0
+VISUAL_ALIGN_Y_SIGN = 1.0
+# 最多微調次數
+MAX_VISUAL_ALIGN_COUNT = 10
+
 
 # ============================================================
 # 手臂位置設定
@@ -94,6 +120,7 @@ TAG_APPROACH_Z_MM = 160.0
 
 # 最後移至 RJ45 上方的距離
 RJ45_APPROACH_Z_MM = 15.0
+# RJ45_APPROACH_Z_MM = 18.0
 
 TARGET_RZ_OFFSET = 180.0
 CAMERA_RX_OFFSET_DEG = 30.0
@@ -116,9 +143,10 @@ class States(Enum):
     MOVE_ABOVE_BOARD_CENTER = 7
     WAIT_YOLO_DETECTION = 8
     MOVE_ABOVE_YOLO_TARGET = 9
+    VISUAL_FINE_ALIGN = 10
 
-    CHECK_POSE = 10
-    FINISH = 11
+    CHECK_POSE = 11
+    FINISH = 12
 
 
 class ExampleStrategy(
@@ -127,6 +155,7 @@ class ExampleStrategy(
     ToolPoseMixin,
     CenterAlignmentMixin,
     Rj45TargetMixin,
+    VisualAlignmentMixin,
     Node
 ):
     CENTER_CORRECTION_SIGN = CENTER_CORRECTION_SIGN
@@ -135,6 +164,19 @@ class ExampleStrategy(
 
     RJ45_APPROACH_Z_MM = RJ45_APPROACH_Z_MM
     TARGET_RZ_OFFSET = TARGET_RZ_OFFSET
+
+    PLUG_CENTER_U = PLUG_CENTER_U
+    PLUG_CENTER_V = PLUG_CENTER_V
+
+    CAMERA_FX = CAMERA_FX
+    CAMERA_FY = CAMERA_FY
+
+    VISUAL_ALIGN_DEPTH_M = VISUAL_ALIGN_DEPTH_M
+    VISUAL_ALIGN_KP = VISUAL_ALIGN_KP
+    VISUAL_ALIGN_THRESHOLD_PX = VISUAL_ALIGN_THRESHOLD_PX
+    MAX_VISUAL_ALIGN_STEP_MM = MAX_VISUAL_ALIGN_STEP_MM
+    VISUAL_ALIGN_X_SIGN = VISUAL_ALIGN_X_SIGN
+    VISUAL_ALIGN_Y_SIGN = VISUAL_ALIGN_Y_SIGN
 
     def __init__(self):
         super().__init__('example_strategy')
@@ -223,14 +265,51 @@ class ExampleStrategy(
         # 已執行幾次畫面置中
         self.center_align_count = 0
 
+        self.latest_hole_center_px = None
+        self.latest_r_base_camera = None
+        self.visual_align_count = 0
+
         self.get_logger().info( 'Example strategy node started' )
 
     def yolo_detections_base_callback(self, msg):
         try:
             data = json.loads(msg.data)
 
-            detections = data.get('detections', [])
 
+            # --------------------------------------------
+            # 取得 Camera → Base 的旋轉矩陣
+            # --------------------------------------------
+            r_base_camera = data.get('r_base_camera')
+            if r_base_camera is not None:
+                matrix = np.asarray(
+                    r_base_camera,
+                    dtype=float
+                )
+
+                if matrix.shape != (3, 3):
+                    self.get_logger().warn(
+                        f'Invalid R_base_camera '
+                        f'shape: {matrix.shape}'
+                    )
+                    return
+
+                if not np.all(np.isfinite(matrix)):
+                    self.get_logger().warn(
+                        'R_base_camera contains '
+                        'invalid numbers'
+                    )
+                    return
+
+                self.latest_r_base_camera = (matrix)
+
+            else:
+                self.get_logger().warn(
+                    'R_base_camera is missing '
+                    'from YOLO base message'
+                )
+
+            # --------------取yolo detections------------------------------
+            detections = data.get('detections', [])
             if not isinstance(detections, list):
                 self.get_logger().warn( 'YOLO detections must be a list' )
                 return
@@ -273,6 +352,19 @@ class ExampleStrategy(
                 f'y={y * 1000.0:.3f} mm, '
                 f'z={z * 1000.0:.3f} mm'
             )
+
+            pixel_center = selected.get('pixel_center')
+
+            if (pixel_center is not None and len(pixel_center) == 2):
+                self.latest_hole_center_px = [
+                    float(pixel_center[0]),
+                    float(pixel_center[1])
+                ]
+                self.get_logger().info(
+                    f'YOLO hole center: '
+                    f'u={self.latest_hole_center_px[0]:.2f}, '
+                    f'v={self.latest_hole_center_px[1]:.2f}'
+                )
 
         except json.JSONDecodeError as exc:
             self.get_logger().error( f'Failed to decode YOLO detections base: {exc}' )
@@ -777,10 +869,102 @@ class ExampleStrategy(
                     'Move above YOLO target failed'
                 )
                 return States.FINISH
+            if not self.update_and_publish_tool_pose():
+                return States.FINISH
 
-            time.sleep(3.0)
+            # time.sleep(3.0)
+            # return States.CHECK_POSE
 
-            return States.CHECK_POSE
+            time.sleep(2.0)
+            self.visual_align_count = 0
+            self.latest_hole_center_px = None
+
+            return States.VISUAL_FINE_ALIGN
+
+
+        # ----------------------------------------------------
+        # 最後微調
+        # ----------------------------------------------------
+        if state == States.VISUAL_FINE_ALIGN:
+            self.get_logger().info('VISUAL_FINE_ALIGN')
+
+            if self.visual_align_count >= MAX_VISUAL_ALIGN_COUNT:
+                self.get_logger().error('Visual alignment exceeded maximum count')
+                return States.FINISH
+
+            # 清除舊孔中心，要求 YOLO 提供新資料
+            self.latest_hole_center_px = None
+
+            start_time = time.time()
+            timeout_sec = 5.0
+
+            while rclpy.ok() and time.time() - start_time < timeout_sec:
+                if self.latest_hole_center_px is not None:
+                    break
+
+                time.sleep(0.05)
+
+            if self.latest_hole_center_px is None:
+                self.get_logger().error('Waiting for new hole center timeout')
+                return States.FINISH
+
+            current_pose = self.get_current_robot_pose()
+
+            if current_pose is None:
+                self.get_logger().error('Current robot pose is missing')
+                return States.FINISH
+
+            pose = self.calculate_visual_alignment_pose(
+                current_pose=current_pose
+            )
+
+            # False 表示已經對準
+            if pose is False:
+                self.get_logger().info('Visual fine alignment completed')
+                return States.CHECK_POSE
+
+            # None 表示計算失敗
+            if pose is None:
+                return States.FINISH
+
+            request = self.generate_robot_request(
+                cmd_mode=RobotCommand.Request.PTP,
+                cmd_type=RobotCommand.Request.POSE_CMD,
+                velocity=5,
+                acceleration=5,
+                tool=ACTIVE_TOOL,
+                base=ACTIVE_BASE,
+                pose=pose,
+                holding=True
+            )
+
+            response = self.call_hiwin(request)
+
+            if response is None:
+                self.get_logger().error('Visual alignment movement failed')
+                return States.FINISH
+
+            self.visual_align_count += 1
+
+            self.get_logger().info(
+                f'Visual alignment '
+                f'{self.visual_align_count}/'
+                f'{MAX_VISUAL_ALIGN_COUNT} completed'
+            )
+
+            time.sleep(1.0)
+            if not self.update_and_publish_tool_pose():
+                self.get_logger().error(
+                    'Failed to update Tool7 pose '
+                    'after visual alignment'
+                )
+                return States.FINISH
+            time.sleep(0.5)
+
+            # 再次進入同一狀態，重新抓新的孔中心再修正
+            return States.VISUAL_FINE_ALIGN
+
+
 
 
         # ----------------------------------------------------
@@ -798,70 +982,6 @@ class ExampleStrategy(
             return States.FINISH
 
         return States.FINISH
-
-
-        # if state == States.CHECK_POSE:
-        #     self.get_logger().info(
-        #         'CHECK_POSE'
-        #     )
-
-        #     current_pose = self.get_current_robot_pose()
-
-        #     if current_pose is not None:
-        #         self.get_logger().info(
-        #             f'Current position: {current_pose}'
-        #         )
-        #     else:
-        #         self.get_logger().warning(
-        #             'Current robot pose is unavailable'
-        #         )
-
-        #     if self.latest_tag_quat is not None:
-        #         qx, qy, qz, qw = self.latest_tag_quat
-
-        #         self.get_logger().info(
-        #             f'Latest AprilTag quaternion: '
-        #             f'qx={qx:.6f}, '
-        #             f'qy={qy:.6f}, '
-        #             f'qz={qz:.6f}, '
-        #             f'qw={qw:.6f}'
-        #         )
-
-        #         try:
-        #             tag_rx, tag_ry, tag_rz = (
-        #                 R.from_quat(
-        #                     [qx, qy, qz, qw]
-        #                 ).as_euler(
-        #                     'xyz',
-        #                     degrees=True
-        #                 )
-        #             )
-
-        #             self.get_logger().info(
-        #                 f'Latest AprilTag Euler: '
-        #                 f'rx={tag_rx:.3f}, '
-        #                 f'ry={tag_ry:.3f}, '
-        #                 f'rz={tag_rz:.3f}'
-        #             )
-
-        #         except Exception as exc:
-        #             self.get_logger().error(
-        #                 f'Quaternion conversion failed: {exc}'
-        #             )
-
-        #     else:
-        #         self.get_logger().warning(
-        #             'Latest AprilTag quaternion is unavailable'
-        #         )
-
-        #     # 避免迴圈印得太快
-        #     time.sleep(0.5)
-
-        #     # 不結束，繼續停留在 CHECK_POSE
-        #     return States.FINISH
-
-        return States.FINISH
-
 
 
     # ========================================================

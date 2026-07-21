@@ -50,7 +50,7 @@ if __name__ == "__main__":
             modbus.reset()
             time.sleep(25)      # 等待reset時間
         elif mode == '2':
-            move(60,4800,1)      # 絕對位置移動 (0~3200)
+            move(0,4800,1)      # 絕對位置移動 (0~3200)
         elif mode == '3':
             move(3200,4800,1)      # 絕對位置移動 (0~3200)
         elif mode == '4':

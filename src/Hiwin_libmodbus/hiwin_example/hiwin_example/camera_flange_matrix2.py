@@ -74,6 +74,7 @@ class AprilTagBaseNode(Node):
             T_base_tool7
             @ self.get_T_tool7_camera_optical()
         )
+        R_base_camera = T_base_camera[:3, :3]
 
         output_detections = []
 
@@ -121,6 +122,8 @@ class AprilTagBaseNode(Node):
         output = String()
         output.data = json.dumps({
             'frame': 'base',
+            # 相機座標向量轉到 Base 座標使用
+            'r_base_camera': R_base_camera.tolist(),
             'detections': output_detections
         })
 
