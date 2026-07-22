@@ -35,6 +35,7 @@ setup(
             'hiwin_tf_tree = hiwin_example.hiwin_tf_tree_publisher:main',
             'strategy_example_3 = hiwin_example_mul.strategy_example_3:main',
             'strategy_example_mul = hiwin_example_mull.strategy_example:main',
+            'continuous_insertion_test=hiwin_example.continuous_insertion_test:main'
 
         ],
     },

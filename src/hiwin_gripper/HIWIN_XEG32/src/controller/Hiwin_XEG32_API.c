@@ -22,7 +22,7 @@
 
 
 /* Modbus RTU default values */
-#define MODBUS_SERIAL_DEV           "/dev/ttyUSB0"
+#define MODBUS_SERIAL_DEV           "/dev/ttyUSB2"
 #define MODBUS_SERIAL_BAUDRATE      115200
 #define MODBUS_SERIAL_PARITY        'N'
 #define MODBUS_SERIAL_DATABITS      8

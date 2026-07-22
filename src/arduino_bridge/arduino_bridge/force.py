@@ -14,7 +14,7 @@ class ArduinoSerialPublisher(Node):
         super().__init__('arduino_serial_publisher')
 
         # ===== 參數設定 =====
-        self.port = '/dev/ttyUSB0'
+        self.port = '/dev/ttyUSB1'
         self.baudrate = 115200
 
         # ===== Publisher =====
