@@ -4,13 +4,23 @@
 ### 執行 ROS 2 節點
 
 每次重新開啟終端機後，先進入工作區並載入環境：
-
 ```bash
-cd ~/work
 colcon build --symlink-install
+```
+```bash
 source install/setup.bash
 ```
+---
+### 執行launch
 
+設定 Arduino 序列埠權限：
+```bash
+sudo chmod 777 /dev/ttyUSB0
+```
+執行launch
+```bash
+ros2 launch hiwinduck_launch system.launch.py
+```
 ---
 
 #### 1. 啟動 RealSense 相機
@@ -63,8 +73,12 @@ ros2 run arduino_bridge force_pub
 
 執行力量感測節點時，不要開啟 Arduino Serial Monitor，否則序列埠會被占用，ROS 2 節點將無法讀取資料。
 
+#### 8. 執行力感測監測
+```bash
+ros2 run insertion_monitor insertion_monitor_node
+```
 
-#### 8. 夾爪
+#### 9. 夾爪
 docker內進資料夾
 ```bash
 cd src/hiwin_gripper/HIWIN_XEG32/src/controller
