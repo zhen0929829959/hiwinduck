@@ -325,11 +325,11 @@ class AprilTagSamplingMixin:
                 self.received_sample_count
                 <= DISCARD_SAMPLE_COUNT
             ):
-                self.get_logger().info(
-                    f'Discard sample '
-                    f'{self.received_sample_count}/'
-                    f'{DISCARD_SAMPLE_COUNT}'
-                )
+                # self.get_logger().info(
+                #     f'Discard sample '
+                #     f'{self.received_sample_count}/'
+                #     f'{DISCARD_SAMPLE_COUNT}'
+                # )
                 return
 
             # ------------------------------------------------
@@ -372,11 +372,11 @@ class AprilTagSamplingMixin:
                 self.tag_samples
             )
 
-            self.get_logger().info(
-                f'Collect sample '
-                f'{sample_count}/'
-                f'{MEDIAN_SAMPLE_COUNT}'
-            )
+            # self.get_logger().info(
+            #     f'Collect sample '
+            #     f'{sample_count}/'
+            #     f'{MEDIAN_SAMPLE_COUNT}'
+            # )
 
             if sample_count < MEDIAN_SAMPLE_COUNT:
                 return
@@ -537,39 +537,39 @@ class AprilTagSamplingMixin:
                 and abs(error_v) <= threshold
             )
 
-            self.get_logger().info(
-                f'Tag median: '
-                f'{self.latest_tag_position_m}'
-            )
+            # self.get_logger().info(
+            #     f'Tag median: '
+            #     f'{self.latest_tag_position_m}'
+            # )
 
-            self.get_logger().info(
-                f'RJ45 median: '
-                f'{self.latest_tag_rj45_position_m}'
-            )
+            # self.get_logger().info(
+            #     f'RJ45 median: '
+            #     f'{self.latest_tag_rj45_position_m}'
+            # )
 
-            self.get_logger().info(
-                f'Board center median: '
-                f'{self.latest_board_center_position_m}'
-            )
+            # self.get_logger().info(
+            #     f'Board center median: '
+            #     f'{self.latest_board_center_position_m}'
+            # )
 
-            self.get_logger().info(
-                f'Center median: '
-                f'u={error_u:.2f}px, '
-                f'v={error_v:.2f}px, '
-                f'threshold={threshold:.2f}px, '
-                f'centered={self.latest_centered}'
-            )
+            # self.get_logger().info(
+            #     f'Center median: '
+            #     f'u={error_u:.2f}px, '
+            #     f'v={error_v:.2f}px, '
+            #     f'threshold={threshold:.2f}px, '
+            #     f'centered={self.latest_centered}'
+            # )
 
             dx, dy, dz = (
                 self.latest_center_correction_base_m
             )
 
-            self.get_logger().info(
-                f'Base center correction median: '
-                f'dx={dx * 1000.0:.3f}mm, '
-                f'dy={dy * 1000.0:.3f}mm, '
-                f'dz={dz * 1000.0:.3f}mm'
-            )
+            # self.get_logger().info(
+            #     f'Base center correction median: '
+            #     f'dx={dx * 1000.0:.3f}mm, '
+            #     f'dy={dy * 1000.0:.3f}mm, '
+            #     f'dz={dz * 1000.0:.3f}mm'
+            # )
 
             self.has_tag = True
             self.waiting_for_tag = False

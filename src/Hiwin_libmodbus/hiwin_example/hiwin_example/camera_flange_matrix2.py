@@ -232,6 +232,24 @@ class AprilTagBaseNode(Node):
 
         return T
 
+    # def get_T_flange_camera_optical(self):
+    #     T = np.eye(4)
+
+    #     T[:3, :3] = R.from_quat([
+    #         0.0044354480938147926,
+    #         -0.34850682220018264,
+    #         0.9371437894244503,
+    #         0.016877192400359686
+    #     ]).as_matrix()
+
+    #     T[:3, 3] = [
+    #         0.03644278305098696,
+    #         0.1006367565880439,
+    #         0.10090572675337739
+    #     ]
+
+    #     return T
+
     def get_T_tool7_camera_optical(self):
         return (
             np.linalg.inv(self.get_T_flange_tool7())

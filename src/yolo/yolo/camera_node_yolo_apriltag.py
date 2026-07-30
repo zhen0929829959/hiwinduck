@@ -25,6 +25,10 @@ class YoloAprilTagPlaneNode(Node):
         self.fy = 1361.8357978878923
         self.cx = 962.1412542551096
         self.cy = 538.5980610605569
+        # self.fx = 1366.140789595595
+        # self.fy = 1366.8042320152897
+        # self.cx = 958.105355700529
+        # self.cy = 540.0568004066198
 
         self.camera_matrix = np.array([
             [self.fx, 0.0, self.cx],

@@ -40,10 +40,17 @@ class AprilTagSubNode(Node):
         self.cx = 962.1412542551096
         self.cy = 538.5980610605569
 
-        # self.fx = 923.5084228515625
-        # self.fy = 923.7492065429688
-        # self.cx = 641.0979614257812
-        # self.cy = 364.9132385253906
+        #camera 6
+        # self.fx = 1366.140789595595
+        # self.fy = 1366.8042320152897
+        # self.cx = 958.105355700529
+        # self.cy = 540.0568004066198
+
+        #camera 6 info
+        # self.fx = 1384.152099609375
+        # self.fy = 1384.89306640625
+        # self.cx = 973.51123046875
+        # self.cy = 534.183349609375
 
         # AprilTag black border size, unit: meter
         self.tag_size = 0.0475
