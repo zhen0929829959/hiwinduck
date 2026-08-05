@@ -45,6 +45,13 @@ class YoloNode(Node):
         self.declare_parameter('detections_topic', '/yolo/detections')
         self.declare_parameter('window_name', 'YOLO Detection')
 
+        # identity_mode:
+        #   master -> 依畫面位置產生 stable_id (RJ45_0, RJ45_1...)
+        #   side   -> 不決定實體編號，只輸出 candidate_id
+        self.declare_parameter('identity_mode', 'master')
+        self.declare_parameter('sort_axis', 'x')
+        self.declare_parameter('sort_reverse', False)
+
         self.declare_parameter('image_width', 1920)
         self.declare_parameter('image_height', 1080)
 
@@ -63,6 +70,27 @@ class YoloNode(Node):
         self.detections_topic = self.get_parameter('detections_topic').value
         self.window_name = self.get_parameter('window_name').value
         self.model_path = self.get_parameter('model_path').value
+
+        self.identity_mode = str(
+            self.get_parameter('identity_mode').value
+        ).lower()
+        self.sort_axis = str(
+            self.get_parameter('sort_axis').value
+        ).lower()
+        self.sort_reverse = bool(
+            self.get_parameter('sort_reverse').value
+        )
+
+        if self.identity_mode not in ('master', 'side'):
+            raise ValueError(
+                f'Invalid identity_mode={self.identity_mode}; '
+                'expected master or side'
+            )
+
+        if self.sort_axis not in ('x', 'y', 'vertical'):
+            raise ValueError(
+                f'Invalid sort_axis={self.sort_axis}; expected x, y or vertical'
+            )
 
         self.image_width = int(self.get_parameter('image_width').value)
         self.image_height = int(self.get_parameter('image_height').value)
@@ -150,7 +178,11 @@ class YoloNode(Node):
         )
 
         self.get_logger().info(
-            'YOLO node started, using AprilTag Z'
+            'YOLO node started | '
+            f'camera_id={self.camera_id} | '
+            f'identity_mode={self.identity_mode} | '
+            f'sort_axis={self.sort_axis} | '
+            f'sort_reverse={self.sort_reverse}'
         )
 
     # ========================================================
@@ -372,34 +404,24 @@ class YoloNode(Node):
     # ========================================================
 
     def make_sorted_items(self, boxes):
+        """
+        master 模式：
+            同類別依指定軸排序，產生 stable_id。
+
+        side 模式：
+            不替實體命名，只保留 candidate_id。
+            candidate_id 只代表該幀候選順序，不能拿來跨相機配對。
+        """
         items = []
 
         for original_i, box in enumerate(boxes):
-            confidence = float(
-                box.conf[0].item()
-            )
+            confidence = float(box.conf[0].item())
+            bbox = box.xyxy[0].tolist()
+            class_id = int(box.cls[0].item())
 
-            bbox = (
-                box.xyxy[0]
-                .tolist()
-            )
-
-            class_id = int(
-                box.cls[0].item()
-            )
-
-            x_min, y_min, x_max, y_max = map(
-                int,
-                bbox
-            )
-
-            cx_box = int(
-                (x_min + x_max) / 2
-            )
-
-            cy_box = int(
-                (y_min + y_max) / 2
-            )
+            x_min, y_min, x_max, y_max = map(int, bbox)
+            cx_box = int((x_min + x_max) / 2)
+            cy_box = int((y_min + y_max) / 2)
 
             items.append({
                 'original_i': original_i,
@@ -410,28 +432,52 @@ class YoloNode(Node):
                 'cy_box': cy_box
             })
 
-        items.sort(
-            key=lambda item: (
-                item['class_id'],
-                item['cx_box']
+        # 側相機不決定 RJ45_0 / RJ45_1。
+        # 只為方便本幀處理給 candidate_id。
+        if self.identity_mode == 'side':
+            items.sort(
+                key=lambda item: (
+                    item['class_id'],
+                    -item['confidence']
+                )
             )
-        )
 
-        class_count = {}
+            for candidate_id, item in enumerate(items):
+                item['stable_id'] = None
+                item['candidate_id'] = candidate_id
+
+            return items
+
+        # 主相機：同類別分組後依固定方向排序。
+        grouped_items = {}
 
         for item in items:
-            class_id = item['class_id']
+            grouped_items.setdefault(
+                item['class_id'], []
+            ).append(item)
 
-            if class_id not in class_count:
-                class_count[class_id] = 0
+        sorted_items = []
 
-            item['stable_id'] = (
-                class_count[class_id]
-            )
+        for class_id in sorted(grouped_items.keys()):
+            same_class_items = grouped_items[class_id]
 
-            class_count[class_id] += 1
+            if self.sort_axis in ('y', 'vertical'):
+                same_class_items.sort(
+                    key=lambda item: item['cy_box'],
+                    reverse=self.sort_reverse
+                )
+            else:
+                same_class_items.sort(
+                    key=lambda item: item['cx_box'],
+                    reverse=self.sort_reverse
+                )
 
-        return items
+            for stable_id, item in enumerate(same_class_items):
+                item['stable_id'] = stable_id
+                item['candidate_id'] = None
+                sorted_items.append(item)
+
+        return sorted_items
 
     # ========================================================
     # RGB callback
@@ -486,6 +532,7 @@ class YoloNode(Node):
             confidence = item['confidence']
             class_id = item['class_id']
             stable_id = item['stable_id']
+            candidate_id = item['candidate_id']
 
             class_name = self.model.names[
                 class_id
@@ -562,9 +609,15 @@ class YoloNode(Node):
                     area = mask_area
                     center_source = 'seg_binary'
 
-            track_key = (
-                f'{class_name}_{stable_id}'
-            )
+            if self.identity_mode == 'master':
+                track_key = f'{class_name}_{stable_id}'
+                display_name = track_key
+            else:
+                # 側相機不宣稱這是 RJ45_0 或 RJ45_1
+                track_key = f'candidate_{candidate_id}'
+                display_name = (
+                    f'{class_name}_candidate_{candidate_id}'
+                )
 
             u, v = self.smooth_center(
                 track_key,
@@ -603,7 +656,7 @@ class YoloNode(Node):
 
             cv2.putText(
                 annotated_image,
-                track_key,
+                display_name,
                 (u + 10, v - 10),
                 cv2.FONT_HERSHEY_SIMPLEX,
                 0.6,
@@ -644,7 +697,13 @@ class YoloNode(Node):
                 'stamp_sec': int(msg.header.stamp.sec),
                 'stamp_nanosec': int(msg.header.stamp.nanosec),
                 'class_name': class_name,
+                'identity_mode': self.identity_mode,
+
+                # 只有主相機會有 stable_id。
                 'stable_id': stable_id,
+
+                # 只有側相機會有 candidate_id；僅限該幀使用。
+                'candidate_id': candidate_id,
                 'track_key': track_key,
                 'bbox': [
                     float(value)

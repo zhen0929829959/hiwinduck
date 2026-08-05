@@ -1,3 +1,5 @@
+import os
+from glob import glob
 from setuptools import find_packages, setup
 
 package_name = 'yolo'
@@ -10,6 +12,10 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (
+            os.path.join('share', package_name, 'config'),
+            glob('config/*.yaml')
+        ),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -28,6 +34,8 @@ setup(
             'yolo_sub = yolo.camera_node_sub:main',
             'apriltag=yolo.camera_node_apriltag:main',
             'yolo_apriltag=yolo.camera_node_yolo_apriltag:main',
+            'stereo_depth = yolo.stereo_depth_node:main',
+            'yolo_left = yolo.yolo:main',
         ],
     },
 )

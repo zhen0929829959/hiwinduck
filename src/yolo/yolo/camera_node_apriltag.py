@@ -35,10 +35,10 @@ class AprilTagSubNode(Node):
         )
 
         # # RealSense color camera intrinsics
-        self.fx = 1362.7784437304256
-        self.fy = 1361.8357978878923
-        self.cx = 962.1412542551096
-        self.cy = 538.5980610605569
+        # self.fx = 1362.7784437304256
+        # self.fy = 1361.8357978878923
+        # self.cx = 962.1412542551096
+        # self.cy = 538.5980610605569
 
         #camera 6
         # self.fx = 1366.140789595595
@@ -52,12 +52,63 @@ class AprilTagSubNode(Node):
         # self.cx = 973.51123046875
         # self.cy = 534.183349609375
 
+
+        # ====================================================
+        # ROS 參數
+        # ====================================================
+
+        self.declare_parameter('camera_id', 'camera')
+        self.declare_parameter('image_topic', '/camera/camera/color/image_raw')
+        self.declare_parameter('pose_topic', '/apriltag/pose_camera')
+        self.declare_parameter('center_error_topic', '/apriltag/center_error')
+        self.declare_parameter('camera_frame', 'camera_color_optical_frame')
+        self.declare_parameter('window_name', 'AprilTag Detection')
+
+        self.declare_parameter('image_width', 1920)
+        self.declare_parameter('image_height', 1080)
+
+        self.declare_parameter('fx', 0.0)
+        self.declare_parameter('fy', 0.0)
+        self.declare_parameter('cx', 0.0)
+        self.declare_parameter('cy', 0.0)
+
+        self.declare_parameter(
+            'dist_coeffs',
+            [0.0, 0.0, 0.0, 0.0, 0.0]
+        )
+
+        self.camera_id = self.get_parameter('camera_id').value
+        self.image_topic = self.get_parameter('image_topic').value
+        self.pose_topic = self.get_parameter('pose_topic').value
+        self.center_error_topic = self.get_parameter('center_error_topic').value
+        self.camera_frame = self.get_parameter('camera_frame').value
+        self.window_name = self.get_parameter('window_name').value
+
+        self.image_width = int(self.get_parameter('image_width').value)
+        self.image_height = int(self.get_parameter('image_height').value)
+
+        self.fx = float(self.get_parameter('fx').value)
+        self.fy = float(self.get_parameter('fy').value)
+        self.cx = float(self.get_parameter('cx').value)
+        self.cy = float(self.get_parameter('cy').value)
+
+        self.dist_coeffs = np.array(
+            self.get_parameter('dist_coeffs').value,
+            dtype=np.float64
+        ).reshape(-1, 1)
+
+        if self.fx <= 0.0 or self.fy <= 0.0:
+            raise ValueError(
+                f'[{self.camera_id}] Invalid intrinsics: '
+                f'fx={self.fx}, fy={self.fy}'
+            )
+
         # AprilTag black border size, unit: meter
         self.tag_size = 0.0475
 
         self.color_sub = self.create_subscription(
             Image,
-            '/camera/camera/color/image_raw',
+            self.image_topic,
             self.image_callback,
             10
         )
@@ -71,18 +122,25 @@ class AprilTagSubNode(Node):
 
         self.pose_pub = self.create_publisher(
             PoseStamped,
-            '/apriltag/pose_camera',
+            self.pose_topic,
             10
         )
+
         self.center_error_pub = self.create_publisher(
             String,
-            '/apriltag/center_error',
+            self.center_error_topic,
             10
         )
 
         self.center_threshold_px = 8.0
 
-        self.get_logger().info('AprilTag + Depth node started, unit = meter')
+        self.get_logger().info(
+            f'[{self.camera_id}] AprilTag started | '
+            f'image={self.image_topic} | '
+            f'pose={self.pose_topic} | '
+            f'K=({self.fx:.3f}, {self.fy:.3f}, '
+            f'{self.cx:.3f}, {self.cy:.3f})'
+        )
 
     # def depth_callback(self, msg):
     #     try:
@@ -127,20 +185,20 @@ class AprilTagSubNode(Node):
             [0, 0, 1]
         ])
 
-        dist_coeffs = np.array([
-            [0.17917354946525302],
-            [-0.5132894964666538],
-            [0.0007240371137749375],
-            [-0.001236800492529745],
-            [0.40194811602762903]
-        ], dtype=np.float64)
+        # dist_coeffs = np.array([
+        #     [0.17917354946525302],
+        #     [-0.5132894964666538],
+        #     [0.0007240371137749375],
+        #     [-0.001236800492529745],
+        #     [0.40194811602762903]
+        # ], dtype=np.float64)
 
         imgpts, _ = cv2.projectPoints(
             points_3d,
             rvec,
             tvec,
             camera_matrix,
-            dist_coeffs
+            self.dist_coeffs
         )
 
         imgpts = np.int32(imgpts).reshape(-1, 2)
@@ -190,10 +248,7 @@ class AprilTagSubNode(Node):
 
     def image_callback(self, msg):
         try:
-            # frame = self.bridge.imgmsg_to_cv2(
-            #     msg,
-            #     desired_encoding='passthrough'
-            # )
+
             frame = self.bridge.imgmsg_to_cv2(
                 msg,
                 desired_encoding='passthrough'
@@ -275,7 +330,7 @@ class AprilTagSubNode(Node):
 
             pose_msg = PoseStamped()
             pose_msg.header.stamp = self.get_clock().now().to_msg()
-            pose_msg.header.frame_id = 'camera_color_optical_frame'
+            pose_msg.header.frame_id = self.camera_frame
 
             pose_msg.pose.position.x = tx
             pose_msg.pose.position.y = ty
@@ -353,8 +408,19 @@ class AprilTagSubNode(Node):
                 2
             )
 
-        cv2.imshow('AprilTag RealSense Detection', frame)
+        cv2.imshow(self.window_name, frame)
         cv2.waitKey(1)
+
+        h_img, w_img = frame.shape[:2]
+
+        if w_img != self.image_width or h_img != self.image_height:
+            self.get_logger().error(
+                f'[{self.camera_id}] Image size mismatch: '
+                f'expected={self.image_width}x{self.image_height}, '
+                f'actual={w_img}x{h_img}',
+                throttle_duration_sec=2.0
+            )
+            return
 
 
 def main(args=None):

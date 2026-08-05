@@ -1,0 +1,71 @@
+/**:
+  ros__parameters:
+    image_width: 1920
+    image_height: 1080
+
+    target_track_key: "RJ45_0"
+
+    max_time_difference_sec: 2.0
+    max_reprojection_error_px: 25.0
+
+    left_detection_topic: "/camera_left/yolo/detections"
+    right_detection_topic: "/camera_right/yolo/detections"
+    depth_topic: "/stereo/depth"
+
+    # 左相機 K
+    left_camera_matrix:
+      - 1366.140789595595
+      - 0.0
+      - 958.105355700529
+      - 0.0
+      - 1366.8042320152897
+      - 540.0568004066198
+      - 0.0
+      - 0.0
+      - 1.0
+
+    # 左相機 D = [k1, k2, p1, p2, k3]
+    left_dist_coeffs:
+      - 0.17472283313374745
+      - -0.48877484679827804
+      - 0.0007903303406794713
+      - -0.0017488615265276596
+      - 0.3665760295264985
+
+    # 右相機 K：取自 RealSense camera_info
+    right_camera_matrix:
+      - 1378.7489013671875
+      - 0.0
+      - 962.7938232421875
+      - 0.0
+      - 1379.1591796875
+      - 550.2374267578125
+      - 0.0
+      - 0.0
+      - 1.0
+
+    # 右相機 D：camera_info 回傳全 0
+    right_dist_coeffs:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+
+    # X_right = R * X_left + T
+    stereo_rotation:
+      - -0.02024641
+      - -0.77244608
+      - -0.63475754
+      - 0.77051210
+      - 0.39251707
+      - -0.50223646
+      - 0.63710375
+      - -0.49925685
+      - 0.58723199
+
+    # 單位：公尺
+    stereo_translation:
+      - 0.13868713
+      - 0.02979670
+      - 0.03715298
