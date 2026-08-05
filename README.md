@@ -13,11 +13,16 @@ source install/setup.bash
 ---
 ### 執行launch
 
+視覺launch
+```bash
+ros2 launch hiwinduck_launch dual_camera_vision.launch.py
+```
+
 設定 Arduino 序列埠權限：
 ```bash
 sudo chmod 777 /dev/ttyUSB0
 ```
-執行launch
+初版插入launch
 ```bash
 ros2 launch hiwinduck_launch system.launch.py
 ```
