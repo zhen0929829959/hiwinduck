@@ -6,6 +6,10 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
 
+
+from launch.substitutions import PathJoinSubstitution
+from launch_ros.substitutions import FindPackageShare
+
 import os
 
 
@@ -35,23 +39,57 @@ def generate_launch_description():
     # 1. RealSense
     # ========================================================
 
-    camera = IncludeLaunchDescription(
+    realsense_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            realsense_launch
+            PathJoinSubstitution([
+                FindPackageShare(
+                    'realsense2_camera'
+                ),
+                'launch',
+                'rs_launch.py'
+            ])
         ),
         launch_arguments={
             'serial_no': f"'{LEFT_SERIAL}'",
 
+            # =================================================
+            # Color stream
+            # =================================================
             'enable_color': 'true',
-            'rgb_camera.color_profile': '1920x1080x30',
 
-            'enable_depth': 'false',
-            'enable_infra1': 'false',
-            'enable_infra2': 'false',
-            'enable_gyro': 'false',
-            'enable_accel': 'false',
+            'rgb_camera.color_profile':
+                '1920,1080,30',
 
-            'initial_reset': 'false'
+            # =================================================
+            # QoS
+            # =================================================
+            'color_qos':
+                'SENSOR_DATA',
+
+            'color_info_qos':
+                'SENSOR_DATA',
+
+            # =================================================
+            # Disable unused streams
+            # =================================================
+            'enable_depth':
+                'false',
+
+            'enable_infra1':
+                'false',
+
+            'enable_infra2':
+                'false',
+
+            'enable_gyro':
+                'false',
+
+            'enable_accel':
+                'false',
+
+            'initial_reset':
+                'false',
+
         }.items()
     )
 
@@ -84,6 +122,11 @@ def generate_launch_description():
                 'window_name':
                     'AprilTag'
             }
+        ],
+        arguments=[
+            '--ros-args',
+            '--log-level',
+            'error'
         ]
     )
 
@@ -119,6 +162,11 @@ def generate_launch_description():
                 'model_path':
                     'src/yolo/best.pt'
             }
+        ],
+        arguments=[
+            '--ros-args',
+            '--log-level',
+            'error'
         ]
     )
 
@@ -177,7 +225,9 @@ def generate_launch_description():
     # ========================================================
 
     return LaunchDescription([
-        camera,
+        # camera,
+        realsense_launch,
+
 
         TimerAction(
             period=2.0,

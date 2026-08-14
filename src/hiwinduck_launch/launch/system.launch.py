@@ -83,11 +83,11 @@ def generate_launch_description():
             actions=[apriltag_node]
         ),
 
-        # 啟動 Arduino 力感測
-        TimerAction(
-            period=2.0,
-            actions=[force_pub_node]
-        ),
+        # # 啟動 Arduino 力感測
+        # TimerAction(
+        #     period=2.0,
+        #     actions=[force_pub_node]
+        # ),
 
         # 啟動座標轉換
         TimerAction(
@@ -101,17 +101,17 @@ def generate_launch_description():
             actions=[yolo_node]
         ),
 
-        # 啟動 HIWIN server
-        TimerAction(
-            period=5.0,
-            actions=[hiwin_server_node]
-        ),
+        # # 啟動 HIWIN server
+        # TimerAction(
+        #     period=5.0,
+        #     actions=[hiwin_server_node]
+        # ),
 
-        # 啟動插入監測
-        TimerAction(
-            period=5.0,
-            actions=[insertion_monitor_node]
-        ),
+        # # 啟動插入監測
+        # TimerAction(
+        #     period=5.0,
+        #     actions=[insertion_monitor_node]
+        # ),
 
         # 啟動手臂策略
         # TimerAction(

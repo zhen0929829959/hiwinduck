@@ -12,7 +12,17 @@ from rclpy.node import Node
 from sensor_msgs.msg import Image
 from ultralytics import YOLO
 from std_msgs.msg import Bool, String
+from rclpy.qos import (
+    QoSProfile,
+    ReliabilityPolicy,
+    HistoryPolicy,
+)
 
+image_qos = QoSProfile(
+    reliability=ReliabilityPolicy.BEST_EFFORT,
+    history=HistoryPolicy.KEEP_LAST,
+    depth=1,
+)
 
 class YoloNode(Node):
     def __init__(self):
@@ -417,7 +427,7 @@ class YoloNode(Node):
         items.sort(
             key=lambda item: (
                 item['class_id'],
-                item['cx_box']
+                -item['cx_box']
             )
         )
 
@@ -466,7 +476,7 @@ class YoloNode(Node):
 
         results = self.model(
             image,
-            conf=0.6,
+            conf=0.4,
             device=self.device,
             verbose=False
         )

@@ -46,16 +46,28 @@ class URForceInsertTest(Node):
         # ============================================================
 
         # 沿 base_link -Z 往下多少
-        self.insert_distance_m = 0.05
-        # 停止後往 base_link +Z 回退
-        self.retreat_distance_m = 0.05
+        self.insert_distance_m = 0.15
 
+        # 成功插入深度
+        self.success_depth_m = 0.09
+
+        # 記錄插入開始位置
+        self.insertion_start_pose = None
+
+        # 記錄碰撞位置
+        self.insertion_stopped_pose = None
+
+        # 實際插入深度
+        self.insertion_depth_m = 0.0
+
+        # SUCCESS / COLLISION
+        self.insertion_result = None
         # MoveIt scaling
         self.velocity_scale = 0.06
         self.acceleration_scale = 0.06
 
         # Force threshold
-        self.force_limit_n = 20.0
+        self.force_limit_n = 30.0
 
         # baseline 幾筆
         self.baseline_sample_count = 50
@@ -415,6 +427,8 @@ class URForceInsertTest(Node):
             return
 
         target_pose = PoseStamped()
+
+        self.insertion_start_pose = current_pose
 
         target_pose.header.frame_id = (
             'base_link'
@@ -849,26 +863,153 @@ class URForceInsertTest(Node):
             self.retreat_started = True
 
             self.get_logger().warning(
-                'Previous trajectory stopped.'
+                'Insertion trajectory stopped.'
             )
 
             self.get_logger().warning(
                 f'Waiting {self.retreat_delay_sec:.1f} s '
-                'before retreat...'
+                'before checking insertion depth...'
             )
 
             self.retreat_timer = self.create_timer(
                 self.retreat_delay_sec,
-                self.start_retreat_after_delay
+                self.check_insertion_depth_after_delay
             )
 
             return
         # 第二段也結束了
         self.motion_finished = True
 
+
+    def check_insertion_depth_after_delay(self):
+
+        if self.retreat_timer is not None:
+            self.retreat_timer.cancel()
+            self.retreat_timer = None
+
+        stopped_pose = (
+            self.get_current_tool0_pose()
+        )
+
+        if stopped_pose is None:
+
+            self.get_logger().error(
+                'Cannot get stopped tool0 pose'
+            )
+
+            self.motion_finished = True
+            return
+
+        if self.insertion_start_pose is None:
+
+            self.get_logger().error(
+                'Insertion start pose is missing'
+            )
+
+            self.motion_finished = True
+            return
+
+        self.insertion_stopped_pose = (
+            stopped_pose
+        )
+
+        start_z = (
+            self.insertion_start_pose
+            .pose.position.z
+        )
+
+        stopped_z = (
+            stopped_pose
+            .pose.position.z
+        )
+
+        # 因為是沿 base_link -Z 插入
+        self.insertion_depth_m = (
+            start_z
+            - stopped_z
+        )
+
+        self.get_logger().warning(
+            f'Insertion start Z = '
+            f'{start_z:.4f} m'
+        )
+
+        self.get_logger().warning(
+            f'Stopped Z = '
+            f'{stopped_z:.4f} m'
+        )
+
+        self.get_logger().warning(
+            f'Insertion depth = '
+            f'{self.insertion_depth_m * 1000:.1f} mm'
+        )
+
+        # ===============================================
+        # 成功
+        # ===============================================
+
+        if (
+            self.insertion_depth_m
+            >= self.success_depth_m
+        ):
+
+            self.insertion_result = (
+                'SUCCESS'
+            )
+
+            self.get_logger().warning(
+                '============================'
+            )
+
+            self.get_logger().warning(
+                'INSERTION SUCCESS'
+            )
+
+            self.get_logger().warning(
+                'Depth >= 90 mm'
+            )
+
+            self.get_logger().warning(
+                '============================'
+            )
+
+            self.motion_finished = True
+            return
+
+        # ===============================================
+        # 提早碰撞
+        # ===============================================
+
+        self.insertion_result = (
+            'COLLISION'
+        )
+
+        self.get_logger().warning(
+            '============================'
+        )
+
+        self.get_logger().warning(
+            'INSERTION COLLISION'
+        )
+
+        self.get_logger().warning(
+            'Depth < 90 mm'
+        )
+
+        self.get_logger().warning(
+            'Returning to insertion start pose...'
+        )
+
+        self.get_logger().warning(
+            '============================'
+        )
+
+        self.start_retreat()
+
     # ================================================================
     # MoveIt trajectory STOP
     # ================================================================
+
 
     def stop_trajectory(self):
 
@@ -893,40 +1034,16 @@ class URForceInsertTest(Node):
             '/trajectory_execution_event'
         )
 
-    def start_retreat_after_delay(self):
-
-        # timer 只執行一次
-        if self.retreat_timer is not None:
-
-            self.retreat_timer.cancel()
-            self.retreat_timer = None
-
-        self.get_logger().warning(
-            'Retreat delay finished.'
-        )
-
-        self.start_retreat()
-
-    # ================================================================
-    # Retreat test
-    # 停止後重新取得目前 tool0，再往 base_link +Z
-    # ================================================================
 
     def start_retreat(self):
 
-        current_pose = (
-            self.get_current_tool0_pose()
-        )
-
-        if current_pose is None:
+        if self.insertion_start_pose is None:
 
             self.get_logger().error(
-                'Cannot get current tool0 '
-                'for retreat'
+                'Insertion start pose is missing'
             )
 
             self.motion_finished = True
-
             return
 
         retreat_pose = PoseStamped()
@@ -936,44 +1053,41 @@ class URForceInsertTest(Node):
         )
 
         retreat_pose.pose.position.x = (
-            current_pose.pose.position.x
+            self.insertion_start_pose
+            .pose.position.x
         )
 
         retreat_pose.pose.position.y = (
-            current_pose.pose.position.y
+            self.insertion_start_pose
+            .pose.position.y
         )
 
         retreat_pose.pose.position.z = (
-            current_pose.pose.position.z
-            + self.retreat_distance_m
+            self.insertion_start_pose
+            .pose.position.z
         )
 
         retreat_pose.pose.orientation = (
-            current_pose.pose.orientation
+            self.insertion_start_pose
+            .pose.orientation
         )
 
         self.get_logger().info(
-            'Current stopped pose: '
-            f'X={current_pose.pose.position.x:.4f}, '
-            f'Y={current_pose.pose.position.y:.4f}, '
-            f'Z={current_pose.pose.position.z:.4f}'
+            'Returning to insertion start pose'
         )
 
         self.get_logger().info(
-            'Retreat target: '
+            f'Target: '
             f'X={retreat_pose.pose.position.x:.4f}, '
             f'Y={retreat_pose.pose.position.y:.4f}, '
             f'Z={retreat_pose.pose.position.z:.4f}'
         )
 
-        # 重要：
-        # 第二段運動不要再讓 force callback 觸發 stop
         self.stop_requested = False
 
         self.send_plan_goal(
             retreat_pose
         )
-
 def main(args=None):
 
     rclpy.init(

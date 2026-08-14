@@ -15,7 +15,17 @@ from geometry_msgs.msg import PoseStamped
 from scipy.spatial.transform import Rotation as R
 import json
 from std_msgs.msg import String
+from rclpy.qos import (
+    QoSProfile,
+    ReliabilityPolicy,
+    HistoryPolicy,
+)
 
+image_qos = QoSProfile(
+    reliability=ReliabilityPolicy.BEST_EFFORT,
+    history=HistoryPolicy.KEEP_LAST,
+    depth=1,
+)
 
 class AprilTagSubNode(Node):
     def __init__(self):
@@ -26,7 +36,7 @@ class AprilTagSubNode(Node):
 
         self.detector = Detector(
             families='tag36h11',
-            nthreads=1,
+            nthreads=4,
             quad_decimate=1.0,
             quad_sigma=0.0,
             refine_edges=1,
