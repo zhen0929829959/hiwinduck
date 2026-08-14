@@ -1,0 +1,7 @@
+robot_description_planning:
+  cartesian_limits:
+    # Conservative test values. Tune for your real robot/application.
+    max_trans_vel: 0.1
+    max_trans_acc: 0.2
+    max_trans_dec: -0.2
+    max_rot_vel: 0.5
