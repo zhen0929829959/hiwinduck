@@ -141,7 +141,7 @@ def generate_launch_description():
                     '/camera_left/apriltag/center_error',
 
                 'camera_frame':
-                    'camera_color_optical_frame',
+                    'camera_left_color_optical_frame',
 
                 'window_name':
                     'Left AprilTag'
@@ -333,21 +333,6 @@ def generate_launch_description():
     #         }
     #     ]
     # )
-    # ========================================================
-    # 4. 相機 / UR 座標轉換
-    # ========================================================
-
-    camera_flange_matrix_node = Node(
-        package='ur_robot_control',
-        executable='camera_flange_matrix2',
-        output='screen',
-        arguments=[
-            '--ros-args',
-            '--log-level',
-            'error'
-        ]
-    )
-
 
     stereo_depth = Node(
         package='yolo',
@@ -356,6 +341,35 @@ def generate_launch_description():
         output='screen',
         parameters=[
             stereo_calibration
+        ]
+    )
+
+
+    # ========================================================
+    # AprilTag 雙目深度與 PnP 深度比較
+    #
+    # 直接從左右彩色影像偵測同一個 AprilTag：
+    # 1. 使用左右 Tag 中心點計算雙目三角化深度
+    # 2. 使用左右 Tag 四角點各自計算 PnP 深度
+    # 3. 輸出深度差、時間差與重投影誤差
+    # ========================================================
+
+    apriltag_stereo_debug = Node(
+        package='yolo',
+        executable='apriltag_stereo_depth_debug',
+        name='apriltag_stereo_depth_debug',
+        output='screen',
+        parameters=[
+            {
+                'left_image_topic':
+                    '/camera_left/camera_left/color/image_raw',
+                'right_image_topic':
+                    '/camera_right/camera_right/color/image_raw',
+                'tag_id': 0,
+                'tag_size_m': 0.05,
+                'max_time_difference_sec': 0.08,
+                'show_images': True
+            }
         ]
     )
 
@@ -371,22 +385,18 @@ def generate_launch_description():
     start_vision_nodes = TimerAction(
         period=3.0,
         actions=[
-            # left_apriltag,
+            # 目前先只跑 AprilTag 雙目測試，避免 YOLO 與舊 stereo_depth 干擾。
+            apriltag_stereo_debug
+
+            # 完成除錯後要恢復原流程時，改回：
             # left_yolo,
             # right_yolo,
             # stereo_depth
-
-            # 需要右 AprilTag 時，改成：
-            left_apriltag,
-            # right_apriltag,
-            # left_yolo,
-            # right_yolo
         ]
     )
 
     return LaunchDescription([
         left_camera,
-        # right_camera,
-        start_vision_nodes,
-        camera_flange_matrix_node
+        right_camera,
+        start_vision_nodes
     ])

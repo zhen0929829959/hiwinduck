@@ -73,6 +73,8 @@ class AprilTagSubNode(Node):
         self.declare_parameter('center_error_topic', '/apriltag/center_error')
         self.declare_parameter('camera_frame', 'camera_color_optical_frame')
         self.declare_parameter('window_name', 'AprilTag Detection')
+        self.declare_parameter('debug_image_topic', '/apriltag/debug_image')
+        self.declare_parameter('show_window', False)
 
         self.declare_parameter('image_width', 1920)
         self.declare_parameter('image_height', 1080)
@@ -93,6 +95,8 @@ class AprilTagSubNode(Node):
         self.center_error_topic = self.get_parameter('center_error_topic').value
         self.camera_frame = self.get_parameter('camera_frame').value
         self.window_name = self.get_parameter('window_name').value
+        self.debug_image_topic = self.get_parameter('debug_image_topic').value
+        self.show_window = bool(self.get_parameter('show_window').value)
 
         self.image_width = int(self.get_parameter('image_width').value)
         self.image_height = int(self.get_parameter('image_height').value)
@@ -114,7 +118,7 @@ class AprilTagSubNode(Node):
             )
 
         # AprilTag black border size, unit: meter
-        self.tag_size = 0.0475
+        self.tag_size = 0.05
 
         self.color_sub = self.create_subscription(
             Image,
@@ -141,6 +145,8 @@ class AprilTagSubNode(Node):
             self.center_error_topic,
             10
         )
+
+        self.debug_image_pub = self.create_publisher(Image, self.debug_image_topic, image_qos)
 
         self.center_threshold_px = 8.0
 
@@ -418,8 +424,13 @@ class AprilTagSubNode(Node):
                 2
             )
 
-        cv2.imshow(self.window_name, frame)
-        cv2.waitKey(1)
+        debug_msg = self.bridge.cv2_to_imgmsg(frame, encoding='bgr8')
+        debug_msg.header = msg.header
+        self.debug_image_pub.publish(debug_msg)
+
+        if self.show_window:
+            cv2.imshow(self.window_name, frame)
+            cv2.waitKey(1)
 
         h_img, w_img = frame.shape[:2]
 
@@ -449,4 +460,3 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-

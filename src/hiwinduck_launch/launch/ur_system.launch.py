@@ -5,11 +5,6 @@ from launch.actions import IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
-
-
-from launch.substitutions import PathJoinSubstitution
-from launch_ros.substitutions import FindPackageShare
-
 import os
 
 
@@ -17,13 +12,10 @@ LEFT_SERIAL = '912112073118'
 
 
 def generate_launch_description():
-
     yolo_share = get_package_share_directory('yolo')
-    realsense_share = get_package_share_directory(
-        'realsense2_camera'
-    )
+    realsense_share = get_package_share_directory('realsense2_camera')
 
-    realsense_launch = os.path.join(
+    realsense_launch_path = os.path.join(
         realsense_share,
         'launch',
         'rs_launch.py'
@@ -36,91 +28,66 @@ def generate_launch_description():
     )
 
     # ========================================================
-    # 1. RealSense
+    # 1. 左 RealSense
+    #
+    # Image：
+    # /camera_left/camera_left/color/image_raw
+    #
+    # CameraInfo：
+    # /camera_left/camera_left/color/camera_info
     # ========================================================
 
-    realsense_launch = IncludeLaunchDescription(
+    left_camera = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            PathJoinSubstitution([
-                FindPackageShare(
-                    'realsense2_camera'
-                ),
-                'launch',
-                'rs_launch.py'
-            ])
+            realsense_launch_path
         ),
         launch_arguments={
             'serial_no': f"'{LEFT_SERIAL}'",
 
-            # =================================================
+            # 相機 Namespace 與名稱
+            'camera_namespace': 'camera_left',
+            'camera_name': 'camera_left',
+
             # Color stream
-            # =================================================
             'enable_color': 'true',
+            'rgb_camera.color_profile': '1920x1080x30',
 
-            'rgb_camera.color_profile':
-                '1920,1080,30',
-
-            # =================================================
             # QoS
-            # =================================================
-            'color_qos':
-                'SENSOR_DATA',
+            'color_qos': 'SENSOR_DATA',
+            'color_info_qos': 'SENSOR_DATA',
 
-            'color_info_qos':
-                'SENSOR_DATA',
-
-            # =================================================
             # Disable unused streams
-            # =================================================
-            'enable_depth':
-                'false',
+            'enable_depth': 'false',
+            'enable_infra1': 'false',
+            'enable_infra2': 'false',
+            'enable_gyro': 'false',
+            'enable_accel': 'false',
 
-            'enable_infra1':
-                'false',
+            'initial_reset': 'false',
 
-            'enable_infra2':
-                'false',
-
-            'enable_gyro':
-                'false',
-
-            'enable_accel':
-                'false',
-
-            'initial_reset':
-                'false',
-
+            # 避免 TF 名稱衝突
+            'tf_prefix': 'camera_left'
         }.items()
     )
 
     # ========================================================
-    # 2. AprilTag
+    # 2. 左 AprilTag
     # ========================================================
 
-    apriltag_node = Node(
+    left_apriltag_node = Node(
         package='yolo',
         executable='apriltag',
-        name='apriltag',
+        name='left_apriltag',
         output='screen',
         parameters=[
             left_intrinsics,
             {
-                'camera_id': 'camera',
-
-                'image_topic':
-                    '/camera/camera/color/image_raw',
-
-                'pose_topic':
-                    '/apriltag/pose_camera',
-
-                'center_error_topic':
-                    '/apriltag/center_error',
-
-                'camera_frame':
-                    'camera_color_optical_frame',
-
-                'window_name':
-                    'AprilTag'
+                'camera_id': 'left',
+                'image_topic': '/camera_left/camera_left/color/image_raw',
+                'pose_topic': '/camera_left/apriltag/pose_camera',
+                'center_error_topic': '/camera_left/apriltag/center_error',
+                'camera_frame': 'camera_color_optical_frame',
+                'window_name': 'Left AprilTag'
             }
         ],
         arguments=[
@@ -131,36 +98,24 @@ def generate_launch_description():
     )
 
     # ========================================================
-    # 3. YOLO
+    # 3. 左 YOLO
     # ========================================================
 
-    yolo_node = Node(
+    left_yolo_node = Node(
         package='yolo',
         executable='yolo_sub',
-        name='yolo',
+        name='left_yolo',
         output='screen',
         parameters=[
             left_intrinsics,
             {
-                'camera_id': 'camera',
-
-                'image_topic':
-                    '/camera/camera/color/image_raw',
-
-                'apriltag_pose_topic':
-                    '/apriltag/pose_camera',
-
-                'freeze_pnp_z_topic':
-                    '/apriltag/freeze_pnp_z',
-
-                'detections_topic':
-                    '/yolo/detections',
-
-                'window_name':
-                    'YOLO',
-
-                'model_path':
-                    'src/yolo/best.pt'
+                'camera_id': 'left',
+                'image_topic': '/camera_left/camera_left/color/image_raw',
+                'apriltag_pose_topic': '/camera_left/apriltag/pose_camera',
+                'freeze_pnp_z_topic': '/camera_left/apriltag/freeze_pnp_z',
+                'detections_topic': '/camera_left/yolo/detections',
+                'window_name': 'Left YOLO',
+                'model_path': 'src/yolo/best.pt'
             }
         ],
         arguments=[
@@ -225,13 +180,11 @@ def generate_launch_description():
     # ========================================================
 
     return LaunchDescription([
-        # camera,
-        realsense_launch,
-
+        left_camera,
 
         TimerAction(
             period=2.0,
-            actions=[apriltag_node]
+            actions=[left_apriltag_node]
         ),
 
         # TimerAction(
@@ -246,7 +199,7 @@ def generate_launch_description():
 
         TimerAction(
             period=5.0,
-            actions=[yolo_node]
+            actions=[left_yolo_node]
         ),
 
         # TimerAction(

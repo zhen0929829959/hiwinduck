@@ -36,6 +36,9 @@ setup(
             'yolo_apriltag=yolo.camera_node_yolo_apriltag:main',
             'stereo_depth = yolo.stereo_depth_node:main',
             'yolo_left = yolo.yolo:main',
+            'stereo_apriltag_calibrator = yolo.stereo_apriltag_calibrator:main',
+            'apriltag_stereo_depth_debug = yolo.apriltag_stereo_depth_debug:main',
+            'combined_vision_view = yolo.combined_vision_view_node:main',
         ],
     },
 )

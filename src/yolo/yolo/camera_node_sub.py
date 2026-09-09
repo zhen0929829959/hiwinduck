@@ -58,6 +58,8 @@ class YoloNode(Node):
         self.declare_parameter('freeze_pnp_z_topic', '/apriltag/freeze_pnp_z')
         self.declare_parameter('detections_topic', '/yolo/detections')
         self.declare_parameter('window_name', 'YOLO Detection')
+        self.declare_parameter('debug_image_topic', '/yolo/debug_image')
+        self.declare_parameter('show_window', False)
 
         self.declare_parameter('image_width', 1920)
         self.declare_parameter('image_height', 1080)
@@ -76,6 +78,8 @@ class YoloNode(Node):
         self.freeze_pnp_z_topic = self.get_parameter('freeze_pnp_z_topic').value
         self.detections_topic = self.get_parameter('detections_topic').value
         self.window_name = self.get_parameter('window_name').value
+        self.debug_image_topic = self.get_parameter('debug_image_topic').value
+        self.show_window = bool(self.get_parameter('show_window').value)
         self.model_path = self.get_parameter('model_path').value
 
         self.image_width = int(self.get_parameter('image_width').value)
@@ -162,6 +166,8 @@ class YoloNode(Node):
             self.detections_topic,
             10
         )
+
+        self.debug_image_pub = self.create_publisher(Image, self.debug_image_topic, image_qos)
 
         self.get_logger().info(
             'YOLO node started, using AprilTag Z'
@@ -341,7 +347,7 @@ class YoloNode(Node):
         # )
 
         # z_m = 0.2805-self.yolo_plane_offset_m
-        # z_m = 0.175
+        # z_m = 0.180
 
         if self.frozen_tag_z_m is None:
             return None
@@ -384,36 +390,18 @@ class YoloNode(Node):
     # ========================================================
     # 排序同類物件
     # ========================================================
-
     def make_sorted_items(self, boxes):
         items = []
 
         for original_i, box in enumerate(boxes):
-            confidence = float(
-                box.conf[0].item()
-            )
+            confidence = float(box.conf[0].item())
+            bbox = box.xyxy[0].tolist()
+            class_id = int(box.cls[0].item())
 
-            bbox = (
-                box.xyxy[0]
-                .tolist()
-            )
+            x_min, y_min, x_max, y_max = map(int, bbox)
 
-            class_id = int(
-                box.cls[0].item()
-            )
-
-            x_min, y_min, x_max, y_max = map(
-                int,
-                bbox
-            )
-
-            cx_box = int(
-                (x_min + x_max) / 2
-            )
-
-            cy_box = int(
-                (y_min + y_max) / 2
-            )
+            cx_box = int((x_min + x_max) / 2)
+            cy_box = int((y_min + y_max) / 2)
 
             items.append({
                 'original_i': original_i,
@@ -424,12 +412,22 @@ class YoloNode(Node):
                 'cy_box': cy_box
             })
 
-        items.sort(
-            key=lambda item: (
-                item['class_id'],
-                -item['cx_box']
+        # 左相機：靠右 = 0
+        # 右相機：靠左 = 0
+        if self.camera_id == 'right':
+            items.sort(
+                key=lambda item: (
+                    item['class_id'],
+                    item['cx_box']
+                )
             )
-        )
+        else:
+            items.sort(
+                key=lambda item: (
+                    item['class_id'],
+                    item['cx_box']
+                )
+            )
 
         class_count = {}
 
@@ -439,10 +437,7 @@ class YoloNode(Node):
             if class_id not in class_count:
                 class_count[class_id] = 0
 
-            item['stable_id'] = (
-                class_count[class_id]
-            )
-
+            item['stable_id'] = class_count[class_id]
             class_count[class_id] += 1
 
         return items
@@ -455,7 +450,7 @@ class YoloNode(Node):
         try:
             image = self.bridge.imgmsg_to_cv2(
                 msg,
-                desired_encoding='passthrough'
+                desired_encoding='bgr8'
             )
 
         except Exception as exc:
@@ -477,6 +472,7 @@ class YoloNode(Node):
         results = self.model(
             image,
             conf=0.4,
+            imgsz=960,
             device=self.device,
             verbose=False
         )
@@ -701,12 +697,13 @@ class YoloNode(Node):
         #     f'camera_xyz_m = {camera_xyz_m}'
         # )
 
-        cv2.imshow(
-            self.window_name,
-            annotated_image
-        )
+        debug_msg = self.bridge.cv2_to_imgmsg(annotated_image, encoding='bgr8')
+        debug_msg.header = msg.header
+        self.debug_image_pub.publish(debug_msg)
 
-        cv2.waitKey(1)
+        if self.show_window:
+            cv2.imshow(self.window_name, annotated_image)
+            cv2.waitKey(1)
 
 
 def main(args=None):
