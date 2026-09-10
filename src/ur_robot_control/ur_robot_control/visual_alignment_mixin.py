@@ -221,22 +221,30 @@ class VisualAlignmentMixin:
         correction_mm
     ):
         """
-        將 Base XY 修正量加到目前手臂 Pose。
+        Visual fine alignment：
 
-        Z、RX、RY、RZ 不變。
+        X、Y：根據視覺誤差修正
+        Z、Rx、Ry、Rz：固定為剛進入
+        VISUAL_FINE_ALIGN 時的姿態
         """
 
-        (
-            current_x,
-            current_y,
-            current_z,
-            current_rx,
-            current_ry,
-            current_rz
-        ) = current_pose
+        if self.visual_align_reference_pose is None:
+            self.get_logger().error(
+                'Visual align reference pose is missing'
+            )
+            return None
+
+        current_x = current_pose[0]
+        current_y = current_pose[1]
+
+        fixed_z = self.visual_align_reference_pose[2]
+        fixed_rx = self.visual_align_reference_pose[3]
+        fixed_ry = self.visual_align_reference_pose[4]
+        fixed_rz = self.visual_align_reference_pose[5]
 
         pose = Twist()
 
+        # 只有 XY 可以改
         pose.linear.x = (
             current_x
             + float(correction_mm[0])
@@ -247,10 +255,12 @@ class VisualAlignmentMixin:
             + float(correction_mm[1])
         )
 
-        pose.linear.z = current_z
+        # Z 鎖死
+        pose.linear.z = float(fixed_z)
 
-        pose.angular.x = current_rx
-        pose.angular.y = current_ry
-        pose.angular.z = current_rz
+        # 姿態全部鎖死
+        pose.angular.x = float(fixed_rx)
+        pose.angular.y = float(fixed_ry)
+        pose.angular.z = float(fixed_rz)
 
         return pose

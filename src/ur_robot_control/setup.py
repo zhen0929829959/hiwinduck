@@ -38,7 +38,8 @@ setup(
             'strategy_example_3 = ur_robot_control.strategy_example_3:main',
             'strategy_example_mul = ur_robot_control.strategy_example_mul:main',
             'force=ur_robot_control.force:main',
-            'continuous_insertion_test=ur_robot_control.continuous_insertion_test:main'
+            'continuous_insertion_test=ur_robot_control.continuous_insertion_test:main',
+            'test0830 = ur_robot_control.test0830:main',
         ],
     },
 )

@@ -49,18 +49,19 @@ class ForceInsertionMixin:
         # ------------------------------------------------------------
         # Parameters copied from the standalone force test
         # ------------------------------------------------------------
-        self.force_limit_n = 30.0
+        self.force_limit_n = 45.0
         self.force_baseline_sample_count = 50
         self.force_trigger_count_required = 3
 
-        self.insert_distance_mm = 150.0
-        self.success_depth_threshold_mm = 90.0
+        self.insert_distance_mm = 300.0 #最多能下降
+        self.success_depth_threshold_mm = 25.0  #成功判定深度
 
-        self.insert_velocity = 6
-        self.insert_acceleration = 6
+        self.insert_velocity = 3
+        self.insert_acceleration = 3
 
-        self.return_velocity = 6
-        self.return_acceleration = 6
+        self.return_velocity = 8
+        self.return_acceleration = 8
+        self.collision_retract_mm = 5.0 #退回距離
 
         self.force_baseline_timeout_sec = 5.0
         self.max_insertion_time_sec = 100.0
@@ -80,6 +81,7 @@ class ForceInsertionMixin:
 
         self.insertion_start_pose = None
         self.insertion_stopped_pose = None
+        self.insertion_reference_z_mm = None
 
         self.insertion_depth_mm = 0.0
         self.insertion_result = None
@@ -418,32 +420,39 @@ class ForceInsertionMixin:
             stopped_pose
         )
 
-        start_z = (
-            self.insertion_start_pose[2]
-        )
+        attempt_start_z = float(self.insertion_start_pose[2])
+        stopped_z = float(self.insertion_stopped_pose[2])
 
-        stopped_z = (
-            self.insertion_stopped_pose[2]
-        )
+        if self.insertion_reference_z_mm is None:
+            self.get_logger().error('Insertion reference Z is missing')
+            return False
 
-        self.insertion_depth_mm = (
-            start_z
-            - stopped_z
+        reference_z = float(self.insertion_reference_z_mm)
+
+        # 本次實際往下走多少
+        attempt_depth_mm = attempt_start_z - stopped_z
+
+        # 從最初視覺對位位置算的總插入深度
+        self.insertion_depth_mm = reference_z - stopped_z
+
+        self.get_logger().warning(
+            f'Insertion reference Z = {reference_z:.2f} mm'
         )
 
         self.get_logger().warning(
-            f'Insertion start Z = '
-            f'{start_z:.2f} mm'
+            f'Attempt start Z = {attempt_start_z:.2f} mm'
         )
 
         self.get_logger().warning(
-            f'Stopped Z = '
-            f'{stopped_z:.2f} mm'
+            f'Stopped Z = {stopped_z:.2f} mm'
         )
 
         self.get_logger().warning(
-            f'Insertion depth = '
-            f'{self.insertion_depth_mm:.2f} mm'
+            f'Attempt depth = {attempt_depth_mm:.2f} mm'
+        )
+
+        self.get_logger().warning(
+            f'Total insertion depth = {self.insertion_depth_mm:.2f} mm'
         )
 
         # ------------------------------------------------------------
@@ -497,7 +506,7 @@ class ForceInsertionMixin:
             '=========================='
         )
 
-        return self.return_force_insertion_to_start()
+        return self.retract_force_insertion_after_collision()
 
     # ================================================================
     # Stop current MoveIt trajectory
@@ -515,6 +524,34 @@ class ForceInsertionMixin:
             'Insertion trajectory STOP requested'
         )
 
+    def retract_force_insertion_after_collision(self):
+        current_pose = self.get_current_robot_pose()
+
+        if current_pose is None:
+            self.get_logger().error('Cannot read pose for collision retract')
+            return False
+
+        retract_pose = self.create_pose(
+            current_pose[0],
+            current_pose[1],
+            current_pose[2] + self.collision_retract_mm,
+            current_pose[3],
+            current_pose[4],
+            current_pose[5]
+        )
+
+        self.get_logger().warning(
+            f'Collision short retract: Z={current_pose[2]:.3f} -> '
+            f'{current_pose[2] + self.collision_retract_mm:.3f} mm'
+        )
+
+        return self.move_pose_lin(
+            retract_pose,
+            self.return_velocity,
+            self.return_acceleration,
+            holding=True
+        )
+    
     # ================================================================
     # Return to saved start pose
     # ================================================================

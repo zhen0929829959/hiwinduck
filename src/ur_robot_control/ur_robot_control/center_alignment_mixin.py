@@ -7,15 +7,13 @@ class CenterAlignmentMixin:
     """
     負責 AprilTag 畫面置中的計算。
 
-    只負責：
-    1. 檢查修正資料
-    2. 將公尺轉成毫米
-    3. 限制單次最大修正量
-    4. 計算手臂目標 Pose
+    ALIGN_APRILTAG_CENTER 階段：
+    1. 只修正 X / Y
+    2. Z 保持不變
+    3. RX / RY / RZ 保持不變
 
-    不負責：
-    1. 發送 HIWIN 指令
-    2. 切換 State
+    AprilTag 的最終高度，
+    交給 strategy 在真正置中後重新決定。
     """
 
     def calculate_center_alignment_pose(
@@ -25,6 +23,8 @@ class CenterAlignmentMixin:
         """
         根據 AprilTag 的修正量，
         計算手臂置中後的目標 Pose。
+
+        只修正 XY。
 
         成功：
             回傳 Twist
@@ -54,15 +54,6 @@ class CenterAlignmentMixin:
             )
             return None
 
-        (
-            current_x,
-            current_y,
-            current_z,
-            current_rx,
-            current_ry,
-            current_rz
-        ) = current_pose
-
         correction_mm = (
             np.array(
                 self.latest_center_correction_base_m,
@@ -88,6 +79,15 @@ class CenterAlignmentMixin:
             )
             return None
 
+        # ============================================================
+        # AprilTag 畫面置中只修 XY
+        #
+        # 不讓 PnP Z 的誤差造成手臂上下移動。
+        # Z 高度等真正置中之後再重新計算。
+        # ============================================================
+
+        correction_mm[2] = 0.0
+
         correction_norm = float(
             np.linalg.norm(
                 correction_mm
@@ -105,10 +105,10 @@ class CenterAlignmentMixin:
         )
 
         self.get_logger().info(
-            f'Raw Base correction: '
+            f'XY Base correction: '
             f'dx={correction_mm[0]:.3f}mm, '
             f'dy={correction_mm[1]:.3f}mm, '
-            f'dz={correction_mm[2]:.3f}mm, '
+            f'dz=0.000mm, '
             f'norm={correction_norm:.3f}mm'
         )
 
@@ -117,7 +117,7 @@ class CenterAlignmentMixin:
             < self.MIN_CENTER_CORRECTION_MM
         ):
             self.get_logger().error(
-                f'Correction is too small '
+                f'XY correction is too small '
                 f'({correction_norm:.3f} mm), '
                 f'but AprilTag is not centered'
             )
@@ -150,7 +150,7 @@ class CenterAlignmentMixin:
         correction_mm
     ):
         """
-        限制單次最大修正距離。
+        限制單次最大 XY 修正距離。
         """
 
         correction_norm = float(
@@ -177,14 +177,17 @@ class CenterAlignmentMixin:
             * self.MAX_CENTER_CORRECTION_MM
         )
 
+        # 確保 Z 永遠不動
+        limited_correction_mm[2] = 0.0
+
         limited_norm = float(
             np.linalg.norm(
                 limited_correction_mm
             )
         )
 
-        self.get_logger().warn(
-            f'Correction limited to '
+        self.get_logger().warning(
+            f'XY correction limited to '
             f'{limited_norm:.3f} mm'
         )
 
@@ -196,10 +199,17 @@ class CenterAlignmentMixin:
         correction_mm
     ):
         """
-        將置中修正量加到目前手臂位置。
+        AprilTag 畫面置中。
 
-        只修改 XYZ。
-        RX、RY、RZ 保持不變。
+        只修改：
+            X
+            Y
+
+        完全保持：
+            Z
+            RX
+            RY
+            RZ
         """
 
         (
@@ -213,21 +223,22 @@ class CenterAlignmentMixin:
 
         pose = Twist()
 
+        # X 修正
         pose.linear.x = (
             current_x
             + float(correction_mm[0])
         )
 
+        # Y 修正
         pose.linear.y = (
             current_y
             + float(correction_mm[1])
         )
 
-        pose.linear.z = (
-            current_z
-            + float(correction_mm[2])
-        )
+        # Z 完全不動
+        pose.linear.z = current_z
 
+        # 姿態完全不動
         pose.angular.x = current_rx
         pose.angular.y = current_ry
         pose.angular.z = current_rz

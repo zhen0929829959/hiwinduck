@@ -10,8 +10,8 @@ from scipy.spatial.transform import Rotation as R
 DISCARD_SAMPLE_COUNT = 10
 MEDIAN_SAMPLE_COUNT = 20
 TAG_TIMEOUT_SEC = 20.0
-APRILTAG_TOPIC = '/apriltag/pose_base'
-DEFAULT_CENTER_THRESHOLD_PX = 8.0
+APRILTAG_TOPIC = '/camera_left/apriltag/pose_base'
+DEFAULT_CENTER_THRESHOLD_PX = 20.0
 
 
 class AprilTagSamplingMixin:
@@ -559,12 +559,13 @@ class AprilTagSamplingMixin:
             # 讀取中心閥值
             # ------------------------------------------------
 
-            center_threshold_px = float(
-                data.get(
-                    'center_threshold_px',
-                    DEFAULT_CENTER_THRESHOLD_PX
-                )
-            )
+            # center_threshold_px = float(
+            #     data.get(
+            #         'center_threshold_px',
+            #         DEFAULT_CENTER_THRESHOLD_PX
+            #     )
+            # )
+            center_threshold_px = DEFAULT_CENTER_THRESHOLD_PX
 
             # ------------------------------------------------
             # 計算收到第幾筆

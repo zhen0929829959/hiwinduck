@@ -18,7 +18,7 @@ class AprilTagBaseNode(Node):
 
         self.create_subscription(
             PoseStamped,
-            '/apriltag/pose_camera',
+            '/camera_left/apriltag/pose_camera',
             self.apriltag_callback,
             10
         )
@@ -32,7 +32,7 @@ class AprilTagBaseNode(Node):
 
         self.pose_pub = self.create_publisher(
             String,
-            '/apriltag/pose_base',
+            '/camera_left/apriltag/pose_base',
             10
         )
 
@@ -47,14 +47,14 @@ class AprilTagBaseNode(Node):
 
         self.create_subscription(
             String,
-            '/yolo/detections',
+            '/stereo/depth',
             self.yolo_detections_callback,
             10
         )
 
         self.create_subscription(
             String,
-            '/apriltag/center_error',
+            '/camera_left/apriltag/center_error',
             self.center_error_callback,
             10
         )
@@ -83,21 +83,23 @@ class AprilTagBaseNode(Node):
             if det.get('class_name') != 'RJ45':
                 continue
 
-            camera_xyz = det.get('camera_xyz')
+            camera_position_m = det.get(
+                'detection_camera_position_m'
+            )
 
             if (
-                camera_xyz is None
-                or len(camera_xyz) != 3
-                or any(v is None for v in camera_xyz)
+                camera_position_m is None
+                or len(camera_position_m) != 3
+                or any(value is None for value in camera_position_m)
             ):
                 continue
 
-            x_mm, y_mm, z_mm = camera_xyz
+            x_m, y_m, z_m = camera_position_m
 
             P_camera = np.array([
-                float(x_mm) / 1000.0,
-                float(y_mm) / 1000.0,
-                float(z_mm) / 1000.0,
+                float(x_m),
+                float(y_m),
+                float(z_m),
                 1.0
             ])
 
@@ -112,7 +114,7 @@ class AprilTagBaseNode(Node):
                 'angle': det.get('angle'),
                 'pixel_center': det.get('pixel_center'),
                 'center_source': det.get('center_source'),
-                'camera_xyz_mm': camera_xyz,
+                'camera_xyz_m': camera_position_m,
                 'detection_base_position_m': P_base[:3].tolist()
             })
 
@@ -274,20 +276,39 @@ class AprilTagBaseNode(Node):
     #     return T
 
     #camera3
+    # def get_T_flange_camera_optical(self):
+    #     T = np.eye(4)
+
+    #     T[:3, :3] = R.from_quat([
+    #         -0.18148837563705517,
+    #         -0.19176593770244868,
+    #         0.6899964238927973,
+    #         0.6739382239203198
+    #     ]).as_matrix()
+
+    #     T[:3, 3] = [
+    #         0.05214414313662461,
+    #         0.004255944244715333,
+    #         0.10605896164833743
+    #     ]
+
+    #     return T
+
+    #camera6
     def get_T_flange_camera_optical(self):
         T = np.eye(4)
 
         T[:3, :3] = R.from_quat([
-            -0.18148837563705517,
-            -0.19176593770244868,
-            0.6899964238927973,
-            0.6739382239203198
+            -0.1719769579812515,
+            -0.18369882942628987,
+            0.671477082986354,
+            0.6969915300884673
         ]).as_matrix()
 
         T[:3, 3] = [
-            0.05214414313662461,
-            0.004255944244715333,
-            0.10605896164833743
+            0.06605019676959288,
+            -0.0011101957303255375,
+            0.08656908061796169
         ]
 
         return T
